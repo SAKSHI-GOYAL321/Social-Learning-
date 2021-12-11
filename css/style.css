@@ -1,0 +1,125 @@
+*{
+    /* background-color: blanchedalmond; */
+    margin: 0px;
+    
+}
+/* body{
+    background-image: url(img/book\ shell.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    opacity: 0.8;
+} */
+.paddoff{
+    padding: 0px !important;
+}
+
+.headder{
+    width: 100%;
+    background-color: rgb(202, 196, 196);
+    background-color: rgb(190 167 158);
+    /* background-image: url(img/book\ shell.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; */
+    height: 716px;
+}
+
+.account h5,button{
+    display: inline;
+}
+.btn-btn{
+    color: cyan;
+}
+.btn-btn:hover{
+    color: burlywood;
+    cursor: default;
+}
+
+.show{
+    visibility: hidden;
+}
+.hide{
+    visibility: visible;
+}
+
+.log-in{
+    width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:713px;
+	position:relative;
+    color: whitesmoke;
+    background-image:url(../img/book_shell.jpg);
+    background-position:left;
+    background-repeat: no-repeat;
+    box-shadow: gray;
+    /* position: static; */
+
+/* border: blue 2px solid; */
+}
+.login-wrap{
+    width:100%;
+	height:100%;
+	position:absolute;
+    max-height: 713px;
+    /* background: rgba(40,57,101,.9); */
+    /* position: relative; */
+    /* background: rgb(32 21 96 / 90%); */
+    /* background: rgb(45 42 188 / 57%); */
+    /* background: rgb(71 70 124 / 78%); */
+    /* padding: 203px 0px; */
+}
+
+.login-html{
+    color: white;
+    padding-top: 50%;
+}
+.login-html header{
+    cursor: pointer;
+    padding: 12px;
+}
+.login-html li:hover{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+.login-html ul{
+    list-style: none;
+}
+.login-html li{
+    margin-right: 22px;
+    display: inline;
+    font-size: large;
+    color: white;
+    cursor: default;
+}
+.bradius{
+    border-radius: 34px !important;
+    margin: 2px 0px;
+    background-color: #1e182f70 !important;
+    color: white;
+}
+input{
+    margin: 3px;
+}
+.log-btn{
+    width: 100%;
+    color: white;
+    border-radius: 34px;
+    background-color: #200202;
+    height: 34px!important;
+    padding: 6px 12px !important;
+}
+.btn h5{
+    display: block;
+}
+.margin{
+    margin: 6px 4px;
+}
+
+.icon{
+    float: right;
+    margin-top: -25px;
+    margin-right: -13px;
+    width: 3%;
+    height: 12px;
+}

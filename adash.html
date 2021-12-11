@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nav bar</title>
+
+    
+</head>
+
+
+<body>
+    <section id="top-nav" class="top-nav">
+        <div class="topnav">
+            <i class="fa fa-bars" style="cursor:pointer" onclick="show();"></i>
+            <a href="dashboard.html" >Dashboard</a>
+            <a href="#">User</a>
+            <a href="#">Log out</a>
+            
+          </div>
+    </section>
+    
+    <section id="nav-bar">
+        <div class="col-sm-12">
+            <div class="contain">
+                
+                <div class="col-sm-2">
+                    <div class="sidenav" id="sidenav">
+                        <a href="#" ></a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                      </div>
+
+                </div>
+                <div class="col-sm-10">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script type="text/javascript">
+
+function show(){
+    var sidenav= document.getElementById("sidenav");
+    console.log("check1");
+    // if(sidenav.style.display=="none"){
+    //     sidenav.style.display="block";
+    // }
+    // else{
+    //     sidenav.style.display="none";
+    // }
+    sidenav.classList.toggle("active");
+    console.log("check3");
+  
+
+
+}
+
+
+</script>
+</html>
