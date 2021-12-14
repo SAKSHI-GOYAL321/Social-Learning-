@@ -1,6 +1,6 @@
 <?php
-	session_start();
-	$valid_extension = array('jpeg','jpg','png','PNG','JPG','JPEG','jfif','JFIF');
+	
+	$valid_extension = array('jpeg','jpg','png','PNG','JPG','JPEG','jfif','JFIF','svg');
 	$path = '../img/';
     include("connection.php");
     if(!empty($_FILES["image_file"]))
@@ -10,6 +10,7 @@
 		$img = $_FILES['image_file']['name'];
 		$tmp = $_FILES['image_file']['tmp_name'];
 		$ext = pathinfo($img, PATHINFO_EXTENSION); 
+		$Author="Aditi";
 
 		if(in_array($ext, $valid_extension)){
 			$path = $path.strtolower($img);
@@ -18,7 +19,7 @@
 	
 		}
 			$query = $db->prepare('INSERT INTO BlogData(Author, title, content, ImagePath) VALUES (?,?,?,?)');
-			$data=array($_SESSION['uname'], $title, $write, $path);
+			$data=array($Author, $title, $write, $path);
 			$execute=$query->execute($data);
 			
 			if($execute)
