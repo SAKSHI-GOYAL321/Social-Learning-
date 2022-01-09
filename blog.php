@@ -44,31 +44,10 @@
                 <div class="col-sm-10 ">
                     <div class="content ">
                         <div id="upperblog">
-                            <!-- <div class="blog ">
-                                <div class="col-sm-6 paddoff">
-                                    <div class="blog-main">
-                                        <p>Roadmap to learn Web Development</p>
-                                        <h5><span ><i class="fa fa-user-circle"></i></span> John Doe . December 27,2017</h5>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 paddoff">
-                                    <div class="blog-top">
-                                        <p>Introduction to Artificial Intelligent</p>
-                                        <h5><span ><i class="fa fa-user-circle"></i></span> John Doe . December 27,2017</h5>
-                                    </div>
-                                    <div class="blog-btm">
-                                        <p>Facts to know about Data Science</p>
-                                        <h5><span ><i class="fa fa-user-circle"></i></span> John Doe . December 27,2017</h5>
-                                    </div>
-                                </div>
-                            </div>
--->
                         </div>
-                            <div style="width:100%;" class="box-b">
-                                    <div class="datalist" id="datalist" style="float:left;width: 100%;"></div>
-                            </div>    
-                        
+                        <div style="width:100%;" class="box-b">
+                            <div class="datalist" id="datalist" style="float:left;width: 100%;"></div>
+                        </div>                           
                     </div>
                 </div>
             </div>
@@ -107,29 +86,12 @@
     </section>    
 
     <script type ="text/javascript">
-    getupperblog();
-    getblogdata();
-        function getblogdata()
-        {
-            console.log('xxx');
-            var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
-            
-            $.ajax({
-                type: "POST",
-                url: "ajax/getblog.php",
-                data: {token:token},
-                
-                success: function(data){
-                    $('#datalist').html(data);
-                }
-            });
-            
-        }
+        getupperblog();
+        getblogdata();
+
         function getupperblog()
-{
-    console.log('xxxx');
-            
-            var token = "<?php echo password_hash("getdata1", PASSWORD_DEFAULT)?>";
+        {
+            var token = "<?php echo password_hash("upperdata", PASSWORD_DEFAULT)?>";
             $.ajax({
                 type: "POST",
                 url: "ajax/getblog.php",
@@ -139,11 +101,22 @@
                     $('#upperblog').html(data);
                 }
             });
-
-}    </script>
+        }
+        function getblogdata()
+        {
+            var token = "<?php echo password_hash("lowerdata", PASSWORD_DEFAULT)?>";
+            $.ajax({
+                type: "POST",
+                url: "ajax/getblog.php",
+                data: {token:token},
+                
+                success: function(data){
+                    $('#datalist').html(data);
+                }
+            });
+        }       
+    </script>
     <script type="text/javascript">
-        
-
         function show(){
             var sidenav= document.getElementsByClassName("sidenav");
             console.log("check1");

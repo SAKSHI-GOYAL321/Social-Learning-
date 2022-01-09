@@ -45,45 +45,7 @@
                             <!-- <div>
                                 <h2 style="text-align: center; color: slategray;">My Profile</h2>
                             </div> -->
-                            <form action="" class="form">
-                                
-                                <div class="margin">
-                                    <label>Subject:</label>
-                                    <select id="subj" name="subj" class="form-control form-style" required>
-                                        <option value="webd">Data Structure and Algorithm</option>
-                                        <option value="DataS">DataBase Management System</option>
-                                        <option value="AI">Programming Languages</option>
-                                        <option value="Android">OOPs</option>
-                                        <option value="Android">Networking</option>
-                                        <option value="Android">Operating System</option>
-                                        <option value="Android">Software Engineering</option>
-                                        <option value="Android">Development</option>
-                                    </select>
-                                </div>
-                                <div class="margin">
-                                    <label>Topic:</label>
-                                    <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
-                                </div>
-                                <div class="margin">
-                                    <label>Content Type:</label>
-                                    <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
-                                        <option value="select">--Select option--</option>
-                                        <option value="file">File</option>
-                                        <option value="link">Link</option>
-                                    </select>
-                                </div>
-                                <div class="margin">
-                                    <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
-                                        class="form-control form-style" required>
-                                </div>
-                                <div class="margin">
-                                    <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style" required>
-                                </div>
-                                <div class="margin">
-                                    <input type="submit" value="Upload" class="log-btn">
-                                </div>
-
-                            </form>
+                            
                         </div>
                     </div>
                 </div>    

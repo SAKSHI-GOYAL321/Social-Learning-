@@ -137,8 +137,9 @@ ul{
     bottom: 0px;
     left: 0px;
     right: 0px;
+    margin-top:10px;
     margin-bottom: 0px;
-    position: fixed;
+    
 }
 
 .footer-distributed .footer-left{
@@ -271,10 +272,13 @@ ul{
 
 .margin{
   margin: 12px 4px;
+
 }
+
+
 .form-style{
-  float: right;
-  width: 80%;
+  
+  width: 100%;
 }
 .checkbox-link{
   margin: 24px;
@@ -304,4 +308,9 @@ textarea{
   width: 80% !important;
   display: inline !important;
   margin-top: 0px;
+}
+
+/*btn*/
+.log-btn{
+margin-top:146px;
 }
