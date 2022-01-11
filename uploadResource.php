@@ -109,12 +109,11 @@
             $.ajax({
                         type: "POST",
                         url: "ajax/getResource.php",
-                        
                         data:{token:token},
                         success: function(data){
                     $('#datalist').html(data);
                 }
-                    });
+            });
         }
          function uploadfiles(){
            

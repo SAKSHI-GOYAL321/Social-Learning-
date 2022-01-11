@@ -67,6 +67,21 @@
             </div>
         </section>
              -->
+
+        <script  type="text/javascript">
+             view();
+            function view(){
+                var id = <?php echo $_GET['bid'] ?>;
+                $.ajax({
+                    type: "POST",
+                    url: "ajax/blogpage.php",
+                    data: {bid:id},
+                    success: function(data){
+                        $('#blog').html(data);
+                    }
+                });    
+            }
+        </script>
         <script type="text/javascript">
             function show(){
                 var sidenav= document.getElementsByClassName("sidenav");
@@ -82,20 +97,8 @@
                 // sidenav.classList.toggle("active");
                 console.log("check3");
             } 
-            view();
-            function view(){
-                $.ajax({
-                type: "POST",
-                url: "ajax/blogpage.php",
-                data: {},
-                success: function(data){
-                    $('#blog').html(data);
-                    alert(data);
-                }
-            });
-                
-            }
         </script>
+        
         <script src="script.js"  type="text/javascript"></script>
     </body>
     <footer class="footer-distributed">
