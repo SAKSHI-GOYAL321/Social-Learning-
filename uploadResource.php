@@ -51,14 +51,14 @@
                                 <div class="margin">
                                     <label>Subject:</label>
                                     <select id="subj" name="subj" class="form-control form-style" required>
-                                        <option value="webd">Data Structure and Algorithm</option>
-                                        <option value="DataS">DataBase Management System</option>
-                                        <option value="AI">Programming Languages</option>
-                                        <option value="Android">OOPs</option>
-                                        <option value="Android">Networking</option>
-                                        <option value="Android">Operating System</option>
-                                        <option value="Android">Software Engineering</option>
-                                        <option value="Android">Development</option>
+                                        <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                        <option value="DataBase Management System">DataBase Management System</option>
+                                        <option value="Programming Languages">Programming Languages</option>
+                                        <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                        <option value="Networking">Networking</option>
+                                        <option value="Operating System">Operating System</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Development">Development</option>
                                     </select>
                                 </div>
                                 <div class="margin">
@@ -89,9 +89,7 @@
                                 </div>
 
                             </form>
-                            <div style="width:100%;">
-                                    <div class="datalist" id="datalist" style="float:left;width: 100%;"></div>
-                            </div>  
+                            
                         </div>
                     </div>
                 </div>    
@@ -101,20 +99,7 @@
        
  
     <script type="text/javascript">
-           getResource();
-
-        function getResource(){
-
-            var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
-            $.ajax({
-                        type: "POST",
-                        url: "ajax/getResource.php",
-                        data:{token:token},
-                        success: function(data){
-                    $('#datalist').html(data);
-                }
-            });
-        }
+        
          function uploadfiles(){
            
             var ctype = document.getElementById("ctype");

@@ -3,9 +3,11 @@
 	$valid_extension = array('pdf','docx','xlxs','xlsm');
 	$path = '../Uploaded_Resources/';
     include("connection.php");
+
     // echo isset($_POST['link']) . ", ";
     // echo !empty($_FILES['pdf_file']); ($_POST['link'] != "" 
     // echo "hello 1";
+    
     if(( $_POST['link'] == "" && !empty($_FILES["pdf_file"]) ) || ($_POST['link'] != "" ) ){
 
         $subject=$_POST['subj'];
@@ -25,9 +27,9 @@
             $link = NULL;
             $ext = pathinfo($doc, PATHINFO_EXTENSION);
             if(in_array($ext, $valid_extension)){
-			    $path = '../Uploaded_Resources/'.basename($doc);
+                $path = '../Uploaded_Resources/'.basename($doc);
 		    }
-            if(move_uploaded_file($tmp, $path)){
+            if(move_uploaded_file($tmp, $uploadpath)){
 		    }
         }
         // echo "hello3";
@@ -43,7 +45,6 @@
         else{
             echo 1;
         }
-        
     }
     else{
         echo 2;

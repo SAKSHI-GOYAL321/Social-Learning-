@@ -1,6 +1,76 @@
 <?php 
 include('connection.php');
+if(password_verify("data", $_POST['token'])){
+    $query = $db->prepare('SELECT * FROM blogdata where bid > ( (select COUNT(*) from blogdata) - 3)');
+    $data = array();
+    $execute=$query->execute($data);
+    $datarow=$query->fetch();
+    ?>
+    <div class="col-sm-6 paddoff">
+        <div class="grid">
+            <figure class=" blog-main effect-zoe">
+                <div class="imgblur" id="main-img">
+                    <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
+                </div>
+                <figcaption>
+                    <h2><?php echo $datarow['Title']; ?></h2>
+                    <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
+                </figcaption>
+            </figure>
+        </div>
+</div>
+        <div class="col-sm-6 paddoff">
+    <?php
+    //2nd Part
+    $datarow=$query->fetch();
+    ?>
+        <div class="grid">
+            <figure class=" blog-top effect-zoe">
+                <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
+                <figcaption>
+                    <h2><?php echo $datarow['Title']; ?></h2>
+                    <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
+                </figcaption>
+            </figure>
+        </div>
+    <?php
+    //3rd Part
+    $datarow=$query->fetch();
+    ?>
+        <div class="grid">
+            <figure class=" blog-btm effect-zoe">
+                <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
+                <figcaption>
+                    <h2><?php echo $datarow['Title']; ?></h2>
+                    <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+        
 
+
+    <div class="grid">
+        <?php while($datarow = $query->fetch()){
+            ?>
+					<figure class="effect-zoe">
+						<img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
+						<figcaption>
+							<h2>Creative <span>Zoe</span></h2>
+							<p class="icon-links">
+								<a href="#"><span class="icon-heart"></span></a>
+								<a href="#"><span class="icon-eye"></span></a>
+								<a href="#"><span class="icon-paper-clip"></span></a>
+							</p>
+							<p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
+						</figcaption>			
+					</figure>
+				<?php 
+            }
+                ?>	
+	</div>
+ <?php
+}
 if(password_verify("lowerdata",$_POST['token']))
 {
     $query = $db->prepare('SELECT * FROM blogdata');
@@ -57,8 +127,9 @@ else if(password_verify("upperdata",$_POST['token']))
     $datarow=$query->fetch();
     ?>
         <div class="blog-top">
-            <p><?php echo $datarow['Title']; ?></p>
-            <h5><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
+        <!-- echo $datarow['Title'];  -->
+            <p><?php ?></p>
+            <h5></h5>
         </div>
     <?php
     //3rd Part

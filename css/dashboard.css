@@ -111,7 +111,7 @@ ul{
     margin-left: 200px; 
    } 
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 756px) {
     #side-nav .sidenav{display:none;}
     #top-nav .topnav .fa{display:block;}
 

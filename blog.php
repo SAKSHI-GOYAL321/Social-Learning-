@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/imageHower.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -43,6 +44,8 @@
                 </div>
                 <div class="col-sm-10 ">
                     <div class="content ">
+                        <div id="grid">
+                        </div>
                         <div id="upperblog">
                         </div>
                         <div style="width:100%;" class="box-b">
@@ -86,9 +89,22 @@
     </section>    
 
     <script type ="text/javascript">
-        getupperblog();
+        getblog();
+        // getupperblog();
         getblogdata();
 
+        function getblog(){
+            var token = "<?php echo password_hash("data", PASSWORD_DEFAULT)?>";
+            $.ajax({
+                type: "POST",
+                url: "ajax/getblog.php",
+                data: {token:token},
+                
+                success: function(data){
+                    $('#grid').html(data);
+                }
+            });
+        }
         function getupperblog()
         {
             var token = "<?php echo password_hash("upperdata", PASSWORD_DEFAULT)?>";

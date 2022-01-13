@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/resource.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
     <section id="top-nav">
@@ -41,11 +44,35 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="content">
-                        <div class="">
-                            <!-- <div>
-                                <h2 style="text-align: center; color: slategray;">My Profile</h2>
-                            </div> -->
-                            
+                        <div class="Data">
+                            <div class="heading">
+                                <h1>Resources</h1>
+                            </div>
+                            <form action="" id="resoucedata" class="input" >
+                                <div class="filestyle">
+                                    <label for="">Select a Field</label>
+                                    <select name="cfield" id="cfield" class="form-control">
+                                        <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                        <option value="DataBase Management System">DataBase Management System</option>
+                                        <option value="Programming Languages">Programming Languages</option>
+                                        <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                        <option value="Networking">Networking</option>
+                                        <option value="Operating System">Operating System</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Development">Development</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+</label>
+                            </form>
+                            <div style="width:100%;">
+                                    <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
+                            </div>   
                         </div>
                     </div>
                 </div>    
@@ -53,7 +80,22 @@
         </div>
     </section>
        
-   
+   <script type = "text/javascript">
+          getResource();
+
+        function getResource(){
+
+            var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
+            $.ajax({
+                        type: "POST",
+                        url: "ajax/getResource.php",
+                        data:{token:token},
+                        success: function(data){
+                    $('#Resources').html(data);
+                }
+            });
+        }
+   </script>
     <script type="text/javascript">
         function sample(){
             var a = document.getElementById("ctype");

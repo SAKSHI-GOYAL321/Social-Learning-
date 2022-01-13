@@ -58,6 +58,7 @@
                     </div>
                     <div class="col-sm-10">
                         <div class="content">
+                        
                             <div id = "blog" class="blog-page"  style="width:100%;">
                                 <!-- Content of Blog  -->
                             </div>
