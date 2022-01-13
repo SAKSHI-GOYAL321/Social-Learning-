@@ -7,7 +7,7 @@
     // echo isset($_POST['link']) . ", ";
     // echo !empty($_FILES['pdf_file']); ($_POST['link'] != "" 
     // echo "hello 1";
-    
+
     if(( $_POST['link'] == "" && !empty($_FILES["pdf_file"]) ) || ($_POST['link'] != "" ) ){
 
         $subject=$_POST['subj'];
@@ -29,7 +29,7 @@
             if(in_array($ext, $valid_extension)){
                 $path = '../Uploaded_Resources/'.basename($doc);
 		    }
-            if(move_uploaded_file($tmp, $uploadpath)){
+            if(move_uploaded_file($tmp, $path)){
 		    }
         }
         // echo "hello3";
