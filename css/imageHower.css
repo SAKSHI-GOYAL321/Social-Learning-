@@ -130,10 +130,10 @@ figure.effect-zoe h5.icon-links {
 	/* color: #301f1f; */
 	font-size: 1.4em;
 }
-figure .imgblur:hover{
+/* figure .imgblur:hover{
 	filter: blur(8px) !important;
   -webkit-filter: blur(8px) !important;
-}
+} */
 
 figure.effect-zoe:hover h5.icon-links :hover,
 figure.effect-zoe:hover h5.icon-links :focus {

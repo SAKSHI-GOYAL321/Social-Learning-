@@ -8,10 +8,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Resource</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/sidenav.css">
     <link rel="stylesheet" href="css/resource.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -28,7 +28,8 @@
             </div>
         </div>
     </section>
-    <section id="side-nav">
+    <!-- id="side-nav" -->
+    <section id = "side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
@@ -42,40 +43,37 @@
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
-                <div class="col-sm-10">
+                <!-- <div class="col-sm-10">
                     <div class="content">
-                        <div class="Data">
+                        <div class="col-sm-10">
                             <div class="heading">
                                 <h1>Resources</h1>
                             </div>
-                            <form action="" id="resoucedata" class="input" >
-                                <div class="filestyle">
-                                    <label for="">Select a Field</label>
-                                    <select name="cfield" id="cfield" class="form-control">
-                                        <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
-                                        <option value="DataBase Management System">DataBase Management System</option>
-                                        <option value="Programming Languages">Programming Languages</option>
-                                        <option value="Object Oriented Programming">Object Oriented Programming</option>
-                                        <option value="Networking">Networking</option>
-                                        <option value="Operating System">Operating System</option>
-                                        <option value="Software Engineering">Software Engineering</option>
-                                        <option value="Development">Development</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="switch">
-                                        <input type="checkbox" checked>
-                                        <span class="slider round"></span>
-                                    </label>
-                                </div>
-</label>
-                            </form>
                             <div style="width:100%;">
-                                    <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
-                            </div>   
+                                        <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
+                            </div> 
+                        </div>
+                        <div class="col-sm-2 vl">                         
+                            <div class="Data">
+                                <form action="" id="resoucedata" class="input" >
+                                    <div class="filestyle">
+                                        <label for="">Select a Field</label>
+                                        <select name="cfield" id="cfield" class="form-control">
+                                            <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                            <option value="DataBase Management System">DataBase Management System</option>
+                                            <option value="Programming Languages">Programming Languages</option>
+                                            <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                            <option value="Networking">Networking</option>
+                                            <option value="Operating System">Operating System</option>
+                                            <option value="Software Engineering">Software Engineering</option>
+                                            <option value="Development">Development</option>
+                                        </select>
+                                    </div>
+                                </form>   
+                            </div>
                         </div>
                     </div>
-                </div>    
+                <!-- </div>     -->
             </div>
         </div>
     </section>
@@ -163,3 +161,5 @@
     </div>
 </footer>
 </html>
+
+

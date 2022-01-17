@@ -14,6 +14,7 @@
 <div class="box">
     <p> <?php echo $datarow['Topic']; ?> </p>
     <embed src="./<?php echo $datarow['Files'] ?>" width="500px" height="300px"  type="application/pdf" />
+    <a href="<?php echo $datarow['Link'] ?>" ><?php echo $datarow['Link'] ?> </a>
     <!-- ./Uploaded_Resources/WDB+JavaScript+Introduction.pdf -->
    <!-- ./ -->
    <?php 

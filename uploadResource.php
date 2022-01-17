@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <!-- <link rel="stylesheet" href="css/sidenav.css"> -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -31,13 +33,13 @@
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
                     <div class="sidenav">
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
-                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Services</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        <a href="profile.php" ><span class="display" style="padding: 4px;"><i class="fa fa-user-circle"></i>Profile</span></a>
+                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i>Dashboard</span></a>
+                        <a href="blog.php" ><span style="padding: 4px;"><i class="fa fa-pencil"></i>Blog</span></a>
+                        <a href="resourse.php" ><span style="padding: 4px;"><i class="fa fa-pencial">Resource</span></a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i> About</span></a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-cog"></i>Services</span></a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i>Contact</span></a>
                     </div>
                 </div>
                 <div class="col-sm-10">
@@ -143,6 +145,10 @@
 
    
     <script type="text/javascript">
+        function{
+            var value = document.getElementsByClassName("display");
+            value.innerText = "";
+        }
         
         function sample(){
             var a = document.getElementById("ctype");
