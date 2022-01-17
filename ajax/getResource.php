@@ -18,7 +18,7 @@
     <!-- ./Uploaded_Resources/WDB+JavaScript+Introduction.pdf -->
    <!-- ./ -->
    <?php 
-//    echo $datarow['Files']
+   echo $datarow['Files']
  ?>
 </div>
 <?php

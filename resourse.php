@@ -34,16 +34,16 @@
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
                     <div class="sidenav">
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
-                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Services</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        <a href="profile.php" style="padding: 4px;"><i class="fa fa-user-circle"> <span> Profile </span></a>
+                        <a href="dashboard.php" style="padding: 4px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
+                        <a href="blog.php"style="padding: 4px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
+                        <a href="resourse.php" style="padding: 4px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
+                        <a href="#" style="padding: 4px;"><i class="fa fa-info"></i> <span>About</span></a>
+                        <a href="#"style="padding: 4px;"><i class="fa fa-cog"></i><span>Services</span></a>
+                        <a href="#"style="padding: 4px;"><i class="fa fa-phone"></i><span>Contact</span></a>
                     </div>
                 </div>
-                <!-- <div class="col-sm-10">
+                 <div class="col-sm-10">
                     <div class="content">
                         <div class="col-sm-10">
                             <div class="heading">
@@ -68,12 +68,39 @@
                                             <option value="Software Engineering">Software Engineering</option>
                                             <option value="Development">Development</option>
                                         </select>
-                                    </div>
-                                </form>   
+                                        <div class="margin">
+                                    <label>Topic:</label>
+                                    <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
+                                </div>
+                                <div class="margin">
+                                    <label>About:</label>
+                                    <textarea type="text" id="about" name="about"  cols="50" rows="5" placeholder="Tell us something about the resource that you are sharing" class="form-control form-style" ></textarea>
+                                </div>
+                                <div class="margin">
+                                    <label >Content Type:</label>
+                                    <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
+                                        <option value="select">--Select option--</option>
+                                        <option value="file">File</option>
+                                        <option value="link">Link</option>
+                                    </select>
+                                </div>
+                                <div class="margin">
+                                    <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
+                                        class="form-control form-style" >
+                                </div>
+                                <div class="margin">
+                                    <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style">
+                                </div>
+                                <div class="margin">
+                                <input type="submit" value="Upload" style="margin-top:5px;" onclick="uploadfiles();" class="log-btn">
+                                </div>
+                                </div>
+
+                            </form>   
                             </div>
                         </div>
                     </div>
-                <!-- </div>     -->
+                </div>    
             </div>
         </div>
     </section>
