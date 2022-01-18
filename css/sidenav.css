@@ -78,18 +78,34 @@ ul{
   display: block;
 }
 .sidenav{
-  width: 3.66666667%;
+  width: 4.66666667%;
     height: 100%;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    transition:all 1s linear;
+    
     display: block;
     padding-top: 40px;
     background-color: steelblue;
 }
 
+span{
+  display:none;
+  transition:all 0.2s linear;
+}
+
+/* a :hover{
+    span{
+      display: block;
+    }
+} */
+
+span :hover, :focus{
+    width: 100px;
+    background-color: steelblue;
+    display: block;
+}
 
 .sidenav a {
     /* padding: 6px 28px 10px 30px;
@@ -108,14 +124,13 @@ ul{
   }
   .sidenav:hover {
     
-    /* background-color: rgb(56, 36, 184);
-    background-color: #1c3a5c; */
-    width:11.66666667%;
+    /* background-color: rgb(56, 36, 184); */
+    /* background-color: #1c3a5c; */
+  
   }
 
-  .sidenav .a span{
-    display:none;
-  } 
+ 
+
  /* .main {
     margin-left: 200px; 
    }  */

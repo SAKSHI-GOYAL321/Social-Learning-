@@ -13,18 +13,83 @@
     text-align: center;
     display: inline-block;
 }
-
+.left{
+    margin-left: 78px;
+}
 .vl {
   border-left: 6px solid rgb(10, 10, 10);
   height: 500px;
   position:fixed;
-  right: 131px;
-    top: 80px;
+  right: -8em;
+  top: 8em;
+  z-index: -1;
 }
 
+.center{
+    text-align: center;
+}
+.btn-style{
+    text-decoration: none;
+    margin: 4px;
+    padding: 10px 48px;
+    font-size: 16px;
+    /* border-color: transparent;
+    color: #e2e0e0;
+    background-color: #1b8eb6;
+    border-radius: 30px; */
+    font-weight: bold;
+    border-color: transparent;
+    color:  #ffffff;
+    background-color: #045a78;
+    border-radius: 20px;
+}
+input[type = button]{
+    text-decoration: none;
+    margin: 4px;
+    padding: 10px 48px;
+    font-size: 16px;
+    border-color: transparent;
+    color: #e2e0e0;
+    background-color: #1b8eb6;
+    border-radius: 30px;
+}
+
+.hl{
+    border-bottom: 3px solid #bab4b4;
+    width: 100%;
+}
+
+.mg{
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+}
 .filestyle{
     width:100%;
     float: right;
     /* margin:0px 40px; */
 }
 
+.box{
+    margin: 20px 33px;
+    float: left;
+}
+.box p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.open-file-style{
+    text-align: center;
+    margin: 4px;
+    padding: 10px 48px;
+    font-size: 16px;
+    border-color: transparent;
+    color: #faf5f5;
+    background-color: #3a484e;
+    border-radius: 30px;
+    transition: none;
+}
+.open-file-style a{
+    color: #faf5f5;
+}

@@ -32,32 +32,53 @@
     <section id = "side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
-                <div class="Ham col-sm-2 paddoff">
+                <div class="Ham paddoff">
                     <div class="sidenav">
-                        <a href="profile.php" style="padding: 4px;"><i class="fa fa-user-circle"> <span> Profile </span></a>
-                        <a href="dashboard.php" style="padding: 4px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
-                        <a href="blog.php"style="padding: 4px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
-                        <a href="resourse.php" style="padding: 4px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
-                        <a href="#" style="padding: 4px;"><i class="fa fa-info"></i> <span>About</span></a>
-                        <a href="#"style="padding: 4px;"><i class="fa fa-cog"></i><span>Services</span></a>
-                        <a href="#"style="padding: 4px;"><i class="fa fa-phone"></i><span>Contact</span></a>
+                        <a href="profile.php" style="text-align: center; padding: 10px;"><i class="fa fa-user-circle"></i><span> Profile </span></a>
+                        <a href="dashboard.php" style="text-align: center; padding: 10px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
+                        <a href="blog.php"style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
+                        <a href="resourse.php" style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
+                        <a href="#" style="text-align: center; padding: 10px;"><i class="fa fa-info"></i> <span>About</span></a>
+                        <a href="#"style="text-align: center; padding: 10px;"><i class="fa fa-cog"></i><span>Services</span></a>
+                        <a href="#"style="text-align: center; padding: 10px;"><i class="fa fa-phone"></i><span>Contact</span></a>
                     </div>
                 </div>
-                 <div class="col-sm-10">
+                <div class="col-sm-12">
                     <div class="content">
-                        <div class="col-sm-10">
+                        <div class="col-sm-8 left">
                             <div class="heading">
                                 <h1>Resources</h1>
                             </div>
+                            <div class ="center hl">
+                                <button class = "btn-style">File</button>
+                                <button class="btn-style">Link</button>
+                            </div>
                             <div style="width:100%;">
-                                        <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
+                                <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
                             </div> 
                         </div>
-                        <div class="col-sm-2 vl">                         
+                        
+                        <div class="col-sm-4 vl">                         
                             <div class="Data">
+                                <form >
+                                    <div class="filestyle hl mg">
+                                        <label>Select a Field</label>
+                                        <select id="subj" name="subj" class="form-control form-style">
+                                        <option value="select">--Search--</option>
+                                        <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                        <option value="DataBase Management System">DataBase Management System</option>
+                                        <option value="Programming Languages">Programming Languages</option>
+                                        <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                        <option value="Networking">Networking</option>
+                                        <option value="Operating System">Operating System</option>
+                                        <option value="Software Engineering">Software Engineering</option>
+                                        <option value="Development">Development</option>
+                                    </select>
+                                    </div>
+                                </form>
                                 <form action="" id="resoucedata" class="input" >
                                     <div class="filestyle">
-                                        <label for="">Select a Field</label>
+                                        <label for="">Select a Field:</label>
                                         <select name="cfield" id="cfield" class="form-control">
                                             <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
                                             <option value="DataBase Management System">DataBase Management System</option>
@@ -100,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>   
             </div>
         </div>
     </section>
