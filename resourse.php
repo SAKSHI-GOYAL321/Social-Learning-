@@ -34,13 +34,13 @@
             <div class="contain">
                 <div class="Ham paddoff">
                     <div class="sidenav">
-                        <a href="profile.php" style="text-align: center; padding: 10px;"><i class="fa fa-user-circle"></i><span> Profile </span></a>
+                        <a href="profile.php" style="text-align: center; padding: 10px;"><i  class="fa fa-user-circle "></i><span > Profile </span></a>
                         <a href="dashboard.php" style="text-align: center; padding: 10px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
                         <a href="blog.php"style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
                         <a href="resourse.php" style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
                         <a href="#" style="text-align: center; padding: 10px;"><i class="fa fa-info"></i> <span>About</span></a>
                         <a href="#"style="text-align: center; padding: 10px;"><i class="fa fa-cog"></i><span>Services</span></a>
-                        <a href="#"style="text-align: center; padding: 10px;"><i class="fa fa-phone"></i><span>Contact</span></a>
+                        <a href="#"style="text-align: center; padding: 10px;" class="demo" ><i class="fa fa-phone"></i><span class="p" >Contact</span></a>
                     </div>
                 </div>
                 <div class="col-sm-12">
@@ -92,11 +92,8 @@
                                         <div class="margin">
                                     <label>Topic:</label>
                                     <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
-                                </div>
-                                <div class="margin">
-                                    <label>About:</label>
-                                    <textarea type="text" id="about" name="about"  cols="50" rows="5" placeholder="Tell us something about the resource that you are sharing" class="form-control form-style" ></textarea>
-                                </div>
+                                       </div>
+                                
                                 <div class="margin">
                                     <label >Content Type:</label>
                                     <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
@@ -128,6 +125,7 @@
        
    <script type = "text/javascript">
           getResource();
+         
 
         function getResource(){
 
@@ -141,6 +139,45 @@
                 }
             });
         }
+
+        function uploadfiles(){
+           
+           var ctype = document.getElementById("ctype");
+           if(ctype.value != "select"){
+       
+               var form = document.getElementById("resoucedata");
+               var data = new FormData(form);
+               
+               
+               $.ajax({
+                       type: "POST",
+                       url: "ajax/Upload_pdf.php",
+                       data: data,
+                       contentType: false,
+                       processData: false,
+                       success: function(data){
+                           alert(data);
+                       
+                           if(data == 0)
+                           {
+                               alert("data inserted successfully");
+                           }
+                           else if(data == 1)
+                           {
+                               alert('data not inserted');
+                           }
+                           else if(data == 2)
+                           {
+                               alert("Please select an file/link");
+                           }
+                       }
+                   });
+                  
+           }
+           else{
+               alert('Please select an appropriate field');
+           }
+       }
    </script>
     <script type="text/javascript">
         function sample(){
@@ -178,6 +215,22 @@
             sidenav.classList.toggle("active");
             console.log("check3");
         } 
+        var demo = document.getElementsByClassName("demo");
+        demo.addEventListener('mouseover', mouseOver(), false);
+        demo.addEventListener('mouseout', mouseOut(), false);
+        // document.getElementsByClassName("demo").addEventListener("mouseover", mouseOver);
+        // document.getElementsByClassName("demo").addEventListener("mouseout", mouseOut);
+        var x=document.getElementsByClassName("p");
+
+function mouseOver() {
+  x.style.display = "block";
+//   x.style.width="100px";
+//   x.style.background-color="black";
+}
+
+function mouseOut() {
+  x.style.display = "none";
+}
     </script>
 </body>
 <footer class="footer-distributed">

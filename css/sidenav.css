@@ -90,9 +90,9 @@ ul{
     background-color: steelblue;
 }
 
-span{
+.sidenav a span{
   display:none;
-  transition:all 0.2s linear;
+  /* transition:all 0.2s linear; */
 }
 
 /* a :hover{
@@ -101,11 +101,11 @@ span{
     }
 } */
 
-span :hover, :focus{
+/* .sidenav a:hover{
     width: 100px;
     background-color: steelblue;
     display: block;
-}
+} */
 
 .sidenav a {
     /* padding: 6px 28px 10px 30px;
@@ -156,6 +156,7 @@ span :hover, :focus{
 .footer-distributed{
     background-color: #4c6c94;
     box-sizing: border-box;
+    z-index: 1;
     width: 100%;
     overflow: hidden;
     bottom: 0px;

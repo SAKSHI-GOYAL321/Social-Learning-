@@ -1,6 +1,7 @@
 .Data{
     width: 300px;
     float: left;
+    
 
 }
 /* .input{
@@ -18,11 +19,11 @@
 }
 .vl {
   border-left: 6px solid rgb(10, 10, 10);
-  height: 500px;
+  height: 406px;
   position:fixed;
   right: -8em;
   top: 8em;
-  z-index: -1;
+  
 }
 
 .center{

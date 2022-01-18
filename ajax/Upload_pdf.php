@@ -10,11 +10,11 @@
 
     if(( $_POST['link'] == "" && !empty($_FILES["pdf_file"]) ) || ($_POST['link'] != "" ) ){
 
-        $subject=$_POST['subj'];
+        $subject=$_POST['cfield'];
 		$topic=$_POST['topic'];
         $link = $_POST['link'];
 		$author = $_SESSION['uname'];
-        $about=$_POST['about'];
+        
 
         if($_POST['link'] != ""){
             $path = NULL;
@@ -36,8 +36,8 @@
         }
         // echo "hello3";
 
-        $query = $db->prepare('INSERT INTO resources(Subjects, Topic, Files, About, Link, Author) VALUES (?,?,?,?,?,?)');
-		$data=array($subject, $topic, $path1, $about, $link, $author);
+        $query = $db->prepare('INSERT INTO resources(Subjects, Topic, Files,  Link, Author) VALUES (?,?,?,?,?)');
+		$data=array($subject, $topic, $path1, $link, $author);
 		$execute=$query->execute($data);
         // echo "hello 4";
 
