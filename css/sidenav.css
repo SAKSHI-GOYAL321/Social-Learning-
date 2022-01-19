@@ -90,8 +90,16 @@ ul{
     background-color: steelblue;
 }
 
+.demo{
+
+}
+.p{
+  transition: all 0.2s linear;
+}
+
+
 .sidenav a span{
-  display:none;
+  display: none;
   /* transition:all 0.2s linear; */
 }
 
@@ -122,8 +130,9 @@ ul{
     color: #3f2828;
     display: block;
   }
-  .sidenav:hover {
-    
+  .sidenav :hover {
+    width: 100px;
+    padding: 4px;
     /* background-color: rgb(56, 36, 184); */
     /* background-color: #1c3a5c; */
   
@@ -149,6 +158,8 @@ ul{
 }
 
 #side-nav .content{
+  width:100%;
+  float: left;
   margin-bottom: 20%;
 } 
 

@@ -17,7 +17,7 @@
         
 
         if($_POST['link'] != ""){
-            $path = NULL;
+            $pathDB = NULL;
         }
         else
         {
@@ -28,7 +28,7 @@
             $ext = pathinfo($doc, PATHINFO_EXTENSION);
             if(in_array($ext, $valid_extension)){
                 $path = '../Uploaded_Resources/'.basename($doc);
-                $path1 = 'Uploaded_Resources/'.basename($doc);
+                $pathDB = 'Uploaded_Resources/'.basename($doc);
 		    }
             echo $path;
             if(move_uploaded_file($tmp, $path)){
@@ -37,7 +37,7 @@
         // echo "hello3";
 
         $query = $db->prepare('INSERT INTO resources(Subjects, Topic, Files,  Link, Author) VALUES (?,?,?,?,?)');
-		$data=array($subject, $topic, $path1, $link, $author);
+		$data=array($subject, $topic, $pathDB, $link, $author);
 		$execute=$query->execute($data);
         // echo "hello 4";
 

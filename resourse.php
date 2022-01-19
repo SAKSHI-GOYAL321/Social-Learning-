@@ -16,7 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <style>
+        .active{
+            display:block;
+            color: black;
+        }
+        .non-active{
+            display:none;
+        }
+    </style>
 </head>
 <body>
     <section id="top-nav">
@@ -38,42 +46,49 @@
                         <a href="dashboard.php" style="text-align: center; padding: 10px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
                         <a href="blog.php"style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
                         <a href="resourse.php" style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
-                        <a href="#" style="text-align: center; padding: 10px;"><i class="fa fa-info"></i> <span>About</span></a>
-                        <a href="#"style="text-align: center; padding: 10px;"><i class="fa fa-cog"></i><span>Services</span></a>
-                        <a href="#"style="text-align: center; padding: 10px;" class="demo" ><i class="fa fa-phone"></i><span class="p" >Contact</span></a>
-                    </div>
+                        <a href="#" style="text-align: center; padding: 10px;" class="demo"><i class="fa fa-info"></i> <span class="p">About</span></a>
+                        <a href="#"style="text-align: center; padding: 10px;" ><i class="p fa fa-cog"></i><span>Services</span></a>
+                        <div>
+                            <a href="#"style="text-align: center; padding: 10px;"><i class="p fa fa-phone"></i><span>Services</span></a>
+                        </div>
+                  </div>
                 </div>
                 <div class="col-sm-12">
                     <div class="content">
+                        <div class="col-sm-1"></div>
                         <div class="col-sm-8 left">
-                            <div class="heading">
-                                <h1>Resources</h1>
+                            <div style="width:100%; float:left;">
+                                <div class="heading">
+                                    <h1>Resources</h1>
+                                </div>
+                                <div class ="center hl">
+                                    <button class = "btn-style " id="bg1" onclick="getResource();" >FILE</button>
+                                    <button class="btn-style " id="bg2" onclick="getLinksData();">LINK</button>
+                                </div>
+                                <div style="width:100%;">
+                                    <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
+                                </div> 
+                                <!-- <div style="width:100%">
+                                    <div class="Links" id="Links" style="float:left; width:100%"></div>
+                                </div> -->
                             </div>
-                            <div class ="center hl">
-                                <button class = "btn-style">File</button>
-                                <button class="btn-style">Link</button>
-                            </div>
-                            <div style="width:100%;">
-                                <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
-                            </div> 
-                        </div>
-                        
-                        <div class="col-sm-4 vl">                         
-                            <div class="Data">
+                        </div> 
+                        <div class="col-sm-2 ">                         
+                            <div class="Data vl">
                                 <form >
                                     <div class="filestyle hl mg">
                                         <label>Select a Field</label>
                                         <select id="subj" name="subj" class="form-control form-style">
-                                        <option value="select">--Search--</option>
-                                        <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
-                                        <option value="DataBase Management System">DataBase Management System</option>
-                                        <option value="Programming Languages">Programming Languages</option>
-                                        <option value="Object Oriented Programming">Object Oriented Programming</option>
-                                        <option value="Networking">Networking</option>
-                                        <option value="Operating System">Operating System</option>
-                                        <option value="Software Engineering">Software Engineering</option>
-                                        <option value="Development">Development</option>
-                                    </select>
+                                            <option value="select">--Search--</option>
+                                            <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                            <option value="DataBase Management System">DataBase Management System</option>
+                                            <option value="Programming Languages">Programming Languages</option>
+                                            <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                            <option value="Networking">Networking</option>
+                                            <option value="Operating System">Operating System</option>
+                                            <option value="Software Engineering">Software Engineering</option>
+                                            <option value="Development">Development</option>
+                                        </select>
                                     </div>
                                 </form>
                                 <form action="" id="resoucedata" class="input" >
@@ -90,51 +105,96 @@
                                             <option value="Development">Development</option>
                                         </select>
                                         <div class="margin">
-                                    <label>Topic:</label>
-                                    <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
+                                            <label>Topic:</label>
+                                            <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
                                        </div>
                                 
-                                <div class="margin">
-                                    <label >Content Type:</label>
-                                    <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
-                                        <option value="select">--Select option--</option>
-                                        <option value="file">File</option>
-                                        <option value="link">Link</option>
-                                    </select>
-                                </div>
-                                <div class="margin">
-                                    <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
-                                        class="form-control form-style" >
-                                </div>
-                                <div class="margin">
-                                    <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style">
-                                </div>
-                                <div class="margin">
-                                <input type="submit" value="Upload" style="margin-top:5px;" onclick="uploadfiles();" class="log-btn">
-                                </div>
-                                </div>
-
-                            </form>   
+                                        <div class="margin">
+                                            <label >Content Type:</label>
+                                            <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
+                                                <option value="select">--Select option--</option>
+                                                <option value="file">File</option>
+                                                <option value="link">Link</option>
+                                            </select>
+                                        </div>
+                                        <div class="margin">
+                                            <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
+                                                class="form-control form-style" >
+                                        </div>
+                                        <div class="margin">
+                                            <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style btn btn-info">
+                                        </div>
+                                        <div class="margin">
+                                            <input type="submit" value="Upload" style="margin-top:5px;" onclick="uploadfiles();" class="log-btn btn btn-success">
+                                        </div>
+                                    </div> 
+                                </form>   
                             </div>
                         </div>
+                        <div class="col-sm-1"></div>
                     </div>
                 </div>   
             </div>
         </div>
     </section>
-       
+    <script type="text/javascript">
+        var demo = document.getElementsByClassName("demo");
+        demo.addEventListener('mouseover', mouseOver(), false);
+        demo.addEventListener('mouseout', mouseOut(), false);
+        // document.getElementsByClassName("demo").addEventListener("mouseover", mouseOver);
+        // document.getElementsByClassName("demo").addEventListener("mouseout", mouseOut);
+        var x= document.getElementsByClassName("p");
+        var span = document.getElementByTagName("span");
+            function mouseOver(){
+                demo.classList.toggle("active");
+
+                // x.style.display = "block";
+                //   x.style.width="100px";
+                //   x.style.background-color="black";
+            }    
+            function mouseOut() {
+                demo.style.display = "none";
+            }
+    </script>
+
+    <script>
+    </script>
    <script type = "text/javascript">
           getResource();
+        //   getLinksData();
+
+          function getLinksData(){
+            var bg_file = document.getElementById("bg1");
+            var bg_link = document.getElementById("bg2");
+            bg_file.style.backgroundColor = " rgb(213 218 220)";
+            bg_link.style.backgroundColor = "rgb(4, 90, 120)";
+
+              var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
+              $.ajax({
+                    type: "POST",
+                    url: "ajax/getResource.php",
+                    data:{token:token},
+                    success: function(data){
+                        // alert(data);
+                    $('#Resources').html(data);
+                }
+            });
+          }
          
 
         function getResource(){
+            var bg_file = document.getElementById("bg1");
+            var bg_link = document.getElementById("bg2");
+            bg_file.style.backgroundColor = "rgb(4, 90, 120)";
+            bg_link.style.backgroundColor = "rgb(213 218 220)";
 
             var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
             $.ajax({
-                        type: "POST",
-                        url: "ajax/getResource.php",
-                        data:{token:token},
-                        success: function(data){
+                    type: "POST",
+                    url: "ajax/getResource.php",
+                    data:{token:token},
+                    success: function(data){
+                        // alert(data);
                     $('#Resources').html(data);
                 }
             });
@@ -199,38 +259,23 @@
             }
         }
 
-        function show(){
-            var sidenav= document.getElementsByClassName("Ham");
-            console.log("check1");
-            if(sidenav.style.display==="none"){
-                alert("if ");
-                // sidenav.classList.remove = "non-active";
-                // sidenav.classList.add="active";
-            }
-            else{
-                // sidenav.classList.remove = "active";
-                // sidenav.classList.add="non-active";
-                alert("else");
-            }
-            sidenav.classList.toggle("active");
-            console.log("check3");
-        } 
-        var demo = document.getElementsByClassName("demo");
-        demo.addEventListener('mouseover', mouseOver(), false);
-        demo.addEventListener('mouseout', mouseOut(), false);
-        // document.getElementsByClassName("demo").addEventListener("mouseover", mouseOver);
-        // document.getElementsByClassName("demo").addEventListener("mouseout", mouseOut);
-        var x=document.getElementsByClassName("p");
+        // function show(){
+        //     var sidenav= document.getElementsByClassName("Ham");
+        //     console.log("check1");
+        //     if(sidenav.style.display==="none"){
+        //         alert("if ");
+        //         sidenav.classList.remove = "non-active";
+        //         sidenav.classList.add="active";
+        //     }
+        //     else{
+        //         sidenav.classList.remove = "active";
+        //         sidenav.classList.add="non-active";
+        //         alert("else");
+        //     }
+        //     sidenav.classList.toggle("active");
+        //     console.log("check3");
+        // } 
 
-function mouseOver() {
-  x.style.display = "block";
-//   x.style.width="100px";
-//   x.style.background-color="black";
-}
-
-function mouseOut() {
-  x.style.display = "none";
-}
     </script>
 </body>
 <footer class="footer-distributed">

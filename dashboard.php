@@ -35,7 +35,7 @@
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
+                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Services</a>
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
