@@ -16,15 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>
-        .active{
-            display:block;
-            color: black;
-        }
-        .non-active{
-            display:none;
-        }
-    </style>
 </head>
 <body>
     <section id="top-nav">
@@ -42,15 +33,13 @@
             <div class="contain">
                 <div class="Ham paddoff">
                     <div class="sidenav">
-                        <a href="profile.php" style="text-align: center; padding: 10px;"><i  class="fa fa-user-circle "></i><span > Profile </span></a>
-                        <a href="dashboard.php" style="text-align: center; padding: 10px;"><i class="fa fa-home"></i><span> Dashboard <span></a>
-                        <a href="blog.php"style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Blog</span></a>
-                        <a href="resourse.php" style="text-align: center; padding: 10px;"><i class="fa fa-pencil"></i><span>Resourse</span></a>
-                        <a href="#" style="text-align: center; padding: 10px;" class="demo"><i class="fa fa-info"></i> <span class="p">About</span></a>
-                        <a href="#"style="text-align: center; padding: 10px;" ><i class="p fa fa-cog"></i><span>Services</span></a>
-                        <div>
-                            <a href="#"style="text-align: center; padding: 10px;"><i class="p fa fa-phone"></i><span>Services</span></a>
-                        </div>
+                        <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
+                        <a href="dashboard.php" style="text-align: center; " class="tooltip"><i class="fa fa-home"></i><span class="tooltiptext"> Dashboard <span></a>
+                        <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
+                        <a href="resourse.php" style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Resourse</span></a>
+                        <a href="#" style="text-align: center;" class="tooltip"><i class="fa fa-info"></i> <span class="tooltiptext">About</span></a>
+                        <a href="#"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Services</span></a>
+                        <a href="#"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Services</span></a>
                   </div>
                 </div>
                 <div class="col-sm-12">
@@ -137,28 +126,7 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript">
-        var demo = document.getElementsByClassName("demo");
-        demo.addEventListener('mouseover', mouseOver(), false);
-        demo.addEventListener('mouseout', mouseOut(), false);
-        // document.getElementsByClassName("demo").addEventListener("mouseover", mouseOver);
-        // document.getElementsByClassName("demo").addEventListener("mouseout", mouseOut);
-        var x= document.getElementsByClassName("p");
-        var span = document.getElementByTagName("span");
-            function mouseOver(){
-                demo.classList.toggle("active");
-
-                // x.style.display = "block";
-                //   x.style.width="100px";
-                //   x.style.background-color="black";
-            }    
-            function mouseOut() {
-                demo.style.display = "none";
-            }
-    </script>
-
-    <script>
-    </script>
+    
    <script type = "text/javascript">
           getResource();
         //   getLinksData();
