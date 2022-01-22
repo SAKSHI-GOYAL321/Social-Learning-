@@ -43,15 +43,19 @@
                     </div>
                 </div>
                 <div class="col-sm-10 ">
-                    <div class="content ">
-                        <div id="grid">
+                   
+                  
+                        <div class="content ">
+                            <div id="grid">
                         </div>
                         <div id="upperblog">
                         </div>
                         <div style="width:100%;" class="box-b">
                             <div class="datalist" id="datalist" style="float:left;width: 100%;"></div>
                         </div>                           
-                    </div>
+                       
+                    
+                
                 </div>
             </div>
         </div>

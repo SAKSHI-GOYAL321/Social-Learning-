@@ -54,7 +54,7 @@
                                     <button class = "btn-style " id="bg1" onclick="getResource();" >FILE</button>
                                     <button class="btn-style " id="bg2" onclick="getLinksData();">LINK</button>
                                 </div>
-                                <div style="width:100%;">
+                                <div class="scroll" style="width:100%;">
                                     <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
                                 </div> 
                                 <!-- <div style="width:100%">
@@ -246,7 +246,7 @@
 
     </script>
 </body>
-<footer class="footer-distributed">
+<!-- <footer class="footer-distributed">
     <div class="col-sm-12">
         <div class="footer-distribution">
             <div class="col-sm-2"></div>
@@ -273,7 +273,7 @@
             <div class="col-sm-1"></div>    
         </div>               
     </div>
-</footer>
+</footer> -->
 </html>
 
 
