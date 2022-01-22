@@ -95,7 +95,7 @@ if(password_verify("lowerdata",$_POST['token']))
                 </div>
                 <div style =" ">
                     <p><?php echo $datarow['Title'];?></p>
-                    <a href="blogpage.php?bid=<?php echo $datarow['bid']; ?>" class="btn">View More</a>
+                    <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>" class="btn">View More</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,28 @@
+.card{
+    width:100%;
+    float: left;
+    margin-top: 30px;
+    box-shadow: 7px 7px 13px grey;
+}
+.club-content{
+    width: 100%;
+    float: left;
+    min-height: 250px;
+    padding: 50px 0px;
+}
+.image img{
+    width:100%;
+    min-height: 250px;
+}
+
+.btn{
+    width: 100%;
+    align-items: center;
+}
+
+.title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+}

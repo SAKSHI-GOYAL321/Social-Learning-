@@ -33,12 +33,12 @@
             <div class="contain">
                 <div class="col-sm-2">
                     <div class="sidenav active">
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
+                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                         <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Services</a>
+                        <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
@@ -53,9 +53,6 @@
                         <div style="width:100%;" class="box-b">
                             <div class="datalist" id="datalist" style="float:left;width: 100%;"></div>
                         </div>                           
-                       
-                    
-                
                 </div>
             </div>
         </div>
