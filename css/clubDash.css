@@ -26,3 +26,50 @@
     font-size: 18px;
     padding: 10px;
 }
+
+.head{
+    
+    margin:auto;
+    font-weight:bolder;
+}
+.head h1 p{
+    text-align: center;
+}
+
+.head h1{
+    font-weight:bold;
+}
+
+.head h1 span{
+    font-size:24px;
+    color:rgb(2, 87, 80);
+    border: solid 2px black;
+    border-radius:5px;
+    margin-right:60px;
+    float:right;
+}
+
+.head h1 span .fa{
+    color:rgb(16, 3, 128);
+}
+
+/*Create Club CSS*/
+#form{
+    
+    width: 500px;
+    margin: 0 auto;
+
+}
+
+.title h3{
+    font-weight:bold;
+}
+
+#form{
+    padding:5px;
+
+}
+
+#submit{
+margin-top:20px;
+}

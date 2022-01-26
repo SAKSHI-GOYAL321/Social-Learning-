@@ -28,6 +28,7 @@
             </div>
         </div>
     </section>
+  
     <section id="side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
@@ -42,7 +43,11 @@
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
+               
                 <div class="col-sm-10">
+                <div class="head">
+                    <h1><p>WELCOME TO CLUBS</p>   <span> <a href="createClub" >Create Your Own Club  <i class="fa fa-plus-circle"></i></a> </span></h1>
+                </div>
                     <div class="content" style="width:100%; float:left;">
                         <div class="col-sm-4">
                             <div class="card">
