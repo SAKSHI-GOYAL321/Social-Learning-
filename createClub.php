@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -42,17 +43,23 @@
                 </div>
                 <div class="col-sm-10">
                     <div class="content">
+                        <div class="title">
+                            <h3 >Create Your Club</h3>
+                        </div>
                         <form id = "form">
                             <div class="title">
-                                <h3 >Create Your Club</h3>
                                 <input type="text" name="title" id="title" placeholder="Enter Club Name" class="form-control ">
                             </div>
                             <div class="para">
                                 <textarea name="write" id="write" placeholder="Enter Club Description" cols="53" rows="10" class="form-control "></textarea>
                             </div>
                             <div>
-                                <label>Upload a Image</label>
-                                <input type="file" id="image_file" name="image_file" class="form-control ">
+                            <div>
+                                <!-- <label for="image_file" class="btn">Select Image</label> -->
+                                <!-- <input id="files" style="visibility:hidden;" type="file" > -->
+                                <input type="file" id="image_file" name="image_file"  class="form-control ">
+                                <!-- <button style="cursor:pointer" id="btn">Click me</button>
+                                <input type="file" id="input" style="display:block"> -->
                             </div>
                             <div>
                             <label>Select a Field</label>
@@ -78,9 +85,49 @@
         </div>
     </section>
     <script type="text/javascript">
-       
+        // document.getElementById('btn').addEventListener('click', () => { 
+        // document.getElementById('input').click();
+        // })
+            // $("#image_file").change(function() {
+            //     filename = this.image_file[0][name];
+            //     console.log(filename);
+            // });
+            
     </script>
-   
+   <script type="text/javascript">
+       function PostClub()
+        {
+            var form = document.getElementById("form");
+            var data = new FormData(form);
+    
+            $.ajax({
+    
+                    type: "POST",
+                    url: "ajax/PostClub.php",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function(data){
+                        if(data == 0)
+                        {
+                            alert('data inserted successfully');
+                        }
+                        else if(data == 1)
+                        {
+                            alert('data not inserted');
+                        }
+                        else if(data == -1)
+                        {
+                            alert("Please check your password");
+                        }
+                        else
+                        {
+                            alert(data);
+                        }
+                    }
+            });
+        }
+   </script>
 </body>
 <footer class="footer-distributed">
     <div class="col-sm-12">

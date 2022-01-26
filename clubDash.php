@@ -46,7 +46,8 @@
                
                 <div class="col-sm-10">
                 <div class="head">
-                    <h1><p>WELCOME TO CLUBS</p>   <span> <a href="createClub" >Create Your Own Club  <i class="fa fa-plus-circle"></i></a> </span></h1>
+                    <h1><p>WELCOME TO CLUBS</p>   
+                    <span> <a href="createClub.php" >Create Your Own Club  <i class="fa fa-plus-circle"></i></a> </span></h1>
                 </div>
                     <div class="content" style="width:100%; float:left;">
                         <div class="col-sm-4">
