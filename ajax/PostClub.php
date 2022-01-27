@@ -19,7 +19,7 @@
 		if(move_uploaded_file($tempname, $path)){
             
 		}
-
+        $clubImg = "img/club_images/" . strtolower($clubImg);
         $query = $db->prepare('INSERT INTO clubname (club_name, club_desc, club_img, club_admin) VALUES (?,?,?,?)');
 		$data=array($clubName, $clubDesc, $clubImg, $Admin);
 		$execute=$query->execute($data);

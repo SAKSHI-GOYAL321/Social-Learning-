@@ -5,6 +5,8 @@
         $query = $db->prepare('SELECT * FROM resources WHERE Files IS NOT NULL;');
         $data = array();
         $execute=$query->execute($data);
+
+        
 ?>
 <?php
             while($datarow=$query->fetch())

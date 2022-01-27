@@ -50,108 +50,29 @@
                     <span> <a href="createClub.php" >Create Your Own Club  <i class="fa fa-plus-circle"></i></a> </span></h1>
                 </div>
                     <div class="content" style="width:100%; float:left;">
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="col-sm-4 paddoff">
-                                    <div class="club-content">
-                                        <div class="title">
-                                            <p>Thapa Club</p>
-                                        </div>
-                                        <div class="btn">
-                                            <button class="btn btn-primary">Join</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 paddoff">
-                                    <div class="image">
-                                        <img src="img/web2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                        <div class="card">
-                                <div class="col-sm-4 paddoff">
-                                    <div class="club-content">
-                                        <div class="title">
-                                            <p>Thapa Club</p>
-                                        </div>
-                                        <div class="btn">
-                                            <button class="btn btn-primary">Join</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 paddoff">
-                                    <div class="image">
-                                        <img src="img/web2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                        <div class="card">
-                                <div class="col-sm-4 paddoff">
-                                    <div class="club-content">
-                                        <div class="title">
-                                            <p>Thapa Club</p>
-                                        </div>
-                                        <div class="btn">
-                                            <button class="btn btn-primary">Join</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 paddoff">
-                                    <div class="image">
-                                        <img src="img/web2.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
+                        <div id="Club-data" class="data">
                         </div>
                     </div>
-                </div>
-                <!--<div class="contain sidebar">
-                    <ul>
-                        <li>
-                            <a href="dashboard.php">
-                                <i class='bx bx-home' type="solid"></i>
-                                <span>Home</span>  
-                            </a>
-                        </li>
-                       
-                        <li >
-                            <a href="#">
-                                <i class="bx bx-book-bookmark"></i>
-                                <span class="dropdwn" onclick="menu_dropdwn()"> Blog</span> 
-                                <span class="fas fa-caret-down first"></span> 
-                            </a>
-                        </li>
-                        <li>
-                           
-                            <a href="#">
-                                <i class="bx bx-home-smile"></i>
-                                <span> About</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-pencil"></i>
-                                <span> Services</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-phone-call"></i>
-                                <span>Contact Us</span>  
-                            </a>
-                        </li>
-                    </ul>
-                </div>-->
-                    
-                
+                </div>  
             </div>
         </div>
     </section>
-       
+    <script type="text/javascript">
+        getClubNames();
+
+        function getClubNames(){
+            var token = "<?php echo password_hash("ClubNames", PASSWORD_DEFAULT) ?>"
+            $.ajax({
+                type : "POST",
+                url: "ajax/getClubNames.php",
+                data: {token:token},
+                
+                success: function(data){
+                    $('#Club-data').html(data);
+                }
+            });
+        }
+    </script>
     <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("Ham");
