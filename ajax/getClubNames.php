@@ -8,8 +8,8 @@
         while($datarow = $query->fetch())
         {
         ?>
-                <div class="col-sm-4">
-                            <div class="card">
+                <div class="col-sm-4 ">
+                            <div class="card wrap-image">
                                 <div class="col-sm-4 paddoff">
                                     <div class="club-content">
                                         <div class="title">

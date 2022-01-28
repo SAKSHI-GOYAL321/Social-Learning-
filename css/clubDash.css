@@ -2,13 +2,16 @@
     width:100%;
     float: left;
     margin-top: 30px;
+    /* overflow: hidden; */
+    overflow: hidden;
+    display: flex;
     box-shadow: 7px 7px 13px grey;
 }
 .club-content{
     width: 100%;
     float: left;
     min-height: 250px;
-    padding: 50px 0px;
+    padding: 10px 0px;
 }
 .image img{
     width:100%;
@@ -19,6 +22,7 @@
 .btn{
         width: 100%;
         align-items: center;
+        
         /* border: 1px solid #d0d0d0; */
 }
 
@@ -26,7 +30,9 @@
     text-align: center;
     font-weight: 600;
     font-size: 18px;
-    padding: 10px 0px;
+    height: 131px;
+    margin-top: 43px;
+    padding: 0px 20px;
 }
 .para{
     text-align: center;
@@ -39,6 +45,7 @@
     
     margin:auto;
     font-weight:bolder;
+    height:68px !important
 }
 .head h1 p{
     text-align: center;
@@ -100,3 +107,121 @@ textarea :focus, input:focus{
     width: 100%;
     float: left;
 }
+
+/*hover effect*/
+.wrap-image {
+    position: relative;
+  }
+  .wrap-image::before, .wrap-image::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border: 2px solid black;
+    transition: all 0.25s ease-out;
+  }
+  .wrap-image::before {
+    background-color: #74afbb;
+    top: -15px;
+    left: -15px;
+  }
+  .wrap-image::after {
+    bottom: -15px;
+    right: -15px;
+  }
+  .wrap-image:hover::before {
+    top: 15px;
+    left: 15px;
+  }
+  .wrap-image:hover::after {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+
+/*create your club*/
+.product {
+    background-image: linear-gradient(
+        135deg
+        , #a8edea 0%, #fed6e3 100%);
+            border-radius: 5px;
+            height: 50%;
+           
+            width: 50%;
+    
+  }
+  
+  .product:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+  }
+  
+  /* .contents {
+    background: white;
+    border-radius: 30%;
+    height: 84%;
+    margin: 8%;
+    position: absolute;
+    width: 84%;
+    vertical-align: middle;
+    z-index: 5000;
+  } */
+  
+  .product:hover .effect-1,
+  .product:hover .effect-2 {
+    display: block;
+  }
+  
+  .effect-1,
+  .effect-2 {
+    border-radius: 30%;
+    /* display: none; */
+    mix-blend-mode: multiply;
+    height: 13%;
+    opacity: 1;
+    position: absolute;
+    width: 50%;
+    z-index: 3000;
+  }
+  
+  .effect-1 {
+    animation: rotate 1.8s linear infinite;
+    background: cyan;
+    margin-left:140px;
+    margin-top:0px;
+  }
+  
+  .effect-2 {
+    animation: rotate 1.2s linear reverse infinite;
+    background: #e7a9ff;
+    margin-left:140px;
+    margin-top:0px;
+  }
+  
+  @keyframes rotate {
+    0% {
+      top: 0;
+      left: 8%;
+    }
+    25% {
+      top: 8%;
+      left: 0%;
+    }
+    50% {
+      top: 16%;
+      left: 8%;
+    }
+    75% {
+      top: 8%;
+      left: 16%;
+    }
+    100% {
+      top: 0;
+      left: 8%;
+    }
+  }
+  
+
+/*    */
