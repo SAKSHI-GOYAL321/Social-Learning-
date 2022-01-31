@@ -10,8 +10,7 @@ include('connection.php');
     <div class="blog-page">
         <h1><?php $datarow['Title']?></h1>
         <img src="social/<?php $datarow['ImagePath'] ?>" alt="Reload">
-        <p><?php $datarow['Content'] ?></p>
+        <pre><?php $datarow['Content'] ?></pre>
     </div>
     <?php
-
 ?>

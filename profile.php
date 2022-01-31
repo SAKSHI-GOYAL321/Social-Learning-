@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <div class="">
+                    <div class="box-club">
                         <div>
                             <h2 style="text-align: center; color: slategray;">My Profile</h2>
                         </div>

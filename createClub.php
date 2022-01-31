@@ -42,13 +42,13 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <div class="content">
-                        <div class="title">
+                    <div class="content box-club">
+                        <div class="heading_name">
                             <h3 >Create Your Club</h3>
                         </div>
                         <form id = "form">
-                            <div class="title">
-                                <input type="text" name="title" id="title" placeholder="Enter Club Name" class="form-control ">
+                            <div class="title_name">
+                                <input type="text" name="title_name" id="title_name" placeholder="Enter Club Name" class="form-control ">
                             </div>
                             <div class="para">
                                 <textarea name="write" id="write" placeholder="Enter Club Description" cols="53" rows="10" class="form-control "></textarea>
@@ -57,7 +57,7 @@
                             <div>
                                 <!-- <label for="image_file" class="btn">Select Image</label> -->
                                 <!-- <input id="files" style="visibility:hidden;" type="file" > -->
-                                <input type="file" id="image_file" name="image_file"  class="form-control ">
+                                <input type="file" id="image_file" name="image_file"  class="form-control form-style">
                                 <!-- <button style="cursor:pointer" id="btn">Click me</button>
                                 <input type="file" id="input" style="display:block"> -->
                             </div>
@@ -76,7 +76,7 @@
                                         </select>
                             </div>
                             <div>
-                                <input type="submit" value="Create" name="submit" id="submit" onclick="PostClub();">
+                                <input type="submit" value="Create" name="submit" id="submit" onclick="PostClub();"  class="button-56">
                             </div>
                         </form>
                     </div>
@@ -158,3 +158,7 @@
     </div>
 </footer>
 </html>
+
+
+
+
