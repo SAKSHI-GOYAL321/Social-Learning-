@@ -42,19 +42,8 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <div class="club-box-content content">
-                            <div class="col-sm-4 paddoff">
-                                <div class="side-img">
-                                    <img src="img/tech.jpg" alt="">
-                                    <img src="img/tech2.jpeg" alt="">
-                                </div>
-                                <div class="side-img">
-                                    <img src="img/tech.jpg" alt="">
-                                    <img src="img/tech2.jpeg" alt="">
-                                </div>
-                            </div>
-                            <div class="col-sm-8 paddoff">
-                                    <div class="content box-club-1">
+                    <div class="club-box-content">
+                                    <div class=" box-club-1">
                                         <div class="heading_name">
                                             <h3 >Create Your Club</h3>
                                         </div>
@@ -73,10 +62,10 @@
                                                 <!-- <button style="cursor:pointer" id="btn">Click me</button>
                                                 <input type="file" id="input" style="display:block"> -->
                                             </div>
-                                            <div>
-                                            <label>Select a Field</label>
+                                            <div class="para">
+                                            <!-- <label>Select a Field</label> -->
                                                         <select id="subj" name="subj" class="form-control form-style">
-                                                            <option value="select">--Search--</option>
+                                                            <option value="select">--Search your field--</option>
                                                             <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
                                                             <option value="DataBase Management System">DataBase Management System</option>
                                                             <option value="Programming Languages">Programming Languages</option>
@@ -92,7 +81,7 @@
                                             </div>
                                         </form>
                                     </div>
-                            </div>
+                    
                     </div>
                 </div>
             </div>

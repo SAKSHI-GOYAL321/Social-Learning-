@@ -79,10 +79,8 @@
 
 /*Create Club CSS*/
 #form{
-    
-    width: 500px;
-    margin: 0 auto;
-
+  width: 80%;
+  margin: 0 auto;
 }
 
 .title h3{
@@ -154,26 +152,31 @@ textarea :focus, input:focus{
   margin-bottom: 50px;
   width: 100%;
   float: left;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-  height: 500px;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+  /* height: 500px; */
 }
 .box-club-1{
-  background-color: lavenderblush;
-  width: 100%;
-  /* margin: 3% auto; */
-  /* border-radius: 48px; */
-  padding: 11px;
+    background-color: lavenderblush;
+    background-image: url(../img/wearable-technologies.jpg);
+    background-position: initial;
+    width: 60%;
+    margin: 3% auto;
+    padding: 11px;
   /* box-shadow: 7px 7px 13px grey; */
-  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
+.heading_name h3{
+  font-weight: bolder;
+  font-size: 35px;
+  font-family: system-ui;
+}
 .side-img{
   width: 100%;
   float: left;
-  height: 270px;
+  /* height: 270px; */
 }
 .side-img img{
-  width: 50%;
+  /* width: 50%; */
   float: left;
   height: 100%;
 }
@@ -276,26 +279,27 @@ textarea :focus, input:focus{
 /* CSS */
 .button-56 {
   align-items: center;
-  background-color: #f4e3e3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 41px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+    background-color: #ecd7d7;
+    border: 2px solid #c8b3b3;
+    border-radius: 8px;
+    /* box-sizing: border-box; */
+    color: #4e4343;
+    cursor: pointer;
+    /* display: flex; */
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 38px;
+    /* justify-content: center; */
+    /* line-height: 24px; */
+    /* max-width: 100%; */
+    /* padding: 0 25px; */
+    /* position: relative; */
+    /* text-align: center; */
+    /* text-decoration: none; */
+    user-select: none;
+    -webkit-user-select: none;
+    /* touch-action: manipulation;*/
 }
 
 .button-56:after {
