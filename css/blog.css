@@ -25,17 +25,19 @@
     text-align: right;
     font-size: 32px;
     color: ivory;
-    width: 48% ;
+    width: 65% ;
     line-height: 1.2;
     margin: 0px 24px 52px 7px;
+    margin: 10px 12px;
     position: absolute; 
     bottom: 0; 
     right: 0;
 }
 .blog-main h5{
     color: rgb(202, 202, 190);
-    width: 40%;
+    width: 65% ;
     margin: 8px 24px 30px 7px;
+    margin: 10px 12px;
     position: absolute; 
     bottom: 0; 
     right: 0;
@@ -61,8 +63,9 @@
 
 .blog-top h5{
     color: rgb(202, 202, 190);
-    width: 38%;
+    width: 65%;
     margin: -2px 24px 37px 7px;
+    margin: 10px 5px;
     /* position: absolute; */
     bottom: 0;
     right: 0;
@@ -90,8 +93,9 @@
 
 .blog-btm h5{
     color: rgb(202, 202, 190);
-    width: 38%;
+    width: 65%;
     margin: -2px 24px 37px 7px;
+    margin: 10px 5px;
     position: absolute;
     bottom: 0;
     right: 0;

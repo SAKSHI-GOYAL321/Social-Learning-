@@ -52,8 +52,6 @@
                     <h1><p>WELCOME TO CLUBS</p></h1>
                 </div>
                 <div class="p">
-                     
-                    
                      <a  class="c" href="createClub.php" >Create Your Own Club  <i class="fa fa-plus-circle"></i></a> 
                </div>
                     <div class="content" style="width:100%; float:left;">

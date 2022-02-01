@@ -10,12 +10,17 @@ if(password_verify("data", $_POST['token'])){
         <div class="grid">
             <figure class=" blog-main effect-zoe">
                 <div class="imgblur" id="main-img">
-                    <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
+                    <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/></a>
                 </div>
-                <figcaption>
-                    <h2><?php echo $datarow['Title']; ?></h2>
+                <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><figcaption>
+                    <h2><?php
+                        if(strlen($datarow['Title']) > 60)
+                            echo substr($datarow['Title'],0, 55). "...";
+                        else
+                            echo $datarow['Title'];
+                    ?></h2>
                     <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
-                </figcaption>
+                </figcaption></a>
             </figure>
         </div>
 </div>
@@ -24,13 +29,19 @@ if(password_verify("data", $_POST['token'])){
     //2nd Part
     $datarow=$query->fetch();
     ?>
+
         <div class="grid">
             <figure class=" blog-top effect-zoe">
-                <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
-                <figcaption>
-                    <h2><?php echo $datarow['Title']; ?></h2>
+            <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/></a>
+            <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><figcaption>
+                    <h2><?php
+                        if(strlen($datarow['Title']) > 60)
+                            echo substr($datarow['Title'],0, 55). "...";
+                        else
+                            echo $datarow['Title'];
+                    ?></h2>
                     <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
-                </figcaption>
+                </figcaption></a>
             </figure>
         </div>
     <?php
@@ -39,11 +50,16 @@ if(password_verify("data", $_POST['token'])){
     ?>
         <div class="grid">
             <figure class=" blog-btm effect-zoe">
-                <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
-                <figcaption>
-                    <h2><?php echo $datarow['Title']; ?></h2>
+            <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/></a>
+            <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>"><figcaption>
+                    <h2><?php
+                        if(strlen($datarow['Title']) > 60)
+                            echo substr($datarow['Title'],0, 55). "...";
+                        else
+                            echo $datarow['Title'];
+                    ?></h2>
                     <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
-                </figcaption>
+                </figcaption></a>
             </figure>
         </div>
     </div>
@@ -106,41 +122,3 @@ if(password_verify("lowerdata",$_POST['token']))
     </div>
 <?php
 }
-else if(password_verify("upperdata",$_POST['token']))
-{
-    $query = $db->prepare('SELECT * FROM blogdata where bid > ( (select COUNT(*) from blogdata) - 3)');
-    $data = array();
-    $execute=$query->execute($data);
-
-    //Ist Part 
-    $datarow=$query->fetch();
-?>
-    <div class="col-sm-6 paddoff">
-        <div class="blog-main">
-            <p><?php echo $datarow['Title']; ?></p>
-            <h5><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>                                
-        </div>
-    </div>
-    <div class="col-sm-6 paddoff">
-    <?php
-    //2nd Part
-    $datarow=$query->fetch();
-    ?>
-        <div class="blog-top">
-        <!-- echo $datarow['Title'];  -->
-            <p><?php ?></p>
-            <h5></h5>
-        </div>
-    <?php
-    //3rd Part
-    $datarow=$query->fetch();
-    ?>
-        <div class="blog-btm">
-            <p><?php echo $datarow['Title']; ?></p>
-            <h5><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
-        </div>  
-    </div>
-
-<?php
-}
-?>

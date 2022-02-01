@@ -149,15 +149,33 @@ textarea :focus, input:focus{
   
 
 /*create your club*/
-
-.box-club{
+.club-box-content{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+  float: left;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  height: 500px;
+}
+.box-club-1{
   background-color: lavenderblush;
-  width: 60%;
-  margin: 3% auto;
+  width: 100%;
+  /* margin: 3% auto; */
   /* border-radius: 48px; */
   padding: 11px;
   /* box-shadow: 7px 7px 13px grey; */
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+
+.side-img{
+  width: 100%;
+  float: left;
+  height: 270px;
+}
+.side-img img{
+  width: 50%;
+  float: left;
+  height: 100%;
 }
 .product {
     background-image: linear-gradient(
