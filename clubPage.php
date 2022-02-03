@@ -11,9 +11,10 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    
+    <link rel="stylesheet" href="css/clubPage.css">
     <!-- <link rel="stylesheet" href="css/clubDash.css"> -->
-    <link rel="stylesheet" href="css/sidenav.css">
+   
     <link rel="stylesheet" href="css/resource.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
@@ -30,29 +31,49 @@
             </div>
         </div>
     </section>
-  
-    <section id="side-nav">
+    <section id="clubpage">
         
             
-                <div class="Ham paddoff">
-                <div class="sidenav">
-                        <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
-                        <a href="dashboard.php" style="text-align: center; " class="tooltip"><i class="fa fa-home"></i><span class="tooltiptext"> Dashboard <span></a>
-                        <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
-                        <a href="resourse.php" style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Resourse</span></a>
-                        <a href="#" style="text-align: center;" class="tooltip"><i class="fa fa-info"></i> <span class="tooltiptext">About</span></a>
-                        <a href="#"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Services</span></a>
-                        <a href="#"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Contact</span></a>
-                  </div>
-                </div>
-        <div class="col-sm-12">
+        
+        <div class="col-sm-12 paddoff">
             <div class="contain"> 
-                <div class="col-sm -2"></div>
-                <div class="col-sm -8"></div>
-                <div class="col-sm -2"></div>       
+                <div class="col-sm-2 paddoff">
+                    <div class="events">
+                        
+                         <a class="button-33" id="contact">Add Events</a>
+                        
+
+                                                <div id="contactForm">
+
+                                                <h1>Keep in touch!</h1>
+                                                <small>I'll get back to you as quickly as possible</small>
+                                                
+                                                <form action="#">
+                                                    <input placeholder="Name" type="text" required />
+                                                    <input placeholder="Email" type="email" required />
+                                                    <input placeholder="Subject" type="text" required />
+                                                    <textarea class="comment" placeholder="Comment"></textarea>
+                                                    <input class="formBtn" type="submit" />
+                                                    <input class="formBtn" type="reset" />
+                                                </form>
+                                                </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-sm-8">
+
+                </div>
+                <div class="col-sm -2">
+
+                </div>       
             
             
         </div>
+</section>
         
 
               
@@ -79,6 +100,28 @@
             sidenav.classList.toggle("active");
             console.log("check3");
         } 
+    </script>
+
+    <script type="text/javascript">
+ 
+
+$(function() {
+  
+  // contact form animations
+  $('#contact').click(function() {
+    $('#contactForm').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#contactForm");
+
+    if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+  
+});
     </script>
 </body>
 <footer class="footer-distributed">
