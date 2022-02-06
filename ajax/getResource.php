@@ -33,7 +33,7 @@
             $execute=$query->execute($data);
 
         ?>
-            <table border = "2" id="customers">
+            <table border="2" id="customers">
                 <tr>
                     <th>Topic</th>
                     <th>url</th>

@@ -1,6 +1,55 @@
+.paddoff{
+  padding: 0px !important;
+}
+
+/* top-nav bar */
+#top-nav{
+  width: 100%;
+}
+
+.topnav{
+    width: 100%;
+    background-color: #2F5168;
+    background-color: #4c6c94;
+    height: 40px;
+    position: static;
+}
+.topnav a{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    /* border: 1px solid #f2f2f2; */
+}
+.topnav a:hover {
+    background-color:#f2f2f2;
+    color: steelblue;
+  }
+  .topnav span,i.fas{
+    height: 10px;
+    width: 10px;
+  }
+.topnav .fa{
+    float:left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 16px;
+    font-size: 17px;
+    transition: 0.4s;
+    cursor: pointer;
+    height: 40px;
+    /* display: none; */
+  }
+.topnav .fa:hover{
+    background-color:#f2f2f2;
+    color: steelblue;
+}
+
 .events{
     border: 2px solid black;
-    height:500px;
+    height: 673px;
     width:100%;
     background-color: rgb(3, 49, 24);
 }
@@ -31,7 +80,7 @@
   
   .button-33:hover {
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+    /* transform: scale(1.05) rotate(-1deg); */
   }
 
   /*pop css*/
@@ -55,7 +104,7 @@
     border: 1px solid white;
   }
   
-  #contact:hover { background: #666; }
+  #contact:hover { background: #dbfffc;}
   #contact:active { background: #444; }
   
   #contactForm { 
@@ -84,14 +133,14 @@
     width: 280px; 
     padding: .4em;
   }
-.comment{
+.About-Event{
    height: 80px; 
   resize: none; 
   margin: .8em auto;
   font-family: inherit; 
   text-transform: inherit; 
   font-size: inherit;
-  
+  background-color: white;
   display: block; 
   width: 280px; 
   padding: .4em;}
@@ -107,3 +156,66 @@
     border: none;
     height: 30px;
   }
+
+/* Scroll-bar */
+
+.scroll{
+    height: 673px !important;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+/* Discussion */
+
+.discussion{
+  width:100%;
+  float:left;
+  height: 673px;
+  background-color: cadetblue;
+}
+.post{
+  width:100%;
+}
+.Add-post{
+  width: 100%;
+}
+
+.post .Add-post .user-icon{
+  float: left;
+    margin: 1.5em;
+}
+.post .Add-post input{
+  width: 80% !important;
+    float: left;
+    border-radius: 25px;
+    margin: 20px;
+    height: 50px;
+    text-decoration: none;
+    border: 2px solid gray;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.post .Add-post .fa{
+  float: left;
+  color: white;
+  /* margin: 0.8em; */
+  margin: auto;
+  padding: auto 0,8em;
+  font-size: xxx-large;
+  border: 2px solid gray;
+  border-radius: 30px;
+}
+
+.Add-post input{
+  color: black !important;
+}
+.Add-post textarea :focus, input:focus{
+  color:black !important;
+}
+
+/* Member */
+.member{
+  width:100%;
+  float:left;
+}

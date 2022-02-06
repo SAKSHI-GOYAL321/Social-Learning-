@@ -19,7 +19,7 @@ if(password_verify("data", $_POST['token'])){
                         else
                             echo $datarow['Title'];
                     ?></h2>
-                    <h5 class="icon-links"><span ><i class="fa fa-user-circle"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
+                    <h5 class="icon-links"><span ><i class="fa C"></i></span> <?php echo $datarow['Author']; ?> . <?php echo $datarow['Date']; ?></h5>
                 </figcaption></a>
             </figure>
         </div>
