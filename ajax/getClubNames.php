@@ -16,7 +16,7 @@
                                             <p><?php echo $datarow['club_name'] ?></p>
                                         </div>
                                         <div class="btn">
-                                            <a href="../clubPage.php?club_id=<?php echo $datarow['club_id']?>"><button class="btn btn-primary">Join</button></a>
+                                            <a href="./clubPage.php?club_id=<?php echo $datarow['club_id']?>"><button class="btn btn-primary">Join</button></a>
                                         </div>
                                     </div>
                                 </div>

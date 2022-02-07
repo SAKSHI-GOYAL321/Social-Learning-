@@ -36,8 +36,7 @@
             <div class="contain"> 
                 <div class="col-sm-2 paddoff">
                     <div class="events">
-                        
-                         <a class="button-33" id="contact">Add Events</a>
+                        <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
                             <h1>Add an Up-comming Event</h1>
                             <form action="#">
@@ -49,9 +48,7 @@
                                <input class="formBtn" type="reset" />
                             </form>
                         </div>
-
                     </div>
-
                 </div>
                 <div class="col-sm-8 paddoff">
                     <div class=" scroll discussion">
@@ -69,23 +66,25 @@
                     <div class="member">
                     </div>
                 </div>        
-        </div>
+            </div>
         </div>
 </section>
     <script type="text/javascript">
-        // connectClubPage();
+        connectClubPage();
             function connectClubPage(){
                 var id = <?php echo $_GET['club_id'] ?>;
                 $.ajax({
                     type: "POST",
                     url: "ajax/ClubPage.php",
-                    data: {Club_id:id},
+                    data: {club_id:id},
                     success: function(data){
                         $('#Club-Page').html(data);
                     }
                 });   
             }
     </script>
+    <script src="clubDash.js"></script>
+
     <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("Ham");
