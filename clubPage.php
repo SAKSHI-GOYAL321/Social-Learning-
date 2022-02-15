@@ -128,7 +128,7 @@
                 });
             }
     </script>
-    <script src="clubDash.js"></script>
+    <!-- <script src="clubDash.js"></script> -->
 
     <script type="text/javascript">
         function show(){

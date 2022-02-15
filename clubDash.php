@@ -48,7 +48,6 @@
                 <div class="head product">
                 <div class="effect-1"></div>
                     <div class="effect-2"></div>
-
                     <h1><p>WELCOME TO CLUBS</p></h1>
                 </div>
                 <div class="p">

@@ -77,7 +77,7 @@
                 var id = <?php echo $_GET['bid'] ?>;
                 $.ajax({
                     type: "POST",
-                    url: "ajax/blogpage.php",
+                    url: "ajax/viewBlog.php",   //ajax/blogpage.php
                     data: {bid:id},
                     success: function(data){
                         $('#blog').html(data);
@@ -102,7 +102,6 @@
             } 
         </script>
         
-        <script src="script.js"  type="text/javascript"></script>
     </body>
     <footer class="footer-distributed">
         <div class="col-sm-12">
