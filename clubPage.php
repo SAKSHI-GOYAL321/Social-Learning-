@@ -94,8 +94,6 @@
                 var time = document.getElementById('time').value;
                 var about = document.getElementById('about').value;
                 alert(name);
-                // var form = document.getElementById("eventForm");
-                // var data = new FormData(form);
                 $.ajax({
                         type: "POST",
                         url: "ajax/UploadEvents.php",
@@ -116,8 +114,7 @@
                         }
                     });
             }
-            // connectEvents();
-
+        connectEvents();
             function connectEvents(){
                 var id = <?php echo $_GET['club_id'] ?>;
                 var token = "<?php echo password_hash('Events', PASSWORD_DEFAULT); ?>";
@@ -151,33 +148,28 @@
             console.log("check3");
         } 
     </script>
-<script type="text/javascript">
-    $('form').submit(function(e) {
-    e.preventDefault();
-});</script>
-
-
 
     <script type="text/javascript">
+        $(function() {
+            // contact form animations
+            $('#contact').click(function() {
+                $('#contactForm').fadeToggle();
+            })
+            $(document).mouseup(function (e) {
+                var container = $("#contactForm");
 
-
-$(function() {
-  
-  // contact form animations
-  $('#contact').click(function() {
-    $('#contactForm').fadeToggle();
-  })
-  $(document).mouseup(function (e) {
-    var container = $("#contactForm");
-
-    if (!container.is(e.target) // if the target of the click isn't the container...
-        && container.has(e.target).length === 0) // ... nor a descendant of the container
-    {
-        container.fadeOut();
-    }
-  });
-  
-});
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    container.fadeOut();
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $('form').submit(function(e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 </html>
