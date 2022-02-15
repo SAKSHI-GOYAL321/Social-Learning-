@@ -39,16 +39,20 @@
                         <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
                             <h1>Add an Up-comming Event</h1>
-                            <form action="#">
-                                <input placeholder="Event Name" type="text" required />
-                                <input placeholder="Date" type="date" required />
-                                <input placeholder="Time" type="time" required />
-                               <textarea class="About-Event" placeholder="About Event"></textarea>
-                                <input class="formBtn" type="submit" />
+                            <form name="eventForm">
+                                <input id="name" name="name" placeholder="Event Name" type="text" required />
+                                <input id="date"name="date" placeholder="Date" type="date" required />
+                                <input id="time" name="time" placeholder="Time" type="time" required />
+                                <textarea id="about" name="about" class="About-Event" placeholder="About Event"></textarea>
+                                <input class="formBtn" type="submit" onclick="connectEventsToDataBase();" />
                                <input class="formBtn" type="reset" />
                             </form>
                         </div>
+
+                        <div id="club-events" >
+                        </div>
                     </div>
+                    
                 </div>
                 <div class="col-sm-8 paddoff">
                     <div class=" scroll discussion">
@@ -82,6 +86,50 @@
                     }
                 });   
             }
+
+            function connectEventsToDataBase(){
+                var id = '<?php echo $_GET['club_id']; ?>';
+                var name = document.getElementById('name').value;
+                var date = document.getElementById('date').value;
+                var time = document.getElementById('time').value;
+                var about = document.getElementById('about').value;
+                alert(name);
+                // var form = document.getElementById("eventForm");
+                // var data = new FormData(form);
+                $.ajax({
+                        type: "POST",
+                        url: "ajax/UploadEvents.php",
+                        data: {club_id:id, name:name, date:date, time:time, about:about},
+                        success: function(data){
+                            if(data == 0)
+                            {
+                                alert("data inserted successfully");
+                            }
+                            else if(data == 1)
+                            {
+                                alert('data not inserted');
+                            }
+                            else
+                            {
+                                alert(data);
+                            }
+                        }
+                    });
+            }
+            // connectEvents();
+
+            function connectEvents(){
+                var id = <?php echo $_GET['club_id'] ?>;
+                var token = "<?php echo password_hash('Events', PASSWORD_DEFAULT); ?>";
+                $.ajax({
+                    type: "POST",
+                    url: "ajax/ClubPage.php",
+                    data: {club_id:id},
+                    success: function(data){
+                        $('#club-events').html(data);
+                    }
+                });
+            }
     </script>
     <script src="clubDash.js"></script>
 
@@ -103,9 +151,15 @@
             console.log("check3");
         } 
     </script>
+<script type="text/javascript">
+    $('form').submit(function(e) {
+    e.preventDefault();
+});</script>
+
+
 
     <script type="text/javascript">
- 
+
 
 $(function() {
   
