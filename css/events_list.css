@@ -1,32 +1,35 @@
 .desc{
     border:2px solid white;
-    width:70%;
+    width:80%;
    
    
     color:aliceblue;
     
     padding:5px;
- 
+    display: inline-block;
 
     background-color: rgb(0, 3, 3);
-
+    border-radius: 0px 20px 20px 0px;
+    min-height: 80px;
 }
 
 .date{
-    border:2px solid aqua;
-    width:10%;
-   
-    
-    padding:5px;
-    float:left;
+    background-color: white;
+    width: 20%;
+    font-size: 18px;
+    color: saddlebrown;
+    padding: 5px;
+    float: left;
+    min-height: 80px;
 }
 
 .event{
+    width: 80%;
     margin:auto;
-    margin-left: 38px;
-    min-height:100px;
-    max-height:200px;
-
+    /* margin-left: 38px; */
+    min-height:80px;
+    max-height:150px;
+    margin-bottom: 10px;
 
 }
 .desc .event_name{
@@ -41,3 +44,52 @@
     
 }
 
+/* pop-up event design  */
+
+
+.pop-up {
+    position:absolute;
+    height:100vh;
+    width:100%;
+    background-color:rgba(0,0,0, .4);
+    top:0;
+    left:0;
+    visibility:hidden;
+    opacity:0;
+    transition:all .3s;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  } /* Background */
+  
+  .pop-up:target {
+    visibility:visible;
+    opacity:1;
+  } /* */
+  
+  .pop-up__content {
+    height:300px;
+    width:75%;
+    background-color: #e5e8f0;
+    border-radius:8px;
+    
+    transform:scale(.5);
+    transition: all .5s;
+    
+    position:relative;
+  }
+  
+  .pop-up:target .pop-up__content {
+    transform:scale(1)
+  }
+  
+  .pop-up__close {
+    position: absolute;
+    top:10px;
+    right:20px;
+    
+    color: #D0EFB1;
+    font-size:25px;
+    font-weight:700;
+  }

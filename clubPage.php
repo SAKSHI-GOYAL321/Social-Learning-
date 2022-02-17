@@ -45,6 +45,7 @@
                                 <input id="date"name="date" placeholder="Date" type="date" required />
                                 <input id="time" name="time" placeholder="Time" type="time" required />
                                 <textarea id="about" name="about" class="About-Event" placeholder="About Event"></textarea>
+                                <input id="link" name = "link" tpe="text" required placeholder="Enter link to the Event"/>
                                 <input class="formBtn" type="submit" onclick="connectEventsToDataBase();" />
                                <input class="formBtn" type="reset" />
                             </form>
@@ -94,11 +95,12 @@
                 var date = document.getElementById('date').value;
                 var time = document.getElementById('time').value;
                 var about = document.getElementById('about').value;
+                var link = document.getElementById('link').value;
                 alert(name);
                 $.ajax({
                         type: "POST",
                         url: "ajax/UploadEvents.php",
-                        data: {club_id:id, name:name, date:date, time:time, about:about},
+                        data: {club_id:id, name:name, date:date, time:time, about:about, link:link},
                         success: function(data){
                             if(data == 0)
                             {
