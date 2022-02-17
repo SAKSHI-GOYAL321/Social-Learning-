@@ -15,6 +15,7 @@
     <!-- <link rel="stylesheet" href="css/clubDash.css"> -->
     <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
     <link rel="stylesheet" href="css/clubPage.css">
+    <link rel="stylesheet" href="css/events_list.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,7 +35,7 @@
     <div class="Club-Page">        
         <div class="col-sm-12 paddoff">
             <div class="contain"> 
-                <div class="col-sm-2 paddoff">
+                <div class="col-sm-3 paddoff">
                     <div class="events">
                         <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
@@ -54,7 +55,7 @@
                     </div>
                     
                 </div>
-                <div class="col-sm-8 paddoff">
+                <div class="col-sm-7 paddoff">
                     <div class=" scroll discussion">
                         <div class="post">
                             <form>
@@ -120,7 +121,7 @@
                 var token = "<?php echo password_hash('Events', PASSWORD_DEFAULT); ?>";
                 $.ajax({
                     type: "POST",
-                    url: "ajax/ClubPage.php",
+                    url: "ajax/getEvents.php",
                     data: {club_id:id},
                     success: function(data){
                         $('#club-events').html(data);

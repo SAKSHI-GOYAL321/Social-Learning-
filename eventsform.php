@@ -28,5 +28,23 @@
     </div>
   </div>  
 </div>
+
+
+
+<script>
+  connectEvents();
+            function connectEvents(){
+                var id = <?php echo $_GET['club_id'] ?>;
+                var token = "<?php echo password_hash('Events', PASSWORD_DEFAULT); ?>";
+                $.ajax({
+                    type: "POST",
+                    url: "ajax/ClubPage.php",
+                    data: {club_id:id},
+                    success: function(data){
+                        $('#club-events').html(data);
+                    }
+                });
+            }
+</script>
 </body>
 </html>

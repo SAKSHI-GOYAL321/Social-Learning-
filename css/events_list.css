@@ -1,0 +1,43 @@
+.desc{
+    border:2px solid white;
+    width:70%;
+   
+   
+    color:aliceblue;
+    
+    padding:5px;
+ 
+
+    background-color: rgb(0, 3, 3);
+
+}
+
+.date{
+    border:2px solid aqua;
+    width:10%;
+   
+    
+    padding:5px;
+    float:left;
+}
+
+.event{
+    margin:auto;
+    margin-left: 38px;
+    min-height:100px;
+    max-height:200px;
+
+
+}
+.desc .event_name{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    
+}
+
+.desc .event_time{
+    color:grey;
+    
+}
+
