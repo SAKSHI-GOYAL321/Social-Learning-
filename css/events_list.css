@@ -78,6 +78,7 @@
     transition: all .5s;
     
     position:relative;
+    padding: 24px;
   }
   
   .pop-up:target .pop-up__content {
@@ -93,3 +94,16 @@
     font-size:25px;
     font-weight:700;
   }
+.pop-up__content h4{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: cadetblue;
+}
+.pop-up__content, .about_event_detail{
+  color: #014f52;
+  font-size: 14px;
+}
+/* .about_event_detail{
+  color:black;
+} */
