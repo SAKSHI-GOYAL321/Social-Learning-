@@ -9,6 +9,7 @@
     display: inline-block;
 
     background-color: rgb(0, 3, 3);
+    background-color: rgb(25 250 250 / 26%);
     border-radius: 0px 20px 20px 0px;
     min-height: 80px;
 }
@@ -49,7 +50,7 @@
 
 .pop-up {
     position:absolute;
-    height:100vh;
+    height: 673px;
     width:100%;
     background-color:rgba(0,0,0, .4);
     top:0;
@@ -87,10 +88,9 @@
   
   .pop-up__close {
     position: absolute;
-    top:10px;
-    right:20px;
-    
-    color: #D0EFB1;
+    top: 2px;
+    right: 20px;
+    color: #546247;
     font-size:25px;
     font-weight:700;
   }
@@ -107,3 +107,10 @@
 /* .about_event_detail{
   color:black;
 } */
+.pop-up__content button{
+  border-radius: 11px;
+  padding: 5px;
+  color: #074b4e;
+  background-color: #8db9ba6e;
+  /* border-color: currentColor; */
+}
