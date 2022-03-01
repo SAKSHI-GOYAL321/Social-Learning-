@@ -8,21 +8,23 @@ $execute=$query->execute($data);
 
 while($data_row=$query->fetch())
 {
-    $name = $data_row['event_name'];
-    $date = $data_row['event_date'];
-    $time = $data_row['event_time'];
-    $desc = $data_row['about_event'];
-    $link = $data_row['link'];
+    $newDate = date('d M Y',strtotime($data_row['event_date']));
+    // echo $newDate;
+    
+    // $newTime = strftime('%H:%M %r');
+    // echo $newTime;
+    // print_r(strptime($newTime,'%H:%M %r'));
+
 ?>
     <div class="events_row ">
         <a href="#pop-up_<?php echo $data_row['event_id']; ?>"><div class="event">
                 <div class="date">
-                    <p class="event_date"><?php echo $data_row['event_date'];?> </p>
+                    <p class="event_date"><?php echo $data_row['event_date']; ?> </p>
                 </div>
                 <div class="desc">
                     <p class="event_name"><?php echo $data_row['event_name'];?> </p>
                     
-                    <p class="event_time fa fa-clock-o"><?php echo $data_row['event_time'];?> </p>
+                    <p class="event_time fa fa-clock-o"><?php echo substr($data_row['event_time'] ,0, 5)?> </p>
                 </div>
         </a>
         <div class="pop-up" id="pop-up_<?php echo $data_row['event_id']; ?>" >
@@ -31,8 +33,8 @@ while($data_row=$query->fetch())
             <h4><?php echo $data_row['event_name']; ?></h4>
             <p class="about_event_detail"><?php  echo $data_row['about_event']; ?></p>
             <p><?php echo $data_row['event_date']; ?></p>
-            <p><?php echo $data_row['event_time']; ?></p>
-            <button onclick=" window.location.href = <?php echo $data_row['link']; ?>" >Click Here</button>
+            <p><?php echo substr($data_row['event_time'] ,0, 5) ?></p>
+            <a href="<?php echo $data_row['link'] ?>" target="_blank">Continue</a>
             </div>
         </div>
     </div>

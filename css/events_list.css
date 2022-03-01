@@ -107,10 +107,10 @@
 /* .about_event_detail{
   color:black;
 } */
-.pop-up__content button{
+.pop-up__content a{
   border-radius: 11px;
   padding: 5px;
   color: #074b4e;
   background-color: #8db9ba6e;
-  /* border-color: currentColor; */
+  text-decoration: none;
 }
