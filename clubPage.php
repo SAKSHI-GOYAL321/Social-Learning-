@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="col-sm -2 paddoff">
-                    <div class="member">
+                    <div id="member">
                     </div>
                 </div>        
             </div>
@@ -129,6 +129,20 @@
                         $('#club-events').html(data);
                     }
                 });
+            }
+        ShowMembers();
+            function ShowMembers(){
+                var id = <?php echo $_GET['club_id'] ?>;
+                var token = "<?php echo password_hash('Members', PASSWORD_DEFAULT); ?>";
+                $.ajax({
+                    type: "POST",
+                    url: "ajax/getMembers.php",
+                    data: {club_id:id},
+                    success: function(data){
+                        $('#member').html(data);
+                    }
+                });
+                console.log("check");
             }
     </script>
     <!-- <script src="clubDash.js"></script> -->
