@@ -18,12 +18,22 @@
     min-height: 250px;
     padding: 15px;
 }
-
-.btn{
-        width: 100%;
-        align-items: center;
-        
-        /* border: 1px solid #d0d0d0; */
+.btn-style-block{
+  float: left;
+    width: 60%;
+    align-items: center;
+    margin: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    margin-left: 34px;
+}
+.btn-1{
+  width: 100%;
+  margin: 5px;
+}
+.width100{
+  width: 100%;
 }
 .p{
   width: 50%;
@@ -39,6 +49,7 @@
     font-weight: 600;
     font-size: 18px;
     height: 131px;
+    height: 80px;
     margin-top: 43px;
     padding: 0px 20px;
 }
