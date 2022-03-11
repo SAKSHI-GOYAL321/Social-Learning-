@@ -238,7 +238,7 @@ textarea :focus, input:focus{
   .effect-1,
   .effect-2 {
     border-radius: 30%;
-    /* display: none; */
+   
     mix-blend-mode: multiply;
     height: 13%;
     opacity: 1;
@@ -248,15 +248,13 @@ textarea :focus, input:focus{
   }
   
   .effect-1 {
-    /* animation: rotate 1.8s linear infinite;
-    background: cyan; */
+   
     margin-left:140px;
     margin-top:0px;
   }
   
   .effect-2 {
-    /* animation: rotate 1.2s linear reverse infinite;
-    background: #e7a9ff; */
+  
     margin-left:140px;
     margin-top:0px;
   }
@@ -285,6 +283,91 @@ textarea :focus, input:focus{
   }
   
 
+  /*decsription hover effect*/
+ .hover-img {
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    height:200px;
+    max-width: 200px;
+    min-width: 160px;
+    overflow: hidden;
+    position: relative;
+    align-self:center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hover-img .image{
+    align-self:center;
+    height:200px;
+  }
+  
+.hover-img * {
+    box-sizing: border-box;
+    transition: all 0.45s ease;
+  }
+  
+ .hover-img:before,
+  .hover-img:after {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* border-top: 32px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 32px solid rgba(0, 0, 0, 0.5); */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+    transform: scaleY(2);
+  }
+  
+  .hover-img img {
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .hover-img figcaption {
+    position: absolute;
+    top: 0;
+    font-size:15px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    z-index: 2;
+    transition-delay: 0.1s;
+    
+    font-family: sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+  
+  .hover-img:hover:before,
+  .hover-img:hover:after {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .hover-img:hover > img {
+    opacity: 1;
+  }
+  
+  .hover-img:hover figcaption {
+    opacity: 1;
+  }
 /*    */
 
 /* CSS */

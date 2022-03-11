@@ -4,7 +4,7 @@
     if(password_verify("ClubNames",$_POST['token']))
     {
         $email = $_SESSION['email'];
-        $query = $db->prepare("SELECT club_name, club_img, club_id FROM clubname where club_admin_email=?");
+        $query = $db->prepare("SELECT club_name, club_img, club_id, club_desc FROM clubname where club_admin_email=?");
         $data = array($email);
         $execute = $query->execute($data); 
         while($datarow = $query->fetch())
@@ -23,11 +23,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-8 paddoff">
-                                    <div class="image">
-                                        <img src="<?php echo $datarow['club_img'] ?>" alt="">
-                                    </div>
-                                </div>
+                                <figure class="col-sm-8 paddoff hover-img">
+                                    
+                                    <img class="image" src="<?php echo $datarow['club_img'] ?>" alt="">
+                                
+                                <figcaption>
+                                    <p><?php echo $datarow['club_desc'] ?></p>
+                                </figcaption>
+                              </figure>
+                              
+
                             </div>
                 </div>
         <?php
@@ -35,7 +40,7 @@
     }
     if(password_verify("ClubNames",$_POST['token'])){
         $email = $_SESSION['email'];
-        $query = $db->prepare("SELECT club_name, club_img, club_id FROM clubname where club_admin_email != ?");
+        $query = $db->prepare("SELECT club_name, club_img, club_id, club_desc FROM clubname where club_admin_email != ?");
         $data = array($email);
         $execute = $query->execute($data); 
         while($datarow = $query->fetch())
@@ -54,12 +59,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-8 paddoff">
-                                    <div class="image">
-                                        <img src="<?php echo $datarow['club_img'] ?>" alt="">
-                                    </div>
-                                </div>
+                                <figure class="col-sm-8 paddoff hover-img">
+                                    
+                                    <img class="image" src="<?php echo $datarow['club_img'] ?>" alt="">
+                                
+                                <figcaption>
+                                    <p><?php echo $datarow['club_desc'] ?></p>
+                                </figcaption>
+                              </figure>
+                    
+                            
                             </div>
+                           
                 </div>
         <?php
         }

@@ -12,6 +12,7 @@
 
         $ext = pathinfo($clubImg, PATHINFO_EXTENSION); 
         $Admin = $_SESSION['uname'];
+        $Admin_email=$_SESSION['email'];
 
         if(in_array($ext, $valid_extension)){
 			$path = $path.strtolower($clubImg);
@@ -20,8 +21,8 @@
             
 		}
         $clubImg = "img/club_images/" . strtolower($clubImg);
-        $query = $db->prepare('INSERT INTO clubname (club_name, club_desc, club_img, club_admin) VALUES (?,?,?,?)');
-		$data=array($clubName, $clubDesc, $clubImg, $Admin);
+        $query = $db->prepare('INSERT INTO clubname (club_name, club_desc, club_img, club_admin,club_admin_email) VALUES (?,?,?,?,?)');
+		$data=array($clubName, $clubDesc, $clubImg, $Admin,$Admin_email);
 		$execute=$query->execute($data);
 			
 		if($execute)

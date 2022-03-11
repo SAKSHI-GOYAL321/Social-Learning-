@@ -49,7 +49,7 @@
                                         </div>
                                         <form id = "form">
                                             <div class="title_name">
-                                                <input type="text" name="title_name" id="title_name" placeholder="Enter Club Name" class="form-control ">
+                                                <input type="text" name="title" id="title" placeholder="Enter Club Name" class="form-control ">
                                             </div>
                                             <div class="para">
                                                 <textarea name="write" id="write" placeholder="Enter Club Description" cols="53" rows="10" class="form-control "></textarea>
