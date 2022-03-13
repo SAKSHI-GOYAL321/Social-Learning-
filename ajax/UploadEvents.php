@@ -7,6 +7,7 @@
     $EventsAbout= $_POST['about'];
     $link = $_POST['link'];
     $club_id = $_POST['club_id'];
+   
 
     $query = $db->prepare("INSERT INTO events (event_name,event_date,event_time,about_event,link, club_id) VALUES(?,?,?,?,?,?)");
     $data = array($EventsName,$EventsDate, $EventsTime, $EventsAbout,$link, $club_id);
