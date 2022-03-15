@@ -61,6 +61,8 @@
             </div>
         </div>
     </section>
+    <script src = "DeleteClubs.js"></script>
+
     <script type="text/javascript">
         getClubNames();
 
@@ -94,13 +96,7 @@
             sidenav.classList.toggle("active");
             console.log("check3");
         } 
-        function DeleteClub(id){
-        console.log("id");
-        var a=id;
-        $query = $db->prepare("DELETE FROM clubname where club_id=a");
-
-    
-    }
+        
     </script>
 </body>
 <footer class="footer-distributed">

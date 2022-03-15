@@ -13,7 +13,7 @@
         $ext = pathinfo($clubImg, PATHINFO_EXTENSION); 
         $Admin = $_SESSION['uname'];
         $Admin_email=$_SESSION['email'];
-
+        echo $Admin;
         if(in_array($ext, $valid_extension)){
 			$path = $path.strtolower($clubImg);
 		}
