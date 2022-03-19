@@ -62,6 +62,7 @@
         </div>
     </section>
     <script src = "DeleteClubs.js"></script>
+    <script src = "joinmembers.js"></script>
 
     <script type="text/javascript">
         getClubNames();

@@ -36,6 +36,7 @@
         <?php
         }
     }
+ 
     if(password_verify("ClubNames",$_POST['token'])){
         $email = $_SESSION['email'];
         $query = $db->prepare("SELECT club_name, club_img, club_id, club_desc FROM clubname where club_admin_email != ?");
@@ -52,7 +53,7 @@
                                             <p><?php echo $datarow['club_name'] ?></p>
                                         </div>
                                         <div class="btn-style-block">
-                                            <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']?>"><button class="width100 btn btn-primary">Join</button></a>
+                                            <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']?>"><button onclick="removeButton(<?php echo $datarow['club_id']; ?>)" class="width100 btn btn-primary">Join</button></a>
                                             <!-- <button onclick="DeleteClub()"class=" btn-1 btn btn-primary">Delete</button> -->
                                         </div>
                                     </div>

@@ -70,6 +70,9 @@
                 </div>
                 <div class="col-sm -2 paddoff">
                     <div id="member">
+                        <h4>Admin</h4>
+                        <h4>Members</h4>
+
                     </div>
                 </div>        
             </div>
