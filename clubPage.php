@@ -140,8 +140,9 @@
                 $.ajax({
                     type: "POST",
                     url: "ajax/getMembers.php",
-                    data: {club_id:id},
+                    data: {club_id:id,token:token},
                     success: function(data){
+                        alert(data);
                         $('#member').html(data);
                     }
                 });
