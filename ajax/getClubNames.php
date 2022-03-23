@@ -56,7 +56,7 @@
                                         </div>
                                         <div class="btn-style-block">
                                             <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']; ?>"><button class="width100 btn btn-primary">Open</button></a>
-                                            <button onclick="DeleteClub(<?php echo $datarow['club_id']; ?>)"class=" btn-1 btn btn-primary">Exit</button>
+                                            <button onclick="ExitClub(<?php echo $datarow['club_id']; ?>)"class=" btn-1 btn btn-primary">Exit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -77,9 +77,13 @@
  
     if(password_verify("ClubNames",$_POST['token'])){
         $email = $_SESSION['email'];
-        $query = $db->prepare('SELECT DISTINCT c.club_id, c.club_name, c.club_img, c.club_desc, c.club_admin_email from clubname as c LEFT JOIN clubmembers as m ON c.club_id = m.club_id where c.club_admin_email != ? AND (m.email IS NULL OR m.email != ?)');
-        $data = array($email,$email);
-        $execute = $query->execute($data); 
+        $query = $db->prepare('Select * from clubmembers where email = ?');
+        $data = array($email);
+        $execute = $query->execute($data);
+        if(!$execute){
+            $query = $db->prepare('SELECT DISTINCT c.club_id, c.club_name, c.club_img, c.club_desc, c.club_admin_email from clubname as c LEFT JOIN clubmembers as m ON c.club_id = m.club_id where c.club_admin_email != ? AND (m.email IS NULL OR m.email != ?)');
+            $data = array($email,$email);
+            $execute = $query->execute($data); 
         while($datarow = $query->fetch())
         {
         ?>
@@ -106,6 +110,7 @@
                 </div>
         <?php
         }
+    }
     }
 ?>
 

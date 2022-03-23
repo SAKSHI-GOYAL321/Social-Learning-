@@ -217,7 +217,8 @@
 }
 
 /* Member */
-.member{
+#member{
   width:100%;
   float:left;
+  background-color:rgb(3, 49, 24, 0.25);
 }
