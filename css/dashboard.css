@@ -43,10 +43,22 @@
     /* display: none; */
   }
 .topnav .fa:hover{
-    background-color:#f2f2f2;
-    color: steelblue;
+    background-color: steelblue;
+    color: #f2f2f2;
 }
-
+/* .sidenav{
+    animation-name: leftToRight;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+@keyframes leftToRight{
+  from{
+    width: 0;
+  }
+  to{
+    left: 2;
+  }
+} */
 /* side-nav bar */
 /* .sidebar{
   height: 96vh; 
@@ -73,9 +85,17 @@ ul{
   font-size: 20px;
 
 } */
-.Ham{
-  display: block;
+#top-ham{
+  display: none;
 }
+#Ham{
+  width: 16.666667%;
+  height: 100%;
+  float: left;
+  display:block;
+  position: fixed;
+}
+
 .sidenav{
   width: 16.66666667%;
     height: 100%;
@@ -83,7 +103,7 @@ ul{
     z-index: 1;
     top: 0;
     left: 0;
-    display: block;
+    /* display: block; */
     padding-top: 40px;
     background-color: steelblue;
 }
@@ -112,9 +132,9 @@ ul{
    } 
 
   @media screen and (max-width: 756px) {
-    #side-nav .sidenav{display:none;}
+    /* #side-nav .sidenav{display:none;} */
     #top-nav .topnav .fa{display:block;}
-
+    #Ham {display: none;}
   }
 
 .active{

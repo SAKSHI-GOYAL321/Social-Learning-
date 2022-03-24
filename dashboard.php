@@ -21,7 +21,7 @@
     <section id="top-nav">
         <div class="col-sm-12 paddoff">
             <div class="topnav">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
                 <a href="#"><?php echo $_SESSION['uname']?></a></i>
             </div>
@@ -31,14 +31,16 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
-                    <div class="sidenav">
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                    <div >
+                        <div id="Ham" class = "sidenav">
+                            <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                            <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
+                            <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
+                            <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
+                            <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
+                            <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
+                            <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-10">
@@ -136,21 +138,34 @@
     </section>        -->
     <script type="text/javascript">
         function show(){
-            var sidenav= document.getElementsByClassName("Ham");
+            var sidenav= document.getElementById("Ham");
+            var Ham = document.getElementById('top-ham');
+            var sidemenu = document.getElementById('sidenav');
             console.log("check1");
-            if(sidenav.style.display==="none"){
+            if(sidenav.style.display == 'block'){
+                sidenav.style.display = "none";
+                Ham.style.backgroundColor = "#4c6c94";
+                // Ham.style.display = "";
+                // sidenav.classList.remove("non-active");
+                // sidenav.classList.add("active");
                 alert("if ");
-                // sidenav.classList.remove = "non-active";
-                // sidenav.classList.add="active";
             }
             else{
-                // sidenav.classList.remove = "active";
-                // sidenav.classList.add="non-active";
+                // sidenav.classList.remove("non-active");
+                // sidenav.classList.add("active");
+                // sidenav.style.display = "none";
+                // Ham.style.display = "block";
+                sidenav.style.display = "block";
+                sidenav.style.width = "256px"
+                // Ham.style.display = "none";
+                Ham.style.zIndex = "12";
+                Ham.style.position = "relative";
+                Ham.style.backgroundColor = "steelblue";
                 alert("else");
             }
             sidenav.classList.toggle("active");
             console.log("check3");
-        } 
+        }
     </script>
 </body>
 <footer class="footer-distributed">
@@ -161,14 +176,12 @@
                 <div class="footer-left">
                     <h4>Company<span>logo</span></h4>
                     <p class="footer-company-name">Company Name © 2021</p>
-                    
                 </div>
             </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-4">
                 <div class="footer-right">
                     <div class="footer-icons">
-        
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-linkedin"></i></a>
