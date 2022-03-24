@@ -19,10 +19,13 @@ if(password_verify("Members",$_POST['token']))
     $query=$db->prepare('SELECT st.uname FROM user_details as st JOIN clubmembers as c ON st.email = c.email WHERE c.club_id = ?');
     $data=array($id);
     $execute=$query->execute($data);
+    ?>
+    <h4>Members</h4>
+    <?php
 
     while($datarow=$query->fetch()){
         ?>
-        <h4>Members</h4>
+        
         <p><?php echo $datarow['uname']; ?></p>
     </div>
         <?php

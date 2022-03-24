@@ -38,8 +38,8 @@
     }
 
     if(password_verify("ClubNames",$_POST['token'])){
-        $query = $db->prepare('SELECT *FROM clubname c left outer join clubmembers m ON c.club_id=m.club_id GROUP BY club_admin_email');
-        $data = array($email,$email);
+        $query = $db->prepare('SELECT c.club_id, c.club_name, c.club_desc, c.club_img, c.club_admin_email, m.email FROM clubname c left outer join clubmembers m ON c.club_id=m.club_id GROUP BY club_admin_email');
+        $data = array();
         $execute = $query->execute($data); 
         while($datarow = $query->fetch())
         {
