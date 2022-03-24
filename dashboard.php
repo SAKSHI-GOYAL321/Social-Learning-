@@ -31,7 +31,7 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
-                    <div class="sidenav">
+                    <div class="sidenav" id="ham">
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
@@ -136,16 +136,17 @@
     </section>        -->
     <script type="text/javascript">
         function show(){
-            var sidenav= document.getElementsByClassName("Ham");
+            var sidenav= document.getElementById("Ham");
             console.log("check1");
-            if(sidenav.style.display==="none"){
+            console.log(sidenav.style.display);
+            if(sidenav.style.display=="none"){
                 alert("if ");
-                // sidenav.classList.remove = "non-active";
-                // sidenav.classList.add="active";
+                sidenav.classList.remove = "non-active";
+                sidenav.classList.add="active";
             }
             else{
-                // sidenav.classList.remove = "active";
-                // sidenav.classList.add="non-active";
+                sidenav.classList.remove = "active";
+                sidenav.classList.add="non-active";
                 alert("else");
             }
             sidenav.classList.toggle("active");

@@ -73,8 +73,14 @@ ul{
   font-size: 20px;
 
 } */
-.Ham{
+/* .Ham{
   display: block;
+} */
+
+
+#Ham{
+  display:block;
+  width:100px;
 }
 .sidenav{
   width: 16.66666667%;
@@ -114,6 +120,7 @@ ul{
   @media screen and (max-width: 756px) {
     #side-nav .sidenav{display:none;}
     #top-nav .topnav .fa{display:block;}
+    #Ham {display:none;}
 
   }
 

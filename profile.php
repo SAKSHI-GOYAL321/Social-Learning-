@@ -41,6 +41,7 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
+                    <div class="col-sm-8">
                     <div class="box-club">
                         <div>
                             <h2 style="text-align: center; color: slategray;">My Profile</h2>
@@ -116,6 +117,11 @@
                             </div>
                         </form>
                     </div>
+                    </div>
+                    <div class="col-sm-2">
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
