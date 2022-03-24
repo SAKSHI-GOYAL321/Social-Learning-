@@ -74,7 +74,7 @@
   } /* */
   
   .pop-up__content {
-    height:300px;
+    /* height:300px; */
     width:75%;
     background-color: #e5e8f0;
     border-radius:8px;

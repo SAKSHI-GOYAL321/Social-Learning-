@@ -37,80 +37,64 @@
         }
     }
 
-
-    if(password_verify("ClubNames",$_POST['token']))
-    {
-        $email = $_SESSION['email'];
-        $query = $db->prepare("SELECT c.club_name, c.club_img, c.club_id, c.club_desc FROM clubname as c join clubmembers as m on c.club_id=m.club_id where m.email=?");
-        $data = array($email);
+    if(password_verify("ClubNames",$_POST['token'])){
+        $query = $db->prepare('SELECT *FROM clubname c left outer join clubmembers m ON c.club_id=m.club_id GROUP BY club_admin_email');
+        $data = array($email,$email);
         $execute = $query->execute($data); 
         while($datarow = $query->fetch())
         {
-        ?>
-                <div class="col-sm-4 ">
-                            <div class="card wrap-image">
-                                <div class="col-sm-4 paddoff">
-                                    <div class="club-content">
-                                        <div class="title">
-                                            <p><?php echo $datarow['club_name'] ?></p>
+            // echo $datarow['email'] . " ". $datarow['club_admin_email'] . "</br>";
+            if($datarow['club_admin_email']!= $email && $datarow['email'] == $email){
+                ?>
+                        <div class="col-sm-4 ">
+                                    <div class="card wrap-image">
+                                        <div class="col-sm-4 paddoff">
+                                            <div class="club-content">
+                                                <div class="title">
+                                                    <p><?php echo $datarow['club_name']; ?></p>
+                                                </div>
+                                                    <div class="btn-style-block">
+                                                        <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']; ?>"><button class="width100 btn btn-primary">Open</button></a>
+                                                        <button onclick="ExitClub(<?php echo $datarow['club_id']; ?>)"class=" btn-1 btn btn-primary">Exit</button>
+                                                    </div>
+                                            </div>
                                         </div>
-                                        <div class="btn-style-block">
-                                            <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']; ?>"><button class="width100 btn btn-primary">Open</button></a>
-                                            <button onclick="ExitClub(<?php echo $datarow['club_id']; ?>)"class=" btn-1 btn btn-primary">Exit</button>
-                                        </div>
+                                        <figure class="col-sm-8 paddoff hover-img">
+                                            <img class="image" src="<?php echo $datarow['club_img']; ?>" alt="">
+                                            <figcaption>
+                                                <p><?php echo $datarow['club_desc']; ?></p>
+                                            </figcaption>
+                                      </figure>
                                     </div>
-                                </div>
-                                <figure class="col-sm-8 paddoff hover-img">
-                                    
-                                    <img class="image" src="<?php echo $datarow['club_img'] ?>" alt="">
-                                
-                                <figcaption>
-                                    <p><?php echo $datarow['club_desc'] ?></p>
-                                </figcaption>
-                              </figure>
                         </div>
-                </div>
-        <?php
-        }
-    }
- 
- 
-    if(password_verify("ClubNames",$_POST['token'])){
-        $email = $_SESSION['email'];
-        $query = $db->prepare('Select * from clubmembers where email = ?');
-        $data = array($email);
-        $execute = $query->execute($data);
-        if(!$execute){
-            $query = $db->prepare('SELECT DISTINCT c.club_id, c.club_name, c.club_img, c.club_desc, c.club_admin_email from clubname as c LEFT JOIN clubmembers as m ON c.club_id = m.club_id where c.club_admin_email != ? AND (m.email IS NULL OR m.email != ?)');
-            $data = array($email,$email);
-            $execute = $query->execute($data); 
-        while($datarow = $query->fetch())
-        {
-        ?>
-                <div class="col-sm-4 ">
-                            <div class="card wrap-image">
-                                <div class="col-sm-4 paddoff">
-                                    <div class="club-content">
-                                        <div class="title">
-                                            <p><?php echo $datarow['club_name'] ?></p>
-                                        </div>
-                                        <div class="btn-style-block">
-                                            <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id']?>"><button onclick="removeButton(<?php echo $datarow['club_id']; ?>)" class="width100 btn btn-primary">Join</button></a>
+                    <?php
+            }
+            else if($datarow['club_admin_email']!= $email && $datarow['email'] != $email){
+                ?>
+                    <div class="col-sm-4 ">
+                                <div class="card wrap-image">
+                                    <div class="col-sm-4 paddoff">
+                                        <div class="club-content">
+                                            <div class="title">
+                                                <p><?php echo $datarow['club_name']; ?></p>
+                                            </div>
+                                            <div class="btn-style-block">
+                                                <a class="btn-1" href="./clubPage.php?club_id=<?php echo $datarow['club_id'];?>"><button onclick="removeButton(<?php echo $datarow['club_id']; ?>)" class="width100 btn btn-primary">Join</button></a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <figure class="col-sm-8 paddoff hover-img">
+                                        
+                                        <img class="image" src="<?php echo $datarow['club_img']; ?>" alt="">
+                                        <figcaption>
+                                            <p><?php echo $datarow['club_desc']; ?></p>
+                                        </figcaption>
+                                  </figure>
                                 </div>
-                                <figure class="col-sm-8 paddoff hover-img">
-                                    
-                                    <img class="image" src="<?php echo $datarow['club_img'] ?>" alt="">
-                                    <figcaption>
-                                        <p><?php echo $datarow['club_desc'] ?></p>
-                                    </figcaption>
-                              </figure>
-                            </div>
-                </div>
-        <?php
+                    </div>
+                <?php
+                }
         }
-    }
     }
 ?>
 

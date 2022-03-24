@@ -76,18 +76,21 @@
         </div>
 </section>
     <script type="text/javascript">
-        connectClubPage();
-            function connectClubPage(){
-                var id = <?php echo $_GET['club_id'] ?>;
-                $.ajax({
-                    type: "POST",
-                    url: "ajax/ClubPage.php",
-                    data: {club_id:id},
-                    success: function(data){
-                        $('#Club-Page').html(data);
-                    }
-                });   
-            }
+        // connectClubPage();
+        //     function connectClubPage(){
+        //         var id = 
+        <?php 
+        // echo $_GET['club_id']
+         ?>
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "ajax/ClubPage.php",
+        //             data: {club_id:id},
+        //             success: function(data){
+        //                 $('#Club-Page').html(data);
+        //             }
+        //         });   
+        //     }
 
             function connectEventsToDataBase(){
                 var id = '<?php echo $_GET['club_id']; ?>';
