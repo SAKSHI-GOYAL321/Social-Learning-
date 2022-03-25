@@ -20,7 +20,7 @@
 <body>
     <section id="top-nav">
         <div class="col-sm-12 paddoff">
-            <div class="topnav">    
+            <div class="topnav" id="top-Ham">    
                 <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
                 <a href="#"><?php echo $_SESSION['uname']?></a></i>
@@ -32,7 +32,7 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="Ham paddoff">
-                    <div class="sidenav">
+                    <div id="Ham" class="sidenav">
                         <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
                         <a href="dashboard.php" style="text-align: center; " class="tooltip"><i class="fa fa-home"></i><span class="tooltiptext"> Dashboard <span></a>
                         <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
@@ -53,72 +53,76 @@
                                 <div class ="center hl">
                                     <button class = "btn-style " id="bg1" onclick="getResource();" >FILE</button>
                                     <button class="btn-style " id="bg2" onclick="getLinksData();">LINK</button>
+                                    <button class="btn-style " id="bg3" onclick="getUploadform();">UPLOAD</button>
                                 </div>
-                                <div class="scroll" style="width:100%;">
-                                    <div class="Resources" id="Resources" style="float:left;width: 100%;"></div>
+                                <div id="scroll" style="width:100%;">
+                                    <div class="Resources" id="Resources" style="float:left;width: 100%;">
+                                    </div>
                                 </div> 
                                 <!-- <div style="width:100%">
                                     <div class="Links" id="Links" style="float:left; width:100%"></div>
                                 </div> -->
                             </div>
                         </div> 
-                        <div class="col-sm-2 ">                         
-                            <div class="Data vl">
-                                <form >
-                                    <div class="filestyle hl mg">
-                                        <label>Select a Field</label>
-                                        <select id="subj" name="subj" class="form-control form-style">
-                                            <option value="select">--Search--</option>
-                                            <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
-                                            <option value="DataBase Management System">DataBase Management System</option>
-                                            <option value="Programming Languages">Programming Languages</option>
-                                            <option value="Object Oriented Programming">Object Oriented Programming</option>
-                                            <option value="Networking">Networking</option>
-                                            <option value="Operating System">Operating System</option>
-                                            <option value="Software Engineering">Software Engineering</option>
-                                            <option value="Development">Development</option>
-                                        </select>
+                        <div class="col-sm-2 ">                    
+                        <div id="resourceForm" class="Data vl">
+                                        <div class="wdthf">
+                                        <form >
+                                            <div class="filestyle hl mg">
+                                                <label>Select a Field</label>
+                                                <select id="subj" name="subj" class="form-control form-style">
+                                                    <option value="select">--Search--</option>
+                                                    <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                                    <option value="DataBase Management System">DataBase Management System</option>
+                                                    <option value="Programming Languages">Programming Languages</option>
+                                                    <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                                    <option value="Networking">Networking</option>
+                                                    <option value="Operating System">Operating System</option>
+                                                    <option value="Software Engineering">Software Engineering</option>
+                                                    <option value="Development">Development</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                        <form action="" id="resoucedata" class="input" >
+                                            <div class="filestyle">
+                                                <label for="">Select a Field:</label>
+                                                <select name="cfield" id="cfield" class="form-control">
+                                                    <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+                                                    <option value="DataBase Management System">DataBase Management System</option>
+                                                    <option value="Programming Languages">Programming Languages</option>
+                                                    <option value="Object Oriented Programming">Object Oriented Programming</option>
+                                                    <option value="Networking">Networking</option>
+                                                    <option value="Operating System">Operating System</option>
+                                                    <option value="Software Engineering">Software Engineering</option>
+                                                    <option value="Development">Development</option>
+                                                </select>
+                                                <div class="margin">
+                                                    <label>Topic:</label>
+                                                    <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
+                                            </div>
+                                        
+                                                <div class="margin">
+                                                    <label >Content Type:</label>
+                                                    <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
+                                                        <option value="select">--Select option--</option>
+                                                        <option value="file">File</option>
+                                                        <option value="link">Link</option>
+                                                    </select>
+                                                </div>
+                                                <div class="margin">
+                                                    <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
+                                                        class="form-control form-style" >
+                                                </div>
+                                                <div class="margin">
+                                                    <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style btn btn-info">
+                                                </div>
+                                                <div class="margin">
+                                                    <input type="submit" value="Upload" style="margin-top:5px;" onclick="uploadfiles();" class="log-btn btn btn-success">
+                                                </div>
+                                            </div> 
+                                        </form>   
+                                        </div>
                                     </div>
-                                </form>
-                                <form action="" id="resoucedata" class="input" >
-                                    <div class="filestyle">
-                                        <label for="">Select a Field:</label>
-                                        <select name="cfield" id="cfield" class="form-control">
-                                            <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
-                                            <option value="DataBase Management System">DataBase Management System</option>
-                                            <option value="Programming Languages">Programming Languages</option>
-                                            <option value="Object Oriented Programming">Object Oriented Programming</option>
-                                            <option value="Networking">Networking</option>
-                                            <option value="Operating System">Operating System</option>
-                                            <option value="Software Engineering">Software Engineering</option>
-                                            <option value="Development">Development</option>
-                                        </select>
-                                        <div class="margin">
-                                            <label>Topic:</label>
-                                            <input type="text" id="topic" name="topic" placeholder="eg: Web Development" class="form-control form-style" required>
-                                       </div>
-                                
-                                        <div class="margin">
-                                            <label >Content Type:</label>
-                                            <select id="ctype" name="ctype" class="form-control form-style" onchange="sample();" required>
-                                                <option value="select">--Select option--</option>
-                                                <option value="file">File</option>
-                                                <option value="link">Link</option>
-                                            </select>
-                                        </div>
-                                        <div class="margin">
-                                            <input type="text" id="link" name="link" placeholder="Enter a link" style="display:none;"
-                                                class="form-control form-style" >
-                                        </div>
-                                        <div class="margin">
-                                            <input type="file" id="pdf_file" name="pdf_file" style="display:none;" class=" form-style btn btn-info">
-                                        </div>
-                                        <div class="margin">
-                                            <input type="submit" value="Upload" style="margin-top:5px;" onclick="uploadfiles();" class="log-btn btn btn-success">
-                                        </div>
-                                    </div> 
-                                </form>   
-                            </div>
                         </div>
                         <div class="col-sm-1"></div>
                     </div>
@@ -134,8 +138,15 @@
           function getLinksData(){
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
+            var bg_upload = document.getElementById("bg3");
             bg_file.style.backgroundColor = " rgb(213 218 220)";
             bg_link.style.backgroundColor = "rgb(4, 90, 120)";
+            bg_upload.style.backgroundColor = " rgb(213 218 220)";
+
+            var resource = document.getElementById('Resources');
+            var scrol = document.getElementById('scroll');
+            resource.style.display = "block";
+            scrol.style.height = "400px";
 
               var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
               $.ajax({
@@ -153,9 +164,14 @@
         function getResource(){
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
+            var bg_upload = document.getElementById("bg3");
             bg_file.style.backgroundColor = "rgb(4, 90, 120)";
             bg_link.style.backgroundColor = "rgb(213 218 220)";
-
+            bg_upload.style.backgroundColor = " rgb(213 218 220)";
+            var resource = document.getElementById('Resources');
+            var scrol = document.getElementById('scroll');
+            resource.style.display = "block";
+            scrol.style.height = "400px";
             var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
             $.ajax({
                     type: "POST",
@@ -168,12 +184,36 @@
             });
         }
 
+        function getUploadform(){
+            var bg_file = document.getElementById("bg1");
+            var bg_link = document.getElementById("bg2");
+            var bg_upload = document.getElementById("bg3");
+            bg_file.style.backgroundColor = "rgb(213 218 220)";
+            bg_link.style.backgroundColor = "rgb(213 218 220)";
+            bg_upload.style.backgroundColor = " rgb(4, 90, 120)";
+
+            var form = document.getElementById('resourceForm');
+            var resource = document.getElementById('Resources');
+            var scrol = document.getElementById('scroll');
+            resource.style.display = "none";
+            scrol.style.height = "0px";
+
+            form.style.display = "block";
+            // if(form.style.display == 'block'){
+            //     console.log('if');
+            //     form.style.display = "none";
+            // }
+            // else{
+            //     console.log('else');
+            //     form.style.display = "block";
+            // }
+        }
         function uploadfiles(){
            
            var ctype = document.getElementById("ctype");
            if(ctype.value != "select"){
        
-               var form = document.getElementById("resoucedata");
+               var form = document.getElementById("resourcedata");
                var data = new FormData(form);
                
                
@@ -226,25 +266,8 @@
                 c.style.display = "none";
             }
         }
-
-        // function show(){
-        //     var sidenav= document.getElementsByClassName("Ham");
-        //     console.log("check1");
-        //     if(sidenav.style.display==="none"){
-        //         alert("if ");
-        //         sidenav.classList.remove = "non-active";
-        //         sidenav.classList.add="active";
-        //     }
-        //     else{
-        //         sidenav.classList.remove = "active";
-        //         sidenav.classList.add="non-active";
-        //         alert("else");
-        //     }
-        //     sidenav.classList.toggle("active");
-        //     console.log("check3");
-        // } 
-
     </script>
+    <script type="text/javascript" src="Hamburger.js"></script>
 </body>
 <!-- <footer class="footer-distributed">
     <div class="col-sm-12">

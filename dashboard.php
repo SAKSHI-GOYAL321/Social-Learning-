@@ -148,7 +148,7 @@
                 // Ham.style.display = "";
                 // sidenav.classList.remove("non-active");
                 // sidenav.classList.add("active");
-                alert("if ");
+                // alert("if ");
             }
             else{
                 // sidenav.classList.remove("non-active");
@@ -161,7 +161,7 @@
                 Ham.style.zIndex = "12";
                 Ham.style.position = "relative";
                 Ham.style.backgroundColor = "steelblue";
-                alert("else");
+                // alert("else");
             }
             sidenav.classList.toggle("active");
             console.log("check3");

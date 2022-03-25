@@ -12,7 +12,9 @@
     background-color: #2F5168;
     background-color: #4c6c94;
     height: 40px;
-    position: static;
+    position: fixed;
+    top: 0;
+    z-index: 50;
 }
 .topnav a{
     float: right;
@@ -94,6 +96,7 @@ ul{
   float: left;
   display:block;
   position: fixed;
+  z-index: 51;
 }
 
 .sidenav{

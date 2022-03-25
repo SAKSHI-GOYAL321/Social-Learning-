@@ -22,7 +22,7 @@
     <section id="top-nav">
         <div class="col-sm-12 paddoff">
             <div class="topnav">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
                 <a href="#"> <span><i class="fas fa-user-alt" style="color:white; font-size: 12px;"></i></span> <?php echo $_SESSION['uname']?></a>
             </div>
@@ -32,7 +32,8 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="col-sm-2">
-                    <div class="sidenav active">
+                    <div id="Ham" class="sidenav active">
+                    <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
@@ -88,7 +89,7 @@
             </div>
 		</footer>
     </section>    
-
+    <script type="text/javascript" src="Hamburger.js"></script>
     <script type ="text/javascript">
         getblog();
         // getupperblog();
@@ -133,7 +134,7 @@
             });
         }       
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("sidenav");
             console.log("check1");
@@ -148,7 +149,7 @@
             // sidenav.classList.toggle("active");
             console.log("check3");
         } 
-    </script>
+    </script> -->
     <script src="script.js"  type="text/javascript"></script>
 </body>
 

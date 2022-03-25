@@ -1,8 +1,18 @@
-.Data{
+#resourceForm{
     width: 300px;
     float: left;
-    
-
+    display: block;
+}
+.btn-btn-style{
+    color: #ffffff;
+    background-color: #365291;
+    border-radius: 26px;
+    padding: 8px 28px;
+    display: none;
+}
+.wdthf{
+    width: 100%;
+    float: left;
 }
 /* .input{
     float: right;
@@ -19,7 +29,7 @@
 } */
 
 /*Scroll-bar*/
-.scroll{
+#scroll{
     height:400px;
     overflow:hidden;
     overflow-y:scroll;
@@ -30,7 +40,7 @@
   height: 406px;
   padding-left: 28px;
   margin-top: 100px;
-
+    z-index: 12;
   
 }
 
@@ -149,4 +159,14 @@ input[type = button]{
     text-align: left;
     background-color: #49718c;
         color: white;
+  }
+  @media screen and (max-width: 1230px) {
+    #top-nav .topnav .fa{display:block;}
+    #Ham {display: none;}
+    .col-sm-1 {width: 0px;}
+    /* .col-sm-2 {float:unset;} */
+    .btn-btn-style{display: block;}
+  }
+  @media scree and (max-width: 1200px){
+    #resourceForm{display: none;}
   }
