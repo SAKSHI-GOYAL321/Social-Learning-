@@ -17,7 +17,7 @@ function show(){
         // sidenav.style.display = "none";
         // Ham.style.display = "block";
         sidenav.style.display = "block";
-        sidenav.style.width = "256px"
+        sidenav.style.width = " 217px"
         // Ham.style.display = "none";
         Ham.style.zIndex = "121";
         Ham.style.position = "relative";

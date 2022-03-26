@@ -64,6 +64,7 @@
     
     margin:auto;
     font-weight:bolder;
+    margin-top:70px;
     height:68px !important
 }
 .head h1 p{
@@ -199,6 +200,8 @@ textarea :focus, input:focus{
             height: 50%;
            
             width: 50%;
+            justify-content: center;
+            display: flex;
     
   }
 
@@ -363,6 +366,7 @@ textarea :focus, input:focus{
   
   .hover-img:hover > img {
     opacity: 1;
+
   }
   
   .hover-img:hover figcaption {
@@ -428,4 +432,28 @@ textarea :focus, input:focus{
   .button-56 {
     padding: 0 40px;
   }
+  
+.col-sm-2 {
+    width: 10%;
+}
+#Ham{
+  display:none;
+}
+  /* .col-sm-4 {
+    width: 48.333333%;
+  } */
+}
+
+@media (max-width:770px){
+  .col-sm-4 {
+    width: 50%;
+    display:flex;
+    align-items:center;
+}
+}
+
+@media (max-width:1200px) and (min-width:500px){
+.col-sm-4 {
+  width: 48.333333%;
+}
 }

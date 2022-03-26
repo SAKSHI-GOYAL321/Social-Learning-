@@ -32,8 +32,8 @@
     <section id="side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
-                <div class="Ham col-sm-2 paddoff">
-                    <div class="sidenav">
+                <div class="col-sm-2 paddoff">
+                    <div class="sidenav" id="Ham">
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
@@ -64,8 +64,10 @@
     <script src = "DeleteClubs.js"></script>
     <script src = "joinmembers.js"></script>
     <script src= "ExitClub.js"></script>
+    <script src="Hamburger.js"></script>
 
     <script type="text/javascript">
+
         getClubNames();
 
         function getClubNames(){
@@ -81,7 +83,7 @@
             });
         }
     </script>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("Ham");
             console.log("check1");
@@ -99,7 +101,7 @@
             console.log("check3");
         } 
         
-    </script>
+    </script> -->
 </body>
 <footer class="footer-distributed">
     <div class="col-sm-12">
