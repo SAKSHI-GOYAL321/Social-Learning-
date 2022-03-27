@@ -10,7 +10,7 @@
         while($datarow = $query->fetch())
         {
         ?>
-                <div class="col-sm-4 ">
+                <div class="col-sm-4 width">
                             <div class="card wrap-image">
                                 <div class="col-sm-4 paddoff">
                                     <div class="club-content">
@@ -46,7 +46,7 @@
             // echo $datarow['email'] . " ". $datarow['club_admin_email'] . "</br>";
             if($datarow['club_admin_email']!= $email && $datarow['email'] == $email){
                 ?>
-                        <div class="col-sm-4 ">
+                        <div class="col-sm-4 width">
                                     <div class="card wrap-image">
                                         <div class="col-sm-4 paddoff">
                                             <div class="club-content">
@@ -71,7 +71,7 @@
             }
             else if($datarow['club_admin_email']!= $email && $datarow['email'] != $email){
                 ?>
-                    <div class="col-sm-4 ">
+                    <div class="col-sm-4 width">
                                 <div class="card wrap-image">
                                     <div class="col-sm-4 paddoff">
                                         <div class="club-content">
