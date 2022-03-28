@@ -59,6 +59,10 @@
                                     <div class="Resources" id="Resources" style="float:left;width: 100%;">
                                     </div>
                                 </div> 
+                                <div id="down-scroll" style="width:100%;">
+                                    <div class="Resources" id="Resources" style="float:left;width: 100%;">
+                                    </div>
+                                </div>
                                 <!-- <div style="width:100%">
                                     <div class="Links" id="Links" style="float:left; width:100%"></div>
                                 </div> -->
@@ -139,6 +143,7 @@
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
             var bg_upload = document.getElementById("bg3");
+            var form = document.getElementById('resourceForm');
             bg_file.style.backgroundColor = " rgb(213 218 220)";
             bg_link.style.backgroundColor = "rgb(4, 90, 120)";
             bg_upload.style.backgroundColor = " rgb(213 218 220)";
@@ -147,6 +152,7 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
+            form.style.display="none";
 
               var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
               $.ajax({
@@ -164,6 +170,7 @@
         function getResource(){
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
+            var form = document.getElementById('resourceForm');
             var bg_upload = document.getElementById("bg3");
             bg_file.style.backgroundColor = "rgb(4, 90, 120)";
             bg_link.style.backgroundColor = "rgb(213 218 220)";
@@ -172,6 +179,7 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
+            form.style.display="none";
             var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
             $.ajax({
                     type: "POST",
