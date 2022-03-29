@@ -1,0 +1,21 @@
+#member h4{
+
+    text-decoration:none;
+    font-weight:500;
+    font-size:20px;
+    color:white;
+    background-color:grey;
+    border:1px solid black;
+    border-radius:10px;
+    text-align:center;
+    margin:2px;
+    /* text-transform:uppercase; */
+}
+
+#member p{
+    text-align:center;
+    justify-content:center;
+    font-weight: 300;
+    font-size:15px;
+    color:green;
+}

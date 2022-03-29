@@ -143,7 +143,7 @@
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
             var bg_upload = document.getElementById("bg3");
-            var form = document.getElementById('resourceForm');
+            var form = document.getElementById("resourceForm");
             bg_file.style.backgroundColor = " rgb(213 218 220)";
             bg_link.style.backgroundColor = "rgb(4, 90, 120)";
             bg_upload.style.backgroundColor = " rgb(213 218 220)";
@@ -152,8 +152,13 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
-            form.style.display="none";
-
+            // form.style.display="none";
+           if(bg_upload.style.display=="block"){
+                form.style.display="none";
+            }
+            else{
+                form.style.display="block";
+            }
               var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
               $.ajax({
                     type: "POST",
@@ -179,7 +184,14 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
-            form.style.display="none";
+            // form.style.display="none";
+            if(bg_upload.style.display=="block"){
+                form.style.display="none";
+            }
+            else{
+                form.style.display="block";
+            }
+            
             var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
             $.ajax({
                     type: "POST",
@@ -206,6 +218,8 @@
             resource.style.display = "none";
             scrol.style.height = "0px";
 
+          
+
             form.style.display = "block";
             // if(form.style.display == 'block'){
             //     console.log('if');
@@ -219,6 +233,7 @@
         function uploadfiles(){
            
            var ctype = document.getElementById("ctype");
+           
            if(ctype.value != "select"){
        
                var form = document.getElementById("resourcedata");
