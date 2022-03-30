@@ -13,7 +13,9 @@
     background-color: #4c6c94;
     height: 40px;
     align-items: center;
-    position: static;
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 .topnav a{
     float: right;
@@ -78,7 +80,7 @@ ul{
   display: block;
 }
 .sidenav{
-  width: 4.66666667%;
+  width: 70px !important;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -86,7 +88,7 @@ ul{
     left: 0;
     
     display: block;
-    padding-top: 40px;
+    padding-top: 70px;
     background-color: steelblue;
 }
 
@@ -102,7 +104,7 @@ ul{
 .sidenav a {
     padding: 6px 28px 10px 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 20px;
     font-weight: bold;
     color: #3f2828;
@@ -350,4 +352,10 @@ textarea{
 /*btn*/
 .log-btn{
 margin-top:146px;
+}
+
+@media (max-width: 600px){
+  .sidenav a{
+    font-size: 16px;
+  }
 }

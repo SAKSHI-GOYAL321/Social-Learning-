@@ -33,12 +33,12 @@
             <div class="contain">
                 <div class="Ham paddoff">
                     <div id="Ham" class="sidenav">
-                        <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
+                        <a href="#" style="text-align: center;" class="tooltip"><i class="fa fa-info"></i> <span class="tooltiptext">About</span></a>
                         <a href="dashboard.php" style="text-align: center; " class="tooltip"><i class="fa fa-home"></i><span class="tooltiptext"> Dashboard <span></a>
+                        <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
                         <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
                         <a href="resourse.php" style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Resourse</span></a>
-                        <a href="#" style="text-align: center;" class="tooltip"><i class="fa fa-info"></i> <span class="tooltiptext">About</span></a>
-                        <a href="#"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Services</span></a>
+                        <a href="clubDash.php"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Club</span></a>
                         <a href="#"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Contact</span></a>
                   </div>
                 </div>
@@ -55,14 +55,10 @@
                                     <button class="btn-style " id="bg2" onclick="getLinksData();">LINK</button>
                                     <button class="btn-style " id="bg3" onclick="getUploadform();">UPLOAD</button>
                                 </div>
-                                <div id="scroll" style="width:100%;">
+                                <div id="scroll" class="down-scroll" style="width:100%;">
                                     <div class="Resources" id="Resources" style="float:left;width: 100%;">
                                     </div>
                                 </div> 
-                                <div id="down-scroll" style="width:100%;">
-                                    <div class="Resources" id="Resources" style="float:left;width: 100%;">
-                                    </div>
-                                </div>
                                 <!-- <div style="width:100%">
                                     <div class="Links" id="Links" style="float:left; width:100%"></div>
                                 </div> -->
@@ -71,7 +67,7 @@
                         <div class="col-sm-2 ">                    
                         <div id="resourceForm" class="Data vl">
                                         <div class="wdthf">
-                                        <form >
+                                        <!-- <form >
                                             <div class="filestyle hl mg">
                                                 <label>Select a Field</label>
                                                 <select id="subj" name="subj" class="form-control form-style">
@@ -86,7 +82,7 @@
                                                     <option value="Development">Development</option>
                                                 </select>
                                             </div>
-                                        </form>
+                                        </form> -->
                                         <form action="" id="resoucedata" class="input" >
                                             <div class="filestyle">
                                                 <label for="">Select a Field:</label>
@@ -137,8 +133,8 @@
     
    <script type = "text/javascript">
           getResource();
-        //   getLinksData();
 
+        //   getLinksData();
           function getLinksData(){
             var bg_file = document.getElementById("bg1");
             var bg_link = document.getElementById("bg2");
@@ -152,14 +148,9 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
-            // form.style.display="none";
-           if(bg_upload.style.display=="block"){
-                form.style.display="none";
-            }
-            else{
-                form.style.display="block";
-            }
-              var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
+            form.style.display="none";
+       
+            var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
               $.ajax({
                     type: "POST",
                     url: "ajax/getResource.php",
@@ -184,13 +175,8 @@
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
             scrol.style.height = "400px";
-            // form.style.display="none";
-            if(bg_upload.style.display=="block"){
-                form.style.display="none";
-            }
-            else{
-                form.style.display="block";
-            }
+            form.style.display="none";
+        
             
             var token = "<?php echo password_hash("getdata", PASSWORD_DEFAULT)?>";
             $.ajax({
@@ -218,17 +204,7 @@
             resource.style.display = "none";
             scrol.style.height = "0px";
 
-          
-
             form.style.display = "block";
-            // if(form.style.display == 'block'){
-            //     console.log('if');
-            //     form.style.display = "none";
-            // }
-            // else{
-            //     console.log('else');
-            //     form.style.display = "block";
-            // }
         }
         function uploadfiles(){
            

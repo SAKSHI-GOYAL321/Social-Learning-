@@ -30,14 +30,14 @@
 
 /*Scroll-bar*/
 #scroll{
-    height:400px;
+    height: 450px !important;
     overflow:hidden;
-    overflow-y:scroll;
+    overflow-y:auto;
 
 }
 .vl {
   border-left: 4px solid rgb(10, 10, 10);
-  height: 406px;
+  /* height: 406px; */
   padding-left: 28px;
   margin-top: 100px;
     z-index: 12;
@@ -73,10 +73,10 @@ input[type = button]{
     border-radius: 30px;
 }
 
-#down-scroll{
+.down-scroll{
     /* display:block; */
-    overflow-x: scroll !important;
-    width:500px !important;
+    overflow-x: auto;
+    /* width:500px !important; */
     overflow: hidden;
 }
 
@@ -176,9 +176,12 @@ input[type = button]{
   }
 
 
-  @media (max-width:1000px){
+  @media (max-width:1050px){
       .col-sm-8{
           width:99% !important ;
+      }
+      .vl{
+          margin-top: 70px;
       }
       /* #resourceForm{
         display:none !important;
@@ -223,9 +226,30 @@ input[type = button]{
           }
       
   }
-  @media (min-width:1000px){
+  @media (max-width: 600px){
+      #scroll{
+          overflow-y: unset;
+          overflow: unset;
+      }
+      #customer td, #customers th{
+          padding : 0px 8px;
+      }
+  }
+  @media (min-width: 600px){
+    /* #scroll{
+        overflow-y: auto;
+        overflow: hidden;
+    } */
+    .down-scroll{
+        overflow-x: unset;
+        overflow: unset;
+    }
+  }
+  @media (min-width:1050px){
       #bg3{
           display:none;
       }
-     
+      #resourceForm{
+        display:block !important;
+     }
   }
