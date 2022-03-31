@@ -10,13 +10,34 @@
     overflow: hidden;
     height: 520px;
 }
+
+#grid{
+    margin-top: 57px;
+}
+
+.col-sm-10{
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    width: 93.333333%;
+}
+
+.col-sm-2{
+    width: 4.666667%;
+}
+
+
+
 .blog-main{
     /* background-image: url(../img/web2.png);
     background-repeat: no-repeat;
     background-size:cover; */
     background-position: right;
     /* height: 405px !important; */
-    margin: 10px 5px 0px 30px !important;
+    margin: 10px 5px 20px 30px !important;
+    height: 500px !important;
+
     /* position: absolute; */
     /* opacity: 0.8; */
 }
@@ -70,6 +91,8 @@
     bottom: 0;
     right: 0;
     text-align: center;
+
+
 }
 .blog-btm{
     /* background-image: url(../img/dataScience.jpg);
@@ -149,3 +172,21 @@ textarea {
     bottom: 32px;
     right: 32px;
 }
+ @media (max-width:1000px){
+    .col-sm-3{
+        width: 33%;
+    }
+
+    .blog-top{
+        height: 180px;
+    }
+    .blog-btm{
+        height: 180px;
+    }
+    .blog-main{
+        height: 372px !important;
+    }
+    .col-sm-3{
+        width:33.33%;
+    }
+ }

@@ -11,7 +11,8 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+    <link rel="stylesheet" href="css/sidenav.css">
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/imageHower.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,16 +33,17 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="col-sm-2">
-                    <div id="Ham" class="sidenav active">
-                    <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
-                    </div>
+                <div class="Ham paddoff">
+                    <div id="Ham" class="sidenav">
+                        <a href="#" style="text-align: center;" class="tooltip"><i class="fa fa-info"></i> <span class="tooltiptext">About</span></a>
+                        <a href="dashboard.php" style="text-align: center; " class="tooltip"><i class="fa fa-home"></i><span class="tooltiptext"> Dashboard <span></a>
+                        <a href="profile.php" style="text-align: center;" class="tooltip"><i  class="fa fa-user-circle "></i><span class="tooltiptext"> Profile </span></a>
+                        <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
+                        <a href="resourse.php" style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Resourse</span></a>
+                        <a href="clubDash.php"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Club</span></a>
+                        <a href="#"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Contact</span></a>
+                  </div>
+                </div>
                 </div>
                 <div class="col-sm-10 ">
                    
