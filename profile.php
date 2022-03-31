@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -41,12 +43,11 @@
                     </div>
                 </div>
                 <div class="col-sm-10">
-                    <div class="col-sm-8">
                     <div class="box-club">
                         <div>
                             <h2 style="text-align: center; color: slategray;">My Profile</h2>
                         </div>
-                        <form action="" class="form">
+                        <form class="form" id="form">
                             <div class="margin">
                                 <label>First Name:</label>
                                 <input type="text" id="fname" name="fname" placeholder="Enter First name"
@@ -64,93 +65,22 @@
                             </div>
                             <div class="margin">
                                 <label>Website:</label>
-                                <input type="text" id="website" name="website" placeholder="Enter your website"
+                                <input type="text" id="website" name="website" placeholder ="linkedin/github/portfolio "
                                     class="form-control form-style" required>
                             </div>
                             <div class="margin">
-                                <label>Interest:</label>
-                                <div class="checkbox checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="">
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        Web Development
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="" >
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        Data Science
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="" >
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        AI/ML
-                                    </label>
-                                </div>
-                                <div class="checkbox checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="" >
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        Android Development
-                                    </label>
-                                </div>
-                                <div class="checkbox  checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="" disabled>
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        Option is disabled
-                                    </label>
-                                </div>
-                                <div class="checkbox disabled checkbox12" style="width:80%; float:right;">
-                                    <label>
-                                        <input type="checkbox" value="" disabled checked>
-                                        <i class="fa fa-2x icon-checkbox"></i>
-                                        Option is disabled & checked
-                                    </label>
-                                </div>
+                                <label>Profile Image</label>
+                                <input type="File" id="photo" name="photo" class="form-control form-style" />
                             </div>
                             <div class="margin">
-                                <input type="submit" value="Update" class="log-btn">
+                                <input type="submit" value= "Update" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
                         </form>
                     </div>
-                    </div>
-                    <div class="col-sm-2">
-                        
-                    </div>
-                    
                 </div>
             </div>
         </div>
-    </section>
-            
-                                            <!-- <div class="margin form-style-checkbox">
-                                                <input type="checkbox" value = "Web Development" class="checkbox-link">
-                                                <label class="form-style-checkbox" >Web Development:</label>
-                                                <input type="checkbox" value = "Data Science" class="checkbox-link">
-                                                <label class="form-style-checkbox">Data Science:</label>
-                                                <input type="checkbox" value = "AI/ML" class="checkbox-link">
-                                                <label class="form-style-checkbox">AI/ML:</label>
-                                                <input type="checkbox" value = "Android Development" class="checkbox-link">
-                                                <label class="form-style-checkbox">Android Development</label>
-                                                 <label>Other</label><input type="text" value = "other" class="form-style"> 
-                                            </div> -->
-                                            <!-- <select id="interest" name="interest" class="form-control form-style" onclick="sample();" required>
-                                                <option value="webd">Web Development</option>
-                                                <option value="DataS">Data Science</option>
-                                                <option value="AI">AI/ML</option>
-                                                <option value="Android">Android Development</option>
-                                                <option value="other" type="text" placeholder="others">Others</option>
-                                            </select>
-                                              <div id="Choose-other" style ="display: none;" >
-                                                  <input type="text" id="other" name="other" class="form-control form-style " required>
-                                              </div> -->
-                                        <!-- </div> -->
-                                        
-                    
+    </section>                             
             <section id="footer">
                 <footer class="footer-distributed">
                     <div class="col-sm-12">
@@ -181,6 +111,36 @@
             </div>
 		</footer>
     </section>       
+    <script type="text/javascript">
+        function UpdateProfile(){
+            var form = document.getElementById("form");
+               var data = new FormData(form);
+            //    alert("check1");
+               $.ajax({
+                       type: "POST",
+                       url: "ajax/Update_Profile.php",
+                       data: data,
+                       contentType: false,
+                       processData: false,
+                       success: function(data){
+                           alert(data);
+                           if(data == 0)
+                           {
+                               alert("data inserted successfully");
+                           }
+                           else if(data == 1)
+                           {
+                               alert('data not inserted');
+                           }
+                           else if(data == 2)
+                           {
+                               alert("Please select an file/link");
+                           }
+                       }
+                   });
+                //    alert("check1");
+        }
+    </script>
     <script type="text/javascript">
         function sample(){
 

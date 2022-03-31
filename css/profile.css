@@ -1,0 +1,57 @@
+.form{
+    margin: auto;
+    width: 50%;
+  }
+  
+  .margin{
+    margin: 12px 4px;
+  
+  }
+  
+  .box-club{
+    background-color: lavenderblush;
+    width: 60%;
+    margin: 8% auto;
+    /* border-radius: 48px; */
+    padding: 11px;
+    /* box-shadow: 7px 7px 13px grey; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .form-style{
+    
+    width: 100%;
+  }
+  .checkbox-link{
+    margin: 24px;
+     width: 20% !important;
+  }
+  .form-style-checkbox{
+    width: 60%;
+    float: right;
+    /* padding: 10px; */
+  }
+  label{
+    margin-top: 4px;
+  }
+  /* 
+  .marg{
+    margin-top: -25px;
+  } */
+  
+  /* Create Post  */
+  
+  .checkbox12{
+    float: left;
+    width: 80% !important;
+    display: inline !important;
+    margin-top: 0px;
+  }
+  
+  /*btn*/
+  .log-btn{
+  margin-top:146px;
+  }
+  input[type = "submit" ]{
+      
+  }
