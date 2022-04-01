@@ -59,6 +59,16 @@
                                     class="form-control form-style" required>
                             </div>
                             <div class="margin">
+                                <label>Profession:</label>
+                                <input type="text" id="profession" name="profession" placeholder="Enter your profession"
+                                    class="form-control form-style" required>
+                            </div>
+                            <div class="margin">
+                                <label>Bio:</label>
+                                <input type="text" id="bio" name="bio" placeholder="Tell us about yourself"
+                                    class="form-control form-style" required>
+                            </div>
+                            <div class="margin">
                                 <label>Email:</label>
                                 <input type="text" id="email" name="email" placeholder="Enter Email"
                                     class="form-control form-style" required>

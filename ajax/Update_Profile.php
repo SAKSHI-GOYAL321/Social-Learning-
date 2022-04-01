@@ -6,6 +6,8 @@
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
         $email=$_POST['email'];
+        $profession=$_POST['profession'];
+        $bio=$_POST['bio'];
         $website = $_POST['website'];
         if(!empty($_FILES["photo"])){
             $img = $_FILES['photo']['name'];
@@ -27,13 +29,13 @@
         $execute = $query->execute($data);
         if($execute){
             if($query->fetch() > 0){
-                $query = $db->prepare('UPDATE profile set fname = ? , lname = ?, website = ?, photo = ? where email= ?');
-                $data=array($fname, $lname, $website, $path, $email);
+                $query = $db->prepare('UPDATE profile set fname = ? , lname = ?, website = ?, photo = ?, profession=?, bio=? where email= ?');
+                $data=array($fname, $lname, $website, $path, $profession,$bio, $email);
                 $execute=$query->execute($data);
             }
             else{
-                $query = $db->prepare('INSERT INTO profile(fname, lname, website, photo, email) VALUES (?,?,?,?,?)');
-                $data=array($fname, $lname, $website, $path, $email);
+                $query = $db->prepare('INSERT INTO profile(fname, lname, website, photo, email, profession, bio) VALUES (?,?,?,?,?,?,?)');
+                $data=array($fname, $lname, $website, $path, $email,$profession,$bio);
                 $execute=$query->execute($data);
             }
 
