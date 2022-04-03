@@ -6,7 +6,7 @@ if(password_verify("data", $_POST['token'])){
     $execute=$query->execute($data);
     $datarow=$query->fetch();
     ?>
-    <div class="col-sm-6 paddoff">
+    <div class="col-sm-6">
         <div class="grid">
             <figure class=" blog-main effect-zoe">
                 <div class="imgblur" id="main-img">

@@ -27,15 +27,13 @@
     width: 4.666667%;
 }
 
-
-
 .blog-main{
     /* background-image: url(../img/web2.png);
     background-repeat: no-repeat;
     background-size:cover; */
     background-position: right;
     /* height: 405px !important; */
-    margin: 10px 5px 20px 30px !important;
+    /* margin: 10px 5px 20px 30px !important; */
     height: 500px !important;
 
     /* position: absolute; */
@@ -68,7 +66,8 @@
     background-size: cover; */
     height: 245px;
     /* margin: 10px 30px 5px 5px !important; */
-    margin: 11px 26px 5px 40px !important;
+    /* margin: 11px 26px 5px 40px !important; */
+    margin-bottom: 16px !important;
     position: relative;
 }
 .blog-top p{
@@ -97,9 +96,9 @@
 .blog-btm{
     /* background-image: url(../img/dataScience.jpg);
     background-size: cover; */
-    height: 245px;
+    height: 238px;
     /* margin: 5px 30px 0px 5px !important; */
-    margin: 6px 30px 5px 41px !important;
+    /* margin: 6px 30px 5px 41px !important; */
     position: relative;
 }
 .blog-btm p{
@@ -127,9 +126,14 @@
 
 .content-2{
     float: left;
-    margin: 30px 30px 100px;
+    margin-top: 3%;
+    /* margin: 30px 30px 100px; */
 }
 .create{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 40px;
     color: indigo;
@@ -172,6 +176,61 @@ textarea {
     bottom: 32px;
     right: 32px;
 }
+@media (max-width: 400px){
+    #grid{
+        display: none;
+    }
+    #datalist{
+        margin-top: 30px;
+    }
+    .col-sm-3{
+        width: 100% !important;
+        margin: auto;
+    }
+    .create i{
+        font-size: 36px !important;
+        margin-right: 4px;
+    }
+    .create a{
+        font-size: 20px !important;
+    }
+    .box p {
+        text-align: center;
+        font-size: 16px;
+        margin: 0px 4px;
+    }
+}
+@media (max-width: 520px) and (min-width: 400px){
+    #grid{
+        display: none;
+    }
+    #datalist{
+        margin-top: 30px;
+    }
+    .col-sm-3{
+        width: 78.33% !important;
+        margin: auto;
+    }
+}
+@media (max-width: 768px) and (min-width: 520px){
+    #grid{
+        display: none;
+    }
+    .col-sm-3{
+        width: 49.33% !important; 
+        float: left;
+    }
+    #datalist{
+        margin-top: 30px;
+    }
+    .create i{
+        font-size: 38px !important;
+        margin-right: 4px;
+    }
+    .create a{
+        font-size: 24px;
+    }
+}
  @media (max-width:1000px){
     .col-sm-3{
         width: 33%;
@@ -188,5 +247,12 @@ textarea {
     }
     .col-sm-3{
         width:33.33%;
+    }
+    .create i{
+        font-size: 36px;
+        margin-right: 4px;
+    }
+    .create a{
+        font-size: 26px;
     }
  }

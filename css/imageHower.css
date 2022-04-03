@@ -13,11 +13,14 @@
 }
 
 /* Common style */
+figure{
+	margin:0px !important;
+}
 .grid figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px 2%;
+	/* margin: 10px 2%; */
 	width: 100%;
 
 	/* min-width: 320px;
@@ -39,6 +42,7 @@
 	opacity: 0.8;
 	
 	width:100%;
+	height: 100%;
 }
 
 .grid figure figcaption {

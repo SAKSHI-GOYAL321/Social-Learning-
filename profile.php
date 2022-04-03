@@ -24,15 +24,15 @@
             <div class="topnav">    
                 <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
-                <a href="#"><?php echo $_SESSION['uname']?></a></i>
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>
     <section id="side-nav">
-        <div class="col-sm-12 paddoff">
+    <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="col-sm-2">
-                    <div class="sidenav">
+                    <div id="Ham" class="sidenav">
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
@@ -82,6 +82,8 @@
                                 <label>Profile Image</label>
                                 <input type="File" id="photo" name="photo" class="form-control form-style" />
                             </div>
+                            <button style="cursor:pointer" id="btn">Click me</button>
+                            <input type="file" id="input" style="display:none">
                             <div class="margin">
                                 <input type="submit" value= "Update" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
@@ -120,7 +122,7 @@
                 </div>               
             </div>
 		</footer>
-    </section>       
+    </section>    
     <script type="text/javascript">
         function UpdateProfile(){
             var form = document.getElementById("form");
