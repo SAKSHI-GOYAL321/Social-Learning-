@@ -1,8 +1,15 @@
 body {
     background: rgb(51, 31, 31)
 }
-
+.container{
+    width: 90% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88.5vh;
+}
 .card {
+    width: 100%;
     border: none;
     position: relative;
     overflow: hidden;
@@ -10,6 +17,8 @@ body {
     cursor: pointer;
     margin-top: 92px;
     margin-bottom: 92px;
+    padding: 10% 2%;
+    background-color: #e1e0e0;
 }
 
 .card:before {
@@ -19,7 +28,7 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #692f74;
+    background-color: #41679e;
     transform: scaleY(1);
     transition: all 0.5s;
     transform-origin: bottom
@@ -32,18 +41,23 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #8E24AA;
+    background-color: #41679e;
     transform: scaleY(0);
     transition: all 0.5s;
     transform-origin: bottom
 }
-
+.text-center{
+    text-align: center;
+    margin-left: 2%;
+}
 .card:hover::after {
     transform: scaleY(1)
 }
 
 .fonts {
-    font-size: 20px
+    width: 100%;
+    font-size: 20px;
+    margin-top: 12px;
 }
 
 .social-list {
@@ -60,21 +74,62 @@ body {
 }
 
 .buttons button:nth-child(1) {
-    border: 1px solid #8E24AA !important;
-    color: #8E24AA;
+    border: 1px solid #244caa !important;
+    background-color: #2479aa40;
+    color: #2479aa;
     height: 40px
 }
 
 .buttons button:nth-child(1):hover {
-    border: 1px solid #8E24AA !important;
-    color: #fff;
+    background-color: #2479aa;
+    color: #d4e9f5;
     height: 40px;
-    background-color: #8E24AA
 }
 
 .buttons button:nth-child(2) {
-    border: 1px solid #8E24AA !important;
-    background-color: #8E24AA;
+    border: 1px solid #244caa !important;
+    background-color: #2479aa;
     color: #fff;
     height: 40px
+}
+.text-center h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+@media (max-width: 800px){
+    #Ham{
+        display: none;
+    }
+    .col-sm-8{
+        width: 93.666667% !important;
+        margin: 0px 4%;
+    }
+    .fonts{
+        font-size: 16px;
+    }
+}
+@media (min-width:800px) and (max-width: 1100px){
+    #Ham{
+        display: block;
+        width: 26% !important;
+    }
+}
+@media (min-width:1100px){
+    #Ham{
+        display: block;
+        width: 19% !important;
+    }
+}
+@media (max-width: 350px){
+    .text-center img{
+        width: 150px !important;
+    }
+    .buttons button:nth-child(1) {
+        height: 34px;
+        margin: 5px;
+    }
+    .buttons button:nth-child(2) {
+        height: 34px
+    }
 }

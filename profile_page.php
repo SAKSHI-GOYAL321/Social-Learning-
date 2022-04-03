@@ -1,6 +1,6 @@
-
-
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +13,16 @@
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Profile page</title>
 </head>
 <body>
-
-    <section id="top-nav">
+<section id="top-nav">
         <div class="col-sm-12 paddoff">
             <div class="topnav">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
-                <a href="#"><?php echo $_SESSION['uname']?></a></i>
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>
@@ -30,7 +30,7 @@
         <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="col-sm-2">
-                    <div class="sidenav">
+                    <div id="Ham" class="sidenav">
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
@@ -40,28 +40,13 @@
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-6">
-                    <div class="container mt-5">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-md-7">
-                                <div class="card p-3 py-4">
-                                    <div class="text-center"> <img src="https://i.imgur.com/bDLhJiP.jpg" width="100" class="rounded-circle"> </div>
-                                    <div class="text-center mt-3"> 
-                                        <h5 class="mt-2 mb-0">Alexender Schidmt</h5> <span>UI/UX Designer</span>
-                                        <div class="px-4 mt-1">
-                                            <p class="fonts">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                                        </div>
-  
-                                        <div class="buttons"> <button class="btn btn-outline-primary px-4">Website</button> <button class="btn btn-primary px-4 ms-3">Contact</button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8">
+                    <div id="profile">
+                            
                     </div>
-                    
                 </div>
-                <div class="col-sm-2"></div>
+                <div class="col-sm-1"></div>
             </div>
         </div>
     </section>                             
@@ -74,7 +59,6 @@
                         <div class="footer-left">
                             <h4>Company<span>logo</span></h4>
                             <p class="footer-company-name">Company Name © 2021</p>
-                            
                         </div>
                     </div>
                     <div class="col-sm-2"></div>
@@ -86,7 +70,6 @@
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-linkedin"></i></a>
                                 <a href="#"><i class="fa fa-github"></i></a>
-                
                             </div>
                         </div>
                     </div>
@@ -95,7 +78,21 @@
             </div>
 		</footer>
     </section>  
-    
+    <script type="text/javascript" src="Hamburger.js"></script>
+    <script type="text/javascript">
+        profileData();
+        function profileData(){
+            var token = "<?php echo password_hash('Profile', PASSWORD_DEFAULT); ?>";
+                $.ajax({
+                    type: "POST",
+                    url: "ajax/profile_page.php",
+                    data: {token:token},
+                    success: function(data){
+                        $('#profile').html(data);
+                    }
+                });
+        }
+    </script>
 
     
 </body>

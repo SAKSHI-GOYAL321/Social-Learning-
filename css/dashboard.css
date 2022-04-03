@@ -94,7 +94,7 @@ ul{
   width: 16.666667%;
   height: 100%;
   float: left;
-  display: none;
+  /* display: none; */
   position: fixed;
   z-index: 51;
   margin-top: 40px;
