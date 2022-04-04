@@ -32,7 +32,7 @@
             <div class="contain">
                 <div class="col-sm-2">
                     <div id="Ham" class="sidenav">
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>

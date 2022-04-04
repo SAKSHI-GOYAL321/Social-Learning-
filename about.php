@@ -13,6 +13,7 @@ session_start();
     <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
     <link rel="stylesheet" href="css/dashboard.css"> 
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/aboutus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@ session_start();
             <div class="contain">
                 <div class="col-sm-2">
                     <div id="Ham" class="sidenav">
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
@@ -42,14 +43,23 @@ session_start();
                         <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
-
+                <div class="col-sm-10">
+                    <div class="col-sm-6">
+                        <div class="abt-sec">
+                            <h2>ABOUT US</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nemo commodi aliquam, porro voluptate repudiandae eum accusantium qui nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, rem. </p>
+                            <a href="dashboard.php">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="img-wrap">
+                            <img src="img/about.png" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
     </div>
 </section>
-
-
-    
-
 <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("sidenav");
