@@ -19,4 +19,6 @@
 
 <script src="" >
     CKEDITOR.replace("editor");
+
+    console.log(document.getElementById('editor').value);
 </script>

@@ -12,8 +12,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+    <style>
+        .content{
+            width: 80%;
+            margin: 7% auto;
+            margin-top: 7%;
+        }
+        .title{
+            text-align: center;
+        }
+        .title h3{
+            font-weight: 600;
+            color: #0d3d66;
+            text-shadow: 0px 2px 12px #8383d0;
+            font-size: 40px;
+            margin-bottom: 43px;
+            margin-top: 20px;
+        }
+        .title .form-control{
+            margin: 14px 0px;
+        }
+        .txt-alg{
+            text-align: center;
+        }
+        input[type=submit]{
+            padding: 7px 3%;
+            font-size: 1.6rem;
+            border-radius: 14px;
+            border: 2px solid gray;
+            background-color: #ced0e5;
+            box-shadow: inset 0px 0px 12px 0px #493e91;
+        }
+        .mg-10{
+            margin: 10px 0px;
+        }
+    </style>
 </head>
-
 <body>
     <section id="top-nav">
         <div class="col-sm-12 paddoff">
@@ -43,17 +78,17 @@
                     <div class="content">
                         <form id = "form">
                             <div class="title">
-                                <h3>Add a Template</h3>
+                                <h3>Create Your Blog</h3>
                                 <input type="text" name="title" id="title" placeholder="Enter title here" class="form-control ">
                             </div>
                             <div class="para">
                                 <textarea name="write" id="write" placeholder="Start writing..." cols="53" rows="20" class="form-control "></textarea>
                             </div>
-                            <div>
+                            <div class="mg-10">
                                 <label>Upload a Image</label>
                                 <input type="file" id="image_file" name="image_file" class="form-control ">
                             </div>
-                            <div>
+                            <div class="txt-alg" >
                                 <input type="submit" value="Post" name="submit" id="submit" onclick="BlogPost();">
                             </div>
                         </form>
@@ -62,6 +97,9 @@
             </div>
         </div>
     </section>
+    <script>
+        CKEDITOR.replace('write');
+    </script>
     <script type="text/javascript">
         function show(){
             var sidenav= document.getElementByClassName("sidenav");
@@ -111,6 +149,11 @@
                     }
             });
         }
+    </script>
+    <script type="text/javascript">
+        $('form').submit(function(e) {
+            e.preventDefault();
+        });
     </script>
 </body>
 <footer class="footer-distributed">

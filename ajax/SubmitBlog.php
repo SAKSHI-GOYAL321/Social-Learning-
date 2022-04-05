@@ -18,7 +18,7 @@
 		if(move_uploaded_file($tmp, $path)){
 	
 		}
-			$query = $db->prepare('INSERT INTO BlogData(Author, title, content, ImagePath) VALUES (?,?,?,?)');
+			$query = $db->prepare('INSERT INTO BlogData(Author, Title, Content, ImagePath) VALUES (?,?,?,?)');
 			$data=array($Author, $title, $write, $path);
 			$execute=$query->execute($data);
 			
@@ -31,8 +31,8 @@
 				echo 1;
 			}
 		}	
-		else
-		{
+	else
+	{
 			echo "attack";
-		}
+	}
 ?>
