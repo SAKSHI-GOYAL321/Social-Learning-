@@ -33,7 +33,7 @@
             <div class="contain">
                 <div class="col-sm-2">
                     <div id="Ham" class="sidenav">
-                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
@@ -45,7 +45,7 @@
                 <div class="col-sm-10">
                     <div class="box-club">
                         <div>
-                            <h2 style="text-align: center; color: slategray;">My Profile</h2>
+                            <h2 style="text-align: center; color: black;">My Profile</h2>
                         </div>
                         <form class="form" id="form">
                             <div class="margin">
@@ -85,7 +85,7 @@
                             <button style="cursor:pointer" id="btn">Click me</button>
                             <input type="file" id="input" style="display:none">
                             <div class="margin">
-                                <input type="submit" value= "Update" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
+                                <input type="submit" value= "Update" class="buton" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
                         </form>
                     </div>
@@ -153,20 +153,7 @@
                 //    alert("check1");
         }
     </script>
-    <script type="text/javascript">
-        function sample(){
 
-            var a = document.getElementById("interest");
-            var b = document.getElementById("Choose-other");
-            if(a.value == "other"){
-                // a.style.display = "none";
-                b.style.display = "block";
-            }
-            else{
-                b.style.display = "none";
-            }       
-        }
-    </script>
     <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("sidenav");

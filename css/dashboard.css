@@ -9,8 +9,7 @@
 
 .topnav{
     width: 100%;
-    background-color: #2F5168;
-    background-color: #4c6c94;
+    background-color: #122765;
     height: 40px;
     position: fixed;
     top: 0;
@@ -18,7 +17,7 @@
 }
 .topnav a{
     float: right;
-    color: #f2f2f2;
+   color: #e5e8e8;
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
@@ -110,8 +109,14 @@ ul{
     left: 0;
     /* display: block; */
     padding-top: 40px;
-    background-color: steelblue;
+    background-color: #122765;
 }
+
+body{
+  background-color: #e5e8e8 !important;
+}
+
+
 .sidenav a {
     /* padding: 6px 28px 10px 30px;
     text-decoration: none;
@@ -124,7 +129,7 @@ ul{
     padding-left: 45px;
     padding-bottom: 20px;
     font-weight: bold;
-    color: #3f2828;
+    color: #e5e8e8;
     display: block;
   }
   .sidenav a:hover {
@@ -157,7 +162,7 @@ ul{
 
 /* footer  */
 .footer-distributed{
-    background-color: #4c6c94;
+    background-color: black;
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
@@ -216,11 +221,11 @@ ul{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-  background-color: #1b5374;
+  background-color: #e5e8e8;
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #ffffff;
+	color: black;
 	text-align: center;
 	line-height: 35px;
 

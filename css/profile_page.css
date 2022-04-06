@@ -18,7 +18,7 @@ body {
     margin-top: 92px;
     margin-bottom: 92px;
     padding: 10% 2%;
-    background-color: #e1e0e0;
+    background-color: #64649563;
 }
 
 .card:before {
@@ -28,7 +28,7 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #41679e;
+    background-color: #646495;
     transform: scaleY(1);
     transition: all 0.5s;
     transform-origin: bottom
@@ -41,7 +41,7 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #41679e;
+    background-color: #646495;
     transform: scaleY(0);
     transition: all 0.5s;
     transform-origin: bottom
@@ -74,22 +74,22 @@ body {
 }
 
 .buttons button:nth-child(1) {
-    border: 1px solid #244caa !important;
-    background-color: #2479aa40;
-    color: #2479aa;
+    border: 1px solid #122765 !important;
+    background-color: #e5e8e8;
+    color: #122765;
     height: 40px
 }
 
 .buttons button:nth-child(1):hover {
-    background-color: #2479aa;
-    color: #d4e9f5;
+    background-color: #122765;
+    color: #e5e8e8;
     height: 40px;
 }
 
 .buttons button:nth-child(2) {
-    border: 1px solid #244caa !important;
-    background-color: #2479aa;
-    color: #fff;
+    border: 1px solid #122765 !important;
+    background-color: #122765;
+    color: #e5e8e8;
     height: 40px
 }
 .text-center h5{
