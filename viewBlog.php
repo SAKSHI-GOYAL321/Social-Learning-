@@ -15,20 +15,28 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <style>
-            h1{
-                font-size: 50px;
+            .main-head{
+                margin: 28px;
+                padding: 10px;
+                font-size: 40px;
                 text-align: center;
+                float: left;
+                width: 43%;
             }
             img{
-                width: 40%;
-                margin: auto;
+                width: 45%;
+                margin-top: 61px;
+                margin: 25px;
+                margin-top: 61px;
                 display: block;
-                height: 200px;
-                margin-bottom: 40px;
+                height: 300px;
+            }
+            .blog-content{
+                margin: 30px;
             }
             p{
-                font-size:20px;
-                float: left;
+                font-size: 16px;
+                line-height: 25px;
             }
         </style>
     </head>

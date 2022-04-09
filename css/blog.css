@@ -136,17 +136,18 @@
     align-items: center;
     text-align: center;
     font-size: 40px;
-    color: indigo;
     height: 300px; 
     margin: 15px 0px;
     padding: 89px 0px;
     box-shadow: 7px 7px 13px grey;
+    /* background-image: linear-gradient(45deg, #64649478,#646495c9, #646495); */
 }
 .create i{
     font-size: 48px;
 }
 .create a{
     font-size: 32px;
+    color: black;
 }
 
 .box{
@@ -154,6 +155,7 @@
     min-height: 300px;
     margin: 15px 0px;
     /* box-shadow: 7px 7px 5px grey; */
+    border: 2px solid black;
     box-shadow: 7px 7px 13px grey;
 }
 .box img{

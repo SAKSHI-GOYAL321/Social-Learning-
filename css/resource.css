@@ -31,7 +31,7 @@
 /*Scroll-bar*/
 #scroll{
     height: 450px !important;
-    display:none;
+    /* display:none; */
     overflow:hidden;
     overflow-y:auto;
 
@@ -60,7 +60,7 @@
     font-weight: bold;
     border-color: transparent;
     color:  #ffffff;
-    background-color: #045a78;
+    background-color: #464691;
     border-radius: 20px;
 }
 input[type = button]{
@@ -117,7 +117,7 @@ input[type = button]{
     font-size: 16px;
     border-color: transparent;
     color: #faf5f5;
-    background-color: #3a484e;
+    background-color: #646495;
     border-radius: 30px;
     transition: none;
 }
@@ -131,16 +131,21 @@ input[type = button]{
     padding: 6px 3px;
     font-size: 14px;
     /* border-color: transparent; */
-    color: #faf5f5;
-    background-color: #c1dbe6;
+    color: #e5e8e8;
     border-radius: 30px;
     transition: none;
+    background-color: #6464958f;
+    border: 2px solid #646495;
 }
 .open-link-style a{
-    color: #045a78;
+    color: #e5e8e8;
 }
 .open-link-style :hover{
     color: white;
+}
+.btn-success{
+    background-color: #5784b8;
+    border-color: #5784b8 ;
 }
 
 /* Table  */
@@ -165,7 +170,7 @@ input[type = button]{
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #49718c;
+    background-color: #646495;
         color: white;
   }
   @media screen and (max-width: 1230px) {

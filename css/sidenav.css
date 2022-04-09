@@ -9,8 +9,7 @@
 
 .topnav{
     width: 100%;
-    background-color: #2F5168;
-    background-color: #4c6c94;
+    background-color: #122765;
     height: 40px;
     align-items: center;
     position: fixed;
@@ -19,7 +18,7 @@
 }
 .topnav a{
     float: right;
-    color: #f2f2f2;
+    color: #e5e8e8;
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
@@ -27,8 +26,8 @@
     /* border: 1px solid #f2f2f2; */
 }
 .topnav a:hover {
-    background-color:#f2f2f2;
-    color: steelblue;
+    background-color:#e5e8e8;
+    color: #122765;
   }
   .topnav span,i.fas{
     height: 10px;
@@ -46,14 +45,14 @@
     /* display: none; */
   }
 .topnav .fa:hover{
-    background-color:#f2f2f2;
-    color: steelblue;
+  background-color:#e5e8e8;
+  color: #122765;
 }
 
 /* side-nav bar */
  .sidebar{
   height: 96vh; 
-  background-color: steelblue;
+  background-color: #122765;
   left: 0px;
   top: 0px;
 
@@ -89,7 +88,7 @@ ul{
     
     display: block;
     padding-top: 70px;
-    background-color: steelblue;
+    background-color: #122765;
 }
 
 
@@ -107,7 +106,7 @@ ul{
     font-size: 18px;
     padding-bottom: 20px;
     font-weight: bold;
-    color: #3f2828;
+    color: #e5e8e8;
     display: block;
   }
   
@@ -119,6 +118,10 @@ ul{
 .non-active{
     display:none;
 }
+.sidenav a:hover {
+  color: #122765;
+  text-decoration: none;
+}
 .tooltip {
     opacity: 1;
     position: relative;
@@ -129,8 +132,8 @@ ul{
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color:rgb(4, 90, 120);
-    color: #fff;
+    background-color: #5784b8;
+    color: #e5e8e8;
     /* color:black; */
     text-align: center;
     border-radius: 6px;
@@ -168,7 +171,7 @@ ul{
 
 /* footer  */
 .footer-distributed{
-    background-color: #4c6c94;
+    background-color: black;
     box-sizing: border-box;
     z-index: 1;
     width: 100%;
@@ -228,11 +231,10 @@ ul{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-  background-color: #1b5374;
-	border-radius: 2px;
-
-	font-size: 20px;
-	color: #ffffff;
+  background-color: #e5e8e8;
+  border-radius: 2px;
+  font-size: 20px;
+  color: black;
 	text-align: center;
 	line-height: 35px;
 

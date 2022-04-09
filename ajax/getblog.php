@@ -64,27 +64,6 @@ if(password_verify("data", $_POST['token'])){
         </div>
     </div>
         
-
-
-    <div class="grid">
-        <?php while($datarow = $query->fetch()){
-            ?>
-					<figure class="effect-zoe">
-						<img src="social/<?php echo $datarow['ImagePath']; ?>" alt="img25"/>
-						<figcaption>
-							<h2>Creative <span>Zoe</span></h2>
-							<p class="icon-links">
-								<a href="#"><span class="icon-heart"></span></a>
-								<a href="#"><span class="icon-eye"></span></a>
-								<a href="#"><span class="icon-paper-clip"></span></a>
-							</p>
-							<p class="description">Zoe never had the patience of her sisters. She deliberately punched the bear in his face.</p>
-						</figcaption>			
-					</figure>
-				<?php 
-            }
-                ?>	
-	</div>
  <?php
 }
 if(password_verify("lowerdata",$_POST['token']))
