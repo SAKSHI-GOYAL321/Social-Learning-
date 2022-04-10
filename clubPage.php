@@ -62,7 +62,7 @@
                         <div class="post">
                             <form>
                                 <div class="Add-post">
-                                    <span class="user-icon"><i class="fa fa-user-circle"></i></span>
+                                    <span id="u_icon" class="user-icon"></span>
                                     <input type="text" placeholder="Start a Post" />
                                 </div>
                             </form>
@@ -77,21 +77,20 @@
         </div>
 </section>
     <script type="text/javascript">
-        // connectClubPage();
-        //     function connectClubPage(){
-        //         var id = 
-        <?php 
-        // echo $_GET['club_id']
-         ?>
-        //         $.ajax({
-        //             type: "POST",
-        //             url: "ajax/ClubPage.php",
-        //             data: {club_id:id},
-        //             success: function(data){
-        //                 $('#Club-Page').html(data);
-        //             }
-        //         });   
-        //     }
+        userimage();
+        function userimage(){
+            var token = "<?php echo password_hash('profile-photo', PASSWORD_DEFAULT); ?>";
+            console.log('check1');
+            $.ajax({
+                type:"POST",
+                url:"ajax/discussion.php",
+                data: {token: token},
+                success: function(data){
+                    $('#u_icon').html(data);
+                }
+            });
+            console.log('check1');
+        }
 
             function connectEventsToDataBase(){
                 var id = '<?php echo $_GET['club_id']; ?>';

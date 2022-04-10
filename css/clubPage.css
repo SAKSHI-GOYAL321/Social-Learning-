@@ -185,6 +185,16 @@
 .post .Add-post .user-icon{
   float: left;
     margin: 1.5em;
+    width: 60px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: 40px;
+    background-color: #d5d0d0;
+    overflow: hidden;
+}
+.post .Add-post .user-icon img{
+  width: 100%;
+  height: 100%;
 }
 .post .Add-post input{
   width: 80% !important;
