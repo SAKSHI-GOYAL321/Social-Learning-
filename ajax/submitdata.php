@@ -17,7 +17,13 @@
 			//4->query success pe action
 			if($execute)
 			{
-				echo 0;
+				$img = 'img/user_profile.png';
+				$query = $db->prepare('INSERT INTO profile(photo, email) VALUES(?,?)');
+				$data = array($img, $email);
+				$execute = $query->execute($data);
+				if($execute){
+					echo 0;
+				}
 			}
 			else
 			{

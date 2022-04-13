@@ -17,8 +17,9 @@ body {
     cursor: pointer;
     margin-top: 92px;
     margin-bottom: 92px;
-    padding: 10% 2%;
+    padding: 2% 2%;
     background-color: #64649563;
+    min-height: 300px;
 }
 
 .card:before {
@@ -46,6 +47,13 @@ body {
     transition: all 0.5s;
     transform-origin: bottom
 }
+.edit{
+    display: flex;
+    justify-content: flex-end;
+    /* margin-top: -64px; */
+    margin-bottom: 15px;
+}
+
 .text-center{
     text-align: center;
     margin-left: 2%;

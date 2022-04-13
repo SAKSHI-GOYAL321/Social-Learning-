@@ -202,9 +202,8 @@
             var resource = document.getElementById('Resources');
             var scrol = document.getElementById('scroll');
             resource.style.display = "none";
-            scrol.style.height = "0px";
-
-            form.style.display = "block";
+            scrol.style.height = "20px";
+            form.style.display="block";
         }
         function uploadfiles(){
            

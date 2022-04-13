@@ -3,8 +3,8 @@
 	include('connection.php');
 	// if(isset($_POST['login']))
 	{	
-		$email=test_input($_POST['email']);
-		$pass=test_input($_POST['pass']);
+		$email=test_input($_POST['emails']);
+		$pass=test_input($_POST['passwords']);
 		if(validiate_input($email,1) && validiate_input($pass,2))
 		{
 			$check=$db->prepare('SELECT * from user_details WHERE  email = ?');
@@ -24,6 +24,9 @@
 					}
 				}
 			}
+            else{
+                echo 3;
+            }
 		}
 		else
 		{

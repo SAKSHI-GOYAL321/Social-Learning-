@@ -201,14 +201,14 @@
 
     <script type="text/javascript">
         function login() {
-            var email = document.getElementById('emails').value;
-            var pass = document.getElementById('passwords').value;
-            if (email != "" && pass != "") {
-                if (ValidateEmail(email)) {
+            var emails = document.getElementById('emails').value;
+            var passwords = document.getElementById('passwords').value;
+            if (emails != "" && passwords != "") {
+                if (ValidateEmail(emails)) {
                     $.ajax({
                             type: 'POST',
                             url: "ajax/login.php",
-                            data: { email: email, pass: pass },
+                            data: {emails:emails, passwords:passwords},
                             success: function (data) {
                                 if (data == 0) {
                                     window.location.href ="dashboard.php";
@@ -218,6 +218,9 @@
                                 }
                                 else if(data == 2){
                                     alert("please follow the proper format");
+                                }
+                                else if(data == 3){
+                                    alert('Email-Id not found');
                                 }
                                 else {
                                     alert(data);

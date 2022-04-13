@@ -22,7 +22,7 @@ figure{
 	overflow: hidden;
 	/* margin: 10px 2%; */
 	width: 100%;
-
+	box-shadow: 6px 6px 12px 0px #a9a8a8;
 	/* min-width: 320px;
 	max-width: 480px;
 	max-height: 360px; */
