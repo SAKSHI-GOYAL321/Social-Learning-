@@ -11,7 +11,7 @@
             <div class="container">
                                 <div class="card p-3 py-4">
                                     <div class="edit">
-                                        <i style='font-size:24px' class='fa fa-edit'></i>
+                                        <i style='font-size:24px' class='fa fa-edit'></i> 
                                     </div>
                                     <div class="text-center"> <img src="<?php echo $datarow['photo'];?>" class="rounded-circle" style="width:150px; height: 150px;" /> </div>
                                     <div class="text-center mt-3"> 
