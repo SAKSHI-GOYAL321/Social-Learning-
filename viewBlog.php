@@ -41,17 +41,16 @@
             }
 
             .back-arrow{
-	width: 30px;
+	width: 38px;
 }
 
 .back-arrow img{
-	height: 30px;
+    height: 38px;
     width: 100%;
     border-radius: 40px;
     padding: 4px;
     box-shadow: 0px 0px 20px 1px grey;
 }
-
 
 #myBtn {
   display: none;
@@ -62,13 +61,16 @@
   font-size: 18px;
   border: none;
   outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+  border-radius: 25px;
+    box-shadow: 0px 0px 14px 0px grey;
+    color: black;
+    cursor: pointer;
+    padding: 12px 16px;
 }
-
+#myBtn img{
+    width: 30px;
+    height: 30px;
+}
 #myBtn:hover {
   background-color: #555;
 }
@@ -144,7 +146,7 @@
             } 
         </script>
 
-<script>
+<script type="text/javascript">
 //Get the button
 var mybutton = document.getElementById("myBtn");
 
@@ -152,16 +154,16 @@ var mybutton = document.getElementById("myBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+  if (document.documentElement.scrollTop > 25) {
+    document.getElementById("myBtn").style.display = "block";
+  } 
+  else {
+    document.getElementById("myBtn").style.display = "none"
   }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
 </script>

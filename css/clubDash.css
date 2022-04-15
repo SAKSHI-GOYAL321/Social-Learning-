@@ -141,11 +141,11 @@ textarea :focus, input:focus{
     height: 100%;
     position: absolute;
     z-index: -1;
-    border: 2px solid #304e71;
+    border: 2px solid #122765;
     transition: all 0.25s ease-out;
   }
   .wrap-image::before {
-    background-color: #5e91cb;
+    background-color: #5784b8;
     top: -15px;
     left: -15px;
   }
@@ -198,17 +198,14 @@ textarea :focus, input:focus{
   height: 100%;
 }
 .product {
-    background-image: linear-gradient(
-        135deg
-        , #a8edea 0%, #fed6e3 100%);
-        background-image: linear-gradient( 135deg , #8989c340 0%, #8888c5);
-            border-radius: 5px;
-            height: 50%;
-           
-            width: 50%;
-            justify-content: center;
-            display: flex;
-    
+  background-image: linear-gradient( 175deg , #12276594 0%, #122765ed);
+  background-image: linear-gradient( 175deg , #646495 0%,#5784b8);
+  border-radius: 5px;
+  height: 50%;
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  color: #e5e8e8;
   }
 
   .heading_name{
