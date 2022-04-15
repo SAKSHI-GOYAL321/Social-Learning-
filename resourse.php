@@ -141,7 +141,7 @@
             var bg_upload = document.getElementById("bg3");
             var form = document.getElementById("resourceForm");
             bg_file.style.backgroundColor = " rgb(213 218 220)";
-            bg_link.style.backgroundColor = "#464691";
+            bg_link.style.backgroundColor = "#122765";
             bg_upload.style.backgroundColor = " rgb(213 218 220)";
 
             var resource = document.getElementById('Resources');
@@ -168,7 +168,7 @@
             var bg_link = document.getElementById("bg2");
             var form = document.getElementById('resourceForm');
             var bg_upload = document.getElementById("bg3");
-            bg_file.style.backgroundColor = "#464691";
+            bg_file.style.backgroundColor = "#122765";
             bg_link.style.backgroundColor = "rgb(213 218 220)";
             bg_upload.style.backgroundColor = " rgb(213 218 220)";
             var resource = document.getElementById('Resources');
@@ -196,7 +196,7 @@
             var bg_upload = document.getElementById("bg3");
             bg_file.style.backgroundColor = "rgb(213 218 220)";
             bg_link.style.backgroundColor = "rgb(213 218 220)";
-            bg_upload.style.backgroundColor = "#464691";
+            bg_upload.style.backgroundColor = "#122765";
 
             var form = document.getElementById('resourceForm');
             var resource = document.getElementById('Resources');

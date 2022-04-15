@@ -18,7 +18,7 @@ body {
     margin-top: 92px;
     margin-bottom: 92px;
     padding: 2% 2%;
-    background-color: #64649563;
+    background-color: #7c8ea9;
     min-height: 300px;
 }
 
@@ -29,7 +29,7 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #646495;
+    background-color: #122765;
     transform: scaleY(1);
     transition: all 0.5s;
     transform-origin: bottom
@@ -42,7 +42,7 @@ body {
     top: 0;
     width: 4px;
     height: 100%;
-    background-color: #646495;
+    background-color: #122765;
     transform: scaleY(0);
     transition: all 0.5s;
     transform-origin: bottom
@@ -54,6 +54,19 @@ body {
     margin-bottom: 15px;
 } 
 
+.edit a{
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.edit a:hover{
+    background-color: #122765;
+    color:#bcbcc6;
+    border-radius: 5px;
+    text-decoration: none;
+}
 .text-center{
     text-align: center;
     margin-left: 2%;

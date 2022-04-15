@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/dashboard.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/5e6dc576bb.js" crossorigin="anonymous"></script>
         <style>
             .main-head{
                 margin: 28px;
@@ -38,7 +39,40 @@
                 font-size: 16px;
                 line-height: 25px;
             }
-        </style>
+
+            .back-arrow{
+	width: 30px;
+}
+
+.back-arrow img{
+	height: 30px;
+    width: 100%;
+    border-radius: 40px;
+    padding: 4px;
+    box-shadow: 0px 0px 20px 1px grey;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
     </head>
     
     <body>
@@ -109,6 +143,28 @@
                 console.log("check3");
             } 
         </script>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
         
     </body>
     <footer class="footer-distributed">

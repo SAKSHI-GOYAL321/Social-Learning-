@@ -16,7 +16,8 @@
   }
   
   .box-club{
-    background-color: #6e6ea1ad;
+    background-color: #122765eb;
+    background-image: linear-gradient(168deg, #85c0e4, transparent);
     width: 60%;
     margin: 8% auto;
     /* border-radius: 48px; */

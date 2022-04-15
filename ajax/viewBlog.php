@@ -9,9 +9,15 @@ include('connection.php');
     $datarow = $query->fetch();
     ?>
     <div class="blog-page">
+        <div class="back-arrow">
+           <a href="./blog.php" > <img src="./img/left.png" /></a>
+        </div>
         <h1 class="main-head"><?php echo $datarow['Title']?></h1>
         <img src="social/<?php echo $datarow['ImagePath'] ?>" alt="Reload">
         <div class="blog-content"><?php echo $datarow['Content'] ?></div>
+        <div class="up-arrow" onclick="topFunction()" id="myBtn">
+            <button <i class="fa-solid fa-arrow-up"></i>
+        </div>
     </div>
     <?php
 ?>
