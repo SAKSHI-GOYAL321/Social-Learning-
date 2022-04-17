@@ -85,6 +85,17 @@
                                     <span id="u_icon" class="user-icon"></span>
                                     <input type="text" placeholder="Start a Post" />
                                 </div>
+                                <div>
+                                    <form id="form">
+                                        <div class="post-content-block">
+                                            <h3>Add a Post</h3>
+                                            <textarea type="text" id="content" name="content" placeholder="Write Here..." class="post-area"></textarea>
+                                            <input type="file" id="img" name="img">
+                                            <input type="hidden" value="<?php echo $_GET['club_id']; ?>" name="" id="">
+                                            <input type="submit" value="Post" id="post" onclick="AddPost();"/>
+                                        </div>
+                                    </form>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -170,6 +181,37 @@
                     }
                 });
                 console.log("check");
+            }
+            function AddPost(){
+                var form = document.getElementById("form");
+                var data = new FormData(form);
+    
+            $.ajax({
+    
+                    type: "POST",
+                    url: "ajax/AddPost.php",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function(data){
+                        if(data == 0)
+                        {
+                            alert('data inserted successfully');
+                        }
+                        else if(data == 1)
+                        {
+                            alert('data not inserted');
+                        }
+                        else if(data == -1)
+                        {
+                            alert("Please check your password");
+                        }
+                        else
+                        {
+                            alert(data);
+                        }
+                    }
+            });
             }
     </script>
     <!-- <script src="clubDash.js"></script> -->
