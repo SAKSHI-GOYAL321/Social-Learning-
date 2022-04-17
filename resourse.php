@@ -43,7 +43,7 @@
                   </div>
                 </div>
                 <div class="col-sm-12">
-                    <div class="content">
+                    <div class="content resouces-content">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-8 left">
                             <div style="width:100%; float:left;">
@@ -267,6 +267,36 @@
     </script>
     <script type="text/javascript" src="Hamburger.js"></script>
 </body>
+<section id="footer">
+        <footer class="footer-distributed">
+            <div class="col-sm-12">
+                <div class="footer-distribution">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3">
+                        <div class="footer-left">
+                            <h4>Company<span>logo</span></h4>
+                            <p class="footer-company-name">Company Name © 2021</p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-4">
+                        <div class="footer-right">
+                            <div class="footer-icons">
+                
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>    
+                </div>               
+            </div>
+		</footer>
+    </section>    
 <!-- <footer class="footer-distributed">
     <div class="col-sm-12">
         <div class="footer-distribution">

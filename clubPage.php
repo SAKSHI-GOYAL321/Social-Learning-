@@ -14,9 +14,12 @@
     
     <!-- <link rel="stylesheet" href="css/clubDash.css"> -->
     <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+    <link rel="stylesheet" href="css/clubDash.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/clubPage.css">
     <link rel="stylesheet" href="css/events_list.css">
     <link rel="stylesheet" href="css/getmembers.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -32,11 +35,28 @@
             </div>
         </div>
     </section>
+    <section id="side-nav">
+        <div class="paddoff">
+            <div class="contain">
+                <div class="paddoff">
+                    <div class="sidenav" id="Ham">
+                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
+                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
+                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
+                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
+                        <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
+                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="clubpage">
     <div class="Club-Page">        
         <div class="col-sm-12 paddoff">
             <div class="contain"> 
-                <div class="col-sm-3 paddoff">
+                <div class="col-sm-3">
                     <div class="events">
                         <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
@@ -57,7 +77,7 @@
                     </div>
                     
                 </div>
-                <div class="col-sm-7 paddoff">
+                <div class="col-sm-7">
                     <div class=" scroll discussion">
                         <div class="post">
                             <form>
@@ -69,13 +89,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2 paddoff">
+                <div class="col-sm-2 ">
                     <div id="member">
                     </div>
                 </div>        
             </div>
         </div>
 </section>
+<script src = "DeleteClubs.js"></script>
+    <script src = "joinmembers.js"></script>
+    <script src= "ExitClub.js"></script>
+    <script src="Hamburger.js"></script>
     <script type="text/javascript">
         userimage();
         function userimage(){
@@ -150,7 +174,7 @@
     </script>
     <!-- <script src="clubDash.js"></script> -->
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("Ham");
             console.log("check1");
@@ -167,7 +191,7 @@
             sidenav.classList.toggle("active");
             console.log("check3");
         } 
-    </script>
+    </script> -->
 
     <script type="text/javascript">
         $(function() {
