@@ -86,12 +86,12 @@
                                     <input type="text" placeholder="Start a Post" />
                                 </div>
                                 <div>
-                                    <form id="form">
+                                    <form id="discussion_form">
                                         <div class="post-content-block">
-                                            <h3>Add a Post</h3>
-                                            <textarea type="text" id="content" name="content" placeholder="Write Here..." class="post-area"></textarea>
+                                            <!-- <h3>Add a Post</h3> -->
+                                            <textarea id="content" name="content" placeholder="Write Here..." class="post-area"></textarea>
                                             <input type="file" id="img" name="img">
-                                            <input type="hidden" value="<?php echo $_GET['club_id']; ?>" name="" id="">
+                                            <input type="hidden" value="<?php echo $_GET['club_id']; ?>" name="club_id" id="club_id">
                                             <input type="submit" value="Post" id="post" onclick="AddPost();"/>
                                         </div>
                                     </form>
@@ -183,14 +183,15 @@
                 console.log("check");
             }
             function AddPost(){
-                var form = document.getElementById("form");
-                var data = new FormData(form);
+                // var form = document.getElementById("discussion_form");
+                var form_data = new FormData(document.getElementById("discussion_form"));
+                // var data = new FormData(form);
     
             $.ajax({
     
                     type: "POST",
                     url: "ajax/AddPost.php",
-                    data: data,
+                    data:form_data,
                     contentType: false,
                     processData: false,
                     success: function(data){
@@ -213,6 +214,8 @@
                     }
             });
             }
+
+
     </script>
     <!-- <script src="clubDash.js"></script> -->
 

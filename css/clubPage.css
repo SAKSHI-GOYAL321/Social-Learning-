@@ -267,6 +267,7 @@
   width: 100%;
   margin: auto;
   height: 100px;
+  color: black !important;
   background-color: #e5e8e812;
 }
 #post{
