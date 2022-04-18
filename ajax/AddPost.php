@@ -6,7 +6,8 @@ $content=$_POST['content'];
 $id=$_POST['club_id'];
 $email=$_SESSION['email'];
 $path = '../img/club_discussion images/';
-if(!empty($_FILES["img"]))
+// echo print_r($_FILES["img"]);
+if($_FILES['img']['size'] != 0 && $_POST['content'] != "")
 {
 
     $img = $_FILES['img']['name'];
@@ -21,7 +22,7 @@ if(!empty($_FILES["img"]))
     }
         // $path='./img/club_discussion images/';
         $query = $db->prepare('INSERT INTO clubdiscussion(club_id,description,email,image) VALUES (?,?,?,?)');
-        $data=array($club_id,$content,$email,$path);
+        $data=array($id,$content,$email,$path);
         $execute=$query->execute($data);
         
         if($execute)
@@ -33,10 +34,10 @@ if(!empty($_FILES["img"]))
             echo 1;
         }
     }	
-else
+else if($_POST['content'] != "")
 {
     $query = $db->prepare('INSERT INTO clubdiscussion(club_id,description,email) VALUES (?,?,?)');
-    $data=array($club_id,$content,$email);
+    $data=array($id,$content,$email);
     $execute=$query->execute($data);
     if($execute)
     {
@@ -47,6 +48,9 @@ else
         echo 1;
     }
     
+}
+else{
+    echo 2;
 }
 
 

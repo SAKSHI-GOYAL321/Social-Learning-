@@ -256,12 +256,21 @@
 }
 .post-content-block{
   padding: 16px;
-  width: 50%;
+  width: 30%;
   /* border: 2px solid black; */
   margin: 25px auto;
   text-align: center;
   background-color: #e5e8e8b8;
   border-radius: 36px;
+  position: fixed;
+  top: 38%;
+  left: 55%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  z-index: 1;
+}
+#discussion_form{
+  display: none;
 }
 .post-area{
   width: 100%;

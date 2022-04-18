@@ -80,15 +80,14 @@
                 <div class="col-sm-7">
                     <div class=" scroll discussion">
                         <div class="post">
-                            <form>
                                 <div class="Add-post">
                                     <span id="u_icon" class="user-icon"></span>
-                                    <input type="text" placeholder="Start a Post" />
+                                    <input type="text" placeholder="Start a Post" id="StartPost"/>
                                 </div>
                                 <div>
-                                    <form id="discussion_form">
+                                    <form id="discussion_form" enctype='multipart/form-data'>
                                         <div class="post-content-block">
-                                            <!-- <h3>Add a Post</h3> -->
+                                            <h3>Add a Post</h3>
                                             <textarea id="content" name="content" placeholder="Write Here..." class="post-area"></textarea>
                                             <input type="file" id="img" name="img">
                                             <input type="hidden" value="<?php echo $_GET['club_id']; ?>" name="club_id" id="club_id">
@@ -96,7 +95,6 @@
                                         </div>
                                     </form>
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -182,61 +180,33 @@
                 });
                 console.log("check");
             }
-            function AddPost(){
-                // var form = document.getElementById("discussion_form");
-                var form_data = new FormData(document.getElementById("discussion_form"));
-                // var data = new FormData(form);
-    
+        function AddPost(){
+            var form = document.getElementById("discussion_form");
+            var form_data = new FormData(form);
             $.ajax({
     
-                    type: "POST",
-                    url: "ajax/AddPost.php",
-                    data:form_data,
-                    contentType: false,
-                    processData: false,
-                    success: function(data){
-                        if(data == 0)
-                        {
-                            alert('data inserted successfully');
-                        }
-                        else if(data == 1)
-                        {
-                            alert('data not inserted');
-                        }
-                        else if(data == -1)
-                        {
-                            alert("Please check your password");
-                        }
-                        else
-                        {
-                            alert(data);
-                        }
+                type: "POST",
+                url: "ajax/AddPost.php",
+                data:form_data,
+                contentType: false,
+                processData: false,
+                success: function(data){
+                    if(data == 0)
+                    {
+                        alert('data inserted successfully');
                     }
+                    else if(data == 1)
+                    {
+                        alert('data not inserted');
+                    }
+                    else if(data != 2)
+                    {
+                        alert(data);
+                    }
+                }
             });
-            }
-
-
+        }
     </script>
-    <!-- <script src="clubDash.js"></script> -->
-
-    <!-- <script type="text/javascript">
-        function show(){
-            var sidenav= document.getElementsByClassName("Ham");
-            console.log("check1");
-            if(sidenav.style.display==="none"){
-                alert("if ");
-                // sidenav.classList.remove = "non-active";
-                // sidenav.classList.add="active";
-            }
-            else{
-                // sidenav.classList.remove = "active";
-                // sidenav.classList.add="non-active";
-                alert("else");
-            }
-            sidenav.classList.toggle("active");
-            console.log("check3");
-        } 
-    </script> -->
 
     <script type="text/javascript">
         $(function() {
@@ -246,6 +216,21 @@
             })
             $(document).mouseup(function (e) {
                 var container = $("#contactForm");
+
+                if (!container.is(e.target) // if the target of the click isn't the container...
+                    && container.has(e.target).length === 0) // ... nor a descendant of the container
+                {
+                    container.fadeOut();
+                }
+            });
+        });
+        $(function() {
+            // contact form animations
+            $('#StartPost').click(function() {
+                $('#discussion_form').fadeToggle();
+            })
+            $(document).mouseup(function (e) {
+                var container = $("#discussion_form");
 
                 if (!container.is(e.target) // if the target of the click isn't the container...
                     && container.has(e.target).length === 0) // ... nor a descendant of the container
