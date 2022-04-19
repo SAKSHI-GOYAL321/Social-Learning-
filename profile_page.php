@@ -16,7 +16,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Profile page</title>
+    <?php
+            include('ajax/connection.php');
+            $email = $_SESSION['email'];
+            $query = $db->prepare('SELECT * FROM profile p join user_details u ON (p.email = u.email) WHERE p.email = ?');
+            $data = array($email);
+            $execute = $query->execute($data);
+            if($execute){
+                $datarow = $query->fetch();
+            }
+        ?>
+        <title>
+        <?php if($datarow['fname'] != '')
+                {
+                    echo $datarow['fname'] . " " . $datarow['lname']; 
+                }
+                else{
+                    echo $datarow['uname'];
+                }?>
+        </title>
 </head>
 <body>
 <section id="top-nav">
