@@ -1,5 +1,13 @@
 <?php 
     session_start();
+        include('ajax/connection.php');
+        $email = $_SESSION['email'];
+        $query = $db->prepare('SELECT * from profile WHERE email = ?');
+        $data = array($email);
+        $execute = $query->execute($data);
+        if($execute){
+            $datarow = $query->fetch();
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,32 +59,32 @@
                             <div class="margin">
                                 <label>First Name:</label>
                                 <input type="text" id="fname" name="fname" placeholder="Enter First name"
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['fname']; ?>" required>
                             </div>
                             <div class="margin">
                                 <label>Last Name:</label>
                                 <input type="text" id="lname" name="lname" placeholder="Enter Last name"
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['lname']; ?>" required>
                             </div>
                             <div class="margin">
                                 <label>Profession:</label>
                                 <input type="text" id="profession" name="profession" placeholder="Enter your profession"
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['profession']; ?>" required>
                             </div>
                             <div class="margin">
                                 <label>Bio:</label>
                                 <input type="text" id="bio" name="bio" placeholder="Tell us about yourself"
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['bio']; ?>" required>
                             </div>
                             <div class="margin">
                                 <label>Email:</label>
                                 <input type="text" id="email" name="email" placeholder="Enter Email"
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['email']; ?>" disabled>
                             </div>
                             <div class="margin">
                                 <label>Website:</label>
                                 <input type="text" id="website" name="website" placeholder ="linkedin/github/portfolio "
-                                    class="form-control form-style" required>
+                                    class="form-control form-style" value="<?php echo $datarow['website']; ?>" required>
                             </div>
                             <div class="margin">
                                 <label>Profile Image</label>

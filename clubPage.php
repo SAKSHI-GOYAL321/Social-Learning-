@@ -8,7 +8,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <?php
+            include('ajax/connection.php');
+            $id = $_GET['club_id'];
+            $query = $db->prepare('SELECT club_name from clubname WHERE club_id = ?');
+            $data = array($id);
+            $execute = $query->execute($data);
+            if($execute){
+                $datarow = $query->fetch();
+            }
+        ?>
+    <title><?php echo $datarow['club_name']; ?></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     
@@ -94,6 +104,9 @@
                                             <input type="submit" value="Post" id="post" onclick="AddPost();"/>
                                         </div>
                                     </form>
+                                </div>
+                                <div id="discussion-section">
+
                                 </div>
                         </div>
                     </div>
@@ -203,6 +216,19 @@
                     {
                         alert(data);
                     }
+                }
+            });
+        }
+        discussionData();
+        function discussionData(){
+            var id = <?php echo $_GET['club_id'] ?>;
+            var token = "<?php echo password_hash('Discussion', PASSWORD_DEFAULT); ?>";
+            $.ajax({
+                type: "POST",
+                url: "ajax/discussionData.php",
+                data: {token:token, club_id:id},
+                success: function(data){
+                    $('#discussion-section').html(data);    
                 }
             });
         }

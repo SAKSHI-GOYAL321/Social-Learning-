@@ -20,7 +20,8 @@ if($_FILES['img']['size'] != 0 && $_POST['content'] != "")
     if(move_uploaded_file($tmp, $path)){
 
     }
-        // $path='./img/club_discussion images/';
+        $path='./img/club_discussion images/';
+        $path = $path.strtolower($img);
         $query = $db->prepare('INSERT INTO clubdiscussion(club_id,description,email,image) VALUES (?,?,?,?)');
         $data=array($id,$content,$email,$path);
         $execute=$query->execute($data);

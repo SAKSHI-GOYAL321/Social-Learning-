@@ -147,7 +147,7 @@
             var resource = document.getElementById('Resources');
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
-            scrol.style.height = "400px";
+            scrol.style.height = "441px;";
             form.style.display="none";
        
             var token = "<?php echo password_hash("Links_page", PASSWORD_DEFAULT)?>";
@@ -174,7 +174,7 @@
             var resource = document.getElementById('Resources');
             var scrol = document.getElementById('scroll');
             resource.style.display = "block";
-            scrol.style.height = "400px";
+            scrol.style.height = "441px";
             form.style.display="none";
         
             
