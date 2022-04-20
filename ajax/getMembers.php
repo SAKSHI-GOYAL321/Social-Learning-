@@ -8,7 +8,7 @@ if(password_verify("Members", $_POST['token'])){
 
     $datarow=$query->fetch();
     ?>
-    <div>
+    <div class="members-list">
         <h4>Admin</h4>
         <p> <?php echo $datarow['club_admin']; ?></p>
 

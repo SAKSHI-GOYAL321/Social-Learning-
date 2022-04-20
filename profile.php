@@ -89,7 +89,7 @@
                             <div class="margin">
                                 <label>Profile Image</label>
                                 <input type="File" id="photo" name="photo" class="form-control form-style" />
-                                <img id="blah" class="blah" src="#" alt="your image" />
+                                <img id="blah" class="blah" src="<?php echo $datarow['photo'];?>" alt="your image" />
                             </div>
                             <div class="margin">
                                 <input type="submit" value= "Update" class="buton" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />

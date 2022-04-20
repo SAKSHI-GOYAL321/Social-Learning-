@@ -2,7 +2,8 @@
 
     text-decoration:none;
     font-weight:500;
-    font-size:20px;
+    font-size: 16px;
+    padding: 6px;
     color:white;
     background-color: #122765d1;
     border-radius: 100px;
@@ -20,4 +21,8 @@
     font-weight: 300;
     font-size:15px;
     color:#e5e8e8;
+}
+
+.members-list{
+    margin-top:2em;
 }
