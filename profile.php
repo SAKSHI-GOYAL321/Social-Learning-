@@ -89,9 +89,8 @@
                             <div class="margin">
                                 <label>Profile Image</label>
                                 <input type="File" id="photo" name="photo" class="form-control form-style" />
+                                <img id="blah" class="blah" src="#" alt="your image" />
                             </div>
-                            <button style="cursor:pointer" id="btn">Click me</button>
-                            <input type="file" id="input" style="display:none">
                             <div class="margin">
                                 <input type="submit" value= "Update" class="buton" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
@@ -160,6 +159,15 @@
                    });
                 //    alert("check1");
         }
+        
+    </script>
+    <script type="text/javascript">
+        photo.onchange = evt => {
+  const [file] = photo.files
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }
+}
     </script>
 
     <script type="text/javascript">

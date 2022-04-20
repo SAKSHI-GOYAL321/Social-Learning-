@@ -22,8 +22,8 @@ while($data_row=$query->fetch())
                 <div class="desc">
                     <p class="event_name">
                     <?php
-                        if(strlen($data_row['event_name']) > 25)
-                            echo substr($data_row['event_name'],0, 25). "...";
+                        if(strlen($data_row['event_name']) > 15)
+                            echo substr($data_row['event_name'],0, 15). "...";
                         else
                             echo $data_row['event_name'];
                     ?>

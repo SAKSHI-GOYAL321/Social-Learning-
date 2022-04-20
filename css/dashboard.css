@@ -147,6 +147,14 @@ body{
     #Ham {display: none;}
   }
 
+
+@media (max-width: 1245px) and (min-width:750px){
+  .sidenav a{
+    font-size:10px;
+  }
+}
+
+
 .active{
     display: block;
 }

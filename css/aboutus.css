@@ -30,3 +30,20 @@
     justify-content: center;
     height: 88.5vh;
 }
+
+
+
+@media (max-width:770px) and (min-width:225px){
+    .abt-sec h2{
+        font-size:35px;
+    }
+    .abt-sec p{
+        font-size:15px;
+    }
+    .abt-sec{
+        height:88.7vh;
+    }
+    .img-wrap{
+        display:none;
+    }
+}

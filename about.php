@@ -90,6 +90,7 @@ session_start();
             </div>
 		</footer>
     </section>    
+    <script src="Hamburger.js"></script>
 <script type="text/javascript">
         function show(){
             var sidenav= document.getElementsByClassName("sidenav");

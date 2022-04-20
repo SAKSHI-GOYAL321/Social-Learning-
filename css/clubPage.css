@@ -116,8 +116,9 @@
   #contactForm { 
     display: none;
   
-    border: 6px solid salmon; 
+    border: 6px solid #122765; 
     padding: 2em;
+    border-radius: 40px;
     width: 400px;
     text-align: center;
     background: #fff;
@@ -128,6 +129,12 @@
     -webkit-transform: translate(-50%,-50%);
     z-index: 1;
     
+  }
+
+  .msg-date{
+    margin-left: 44px;
+    font-size: 10px;
+    margin-top: -9px;
   }
   
   input { 

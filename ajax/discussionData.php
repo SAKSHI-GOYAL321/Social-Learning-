@@ -22,6 +22,11 @@
                         echo $datarow['fname'] . " " . $datarow['lname'];
                     }
                     ?></span>
+                    <div class="msg-date">
+                        <?php
+                        echo $datarow['date'];
+                        ?>
+                    </div>
                 </div>
                 <div class="discuss">
                     <?php
