@@ -16,28 +16,24 @@
 
 .headder{
     width: 100%;
-    background-color: rgb(202, 196, 196);
-    background-color: rgb(190 167 158);
-    /* background-image: url(img/book\ shell.jpg);
-    background-size:cover;
-    background-repeat: no-repeat; */
-    height: 716px;
+    background-color: #122765;
+    height: 100vh;
 }
 
 .landing-img{
-    height:600px;
-    width:600px;
+    width: 70%;
 }
 
 .account h5,button{
     display: inline;
 }
 .btn-btn{
-    color: cyan;
+    color: #122765b8;
+    cursor: pointer;
 }
 .btn-btn:hover{
-    color: burlywood;
-    cursor: default;
+    color: #122765;
+    cursor: pointer;
 }
 
 .show{
@@ -48,16 +44,10 @@
 }
 
 .log-in{
-    border:2px solid black;
-    border-radius:25px;
-    background-color:#122765;
-    margin-top:150px;
-    width:200px;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding:15px;
-    box-shadow:inset 0px 0px 10px rgb(36, 180, 203);
+    height: 100vh;
 }
 
 .log-in{
@@ -75,23 +65,37 @@
 
 /* border: blue 2px solid; */
 }
+.height-100vh{
+    height: 100vh;
+}
 .login-wrap{
-    /* width:100%;
-	height:100%;
-	position:absolute;
-    max-height: 713px; */
-    /* background: rgba(40,57,101,.9); */
-    /* position: relative; */
-    /* background: rgb(32 21 96 / 90%); */
-    /* background: rgb(45 42 188 / 57%); */
-    /* background: rgb(71 70 124 / 78%); */
-    /* padding: 203px 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .login-html{
-    color: white;
-    padding:20px;
-    
+    width: 100%;
+    color: black;
+    padding: 20px;
+    padding: 26px 20px;
+    /* border: 2px solid black; */
+    border-radius: 25px;
+    background-color: #eafaff;
+    box-shadow: inset 0px 0px 30px rgb(132 177 211);
+
+}
+.middle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+form{
+    width: 85%;
 }
 .login-html header{
     cursor: pointer;
@@ -112,14 +116,12 @@
     cursor: default;
 }
 
-.form-control{
-    width:100% !important;
-}
 .bradius{
     border-radius: 34px !important;
     margin: 2px 0px;
-    background-color: #1e182f70 !important;
-    color: white;
+    background-color: #b1d2dc70 !important;
+    color: #000 !important;
+    border: 1px solid #b6c9db !important;
 }
 input{
     margin: 3px;
@@ -132,9 +134,15 @@ input{
     width: 100%;
     color: white;
     border-radius: 34px;
-    background-color: #200202;
+    background-color: #122765;
     height: 34px!important;
     padding: 6px 12px !important;
+}
+hr{
+    border-top: 1px solid gray !important;
+}
+.hgt{
+    height: 425px;
 }
 .btn h5{
     display: block;

@@ -117,7 +117,9 @@ input[type = button]{
     font-size: 16px;
     border-color: transparent;
     color: #faf5f5;
-    box-shadow: inset 0px 0px 10px 0px #000000;
+    /* box-shadow: inset 0px 0px 10px 0px #000000;
+    background-color: #122765cc; */
+    box-shadow: 0px 0px 10px 0px #7d7c7c;
     background-color: #122765cc;
     border-radius: 30px;
     transition: none;

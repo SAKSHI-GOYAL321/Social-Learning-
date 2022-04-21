@@ -18,13 +18,13 @@
                 <div class="headder">
                     <!-- <div class="log-in"> -->
                         <div class="col-sm-6 paddoff">
-                            <div class="login-wrap">
+                            <div class="login-wrap height-100vh">
 
                         <img class="landing-img" src="img/landing.png" />
                             </div>
                         </div>
                         <div class="col-sm-4 log-in paddoff">
-                            <div class="login-wrap login-html">
+                            <div class="login-wrap login-html hgt">
                                 <div class="middle">
                                 <h2>Welcome Back..</h2>
                                     <form action="">
@@ -37,7 +37,7 @@
                                             <label for="">PASSWORD:</label>
                                             <input type="password" id="passwords" name="passwords"
                                                 placeholder="Enter password " class="form-control bradius pw" required>
-                                            <i class="fa fa-eye icon" onclick="myPassword();"></i>
+                                            <!-- <i class="fa fa-eye icon" onclick="myPassword();"></i> -->
                                         </div>
                                         <div class="margin">
                                             <input type="checkbox" name="myElegibility" checked required>
@@ -51,7 +51,6 @@
                                 <div class="last margin">
                                     <div class="line">
                                         <hr>
-                                        <p>Forgot password</p>
                                     </div>
                                     <div class="account margin">
                                         <h5>Don't have an account? <span onclick="showsignup();"
@@ -73,7 +72,7 @@
                 <div class="headder">
                     <!-- <div class="log-in"> -->
                         <div class="col-sm-6 paddoff">
-                            <div class="login-wrap">
+                            <div class="login-wrap height-100vh">
                             <img class="landing-img" src="img/landing.png" />
                             </div>
                         </div>
@@ -82,7 +81,7 @@
 
 
                                 <div class="middle">
-                                    
+                                <h2>Create your Account</h2>
                                     <form action="">
                                         <div>
                                             <label>USERNAME:</label>
@@ -118,17 +117,16 @@
                                 <div class="last">
                                     <div>
                                         <hr>
-                                        <p>Forgot password</p>
                                     </div>
                                     <div class="account">
                                         <h5>Already have an account? <span onclick="showlogin();"
-                                                class="btn-btn">LOGIN</span></h5>
+                                                class="btn-btn">Login</span></h5>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-2 paddoff">
-                                <div class="login-wrap"></div>
-                            </div>
+                        </div>
+                        <div class="col-sm-2 paddoff">
+                            <div class="login-wrap"></div>
                         </div>
                     <!-- </div> -->
 
