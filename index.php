@@ -16,13 +16,17 @@
         <div id="login" class="login-box">
             <div class="col-sm-12 paddoff">
                 <div class="headder">
-                    <div class="log-in">
-                        <div class="col-sm-1 paddoff">
-                            <div class="login-wrap"></div>
+                    <!-- <div class="log-in"> -->
+                        <div class="col-sm-6 paddoff">
+                            <div class="login-wrap">
+
+                        <img class="landing-img" src="img/landing.png" />
+                            </div>
                         </div>
-                        <div class="col-sm-10 paddoff">
+                        <div class="col-sm-4 log-in paddoff">
                             <div class="login-wrap login-html">
                                 <div class="middle">
+                                <h2>Welcome Back..</h2>
                                     <form action="">
                                         <div class="margin">
                                             <label>EMAIL:</label>
@@ -45,7 +49,7 @@
                                     </form>
                                 </div>
                                 <div class="last margin">
-                                    <div>
+                                    <div class="line">
                                         <hr>
                                         <p>Forgot password</p>
                                     </div>
@@ -56,10 +60,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-1 paddoff">
+                        <div class="col-sm-2 paddoff">
                             <div class="login-wrap"></div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                 </div>
 
             </div>
@@ -67,14 +71,18 @@
         <div id="signup" class="login-box " style="display: none;">
             <div class="col-sm-12 paddoff">
                 <div class="headder">
-                    <div class="log-in">
-                        <div class="col-sm-1 paddoff">
-                            <div class="login-wrap"></div>
+                    <!-- <div class="log-in"> -->
+                        <div class="col-sm-6 paddoff">
+                            <div class="login-wrap">
+                            <img class="landing-img" src="img/landing.png" />
+                            </div>
                         </div>
-                        <div class="col-sm-10 paddoff">
+                        <div class="col-sm-4 log-in paddoff">
                             <div class="login-wrap login-html">
 
+
                                 <div class="middle">
+                                    
                                     <form action="">
                                         <div>
                                             <label>USERNAME:</label>
@@ -118,11 +126,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-1 paddoff">
+                            <div class="col-sm-2 paddoff">
                                 <div class="login-wrap"></div>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
 
                 </div>
             </div>
