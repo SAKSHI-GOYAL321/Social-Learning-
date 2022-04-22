@@ -90,10 +90,10 @@
     <body>
         <section id="top-nav">
             <div class="col-sm-12 paddoff">
-                <div class="topnav">    
+                <div class="topnav" id="top-Ham">    
                     <i class="fa fa-bars non-active" onclick="show();"></i>
                     <a href="logout.php">Log out</a></i>    
-                    <!-- <a href="#"><?php echo $_SESSION['uname']?></a></i> -->
+                    <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
                 </div>
             </div>
         </section>
@@ -101,20 +101,18 @@
             <div class="col-sm-12 paddoff">
                 <div class="contain">
                     <div class="col-sm-2">
-                        <div class="sidenav active">
-                            <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <div id="Ham" class="sidenav">
+                            <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                             <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                             <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                             <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                             <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                             <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                            <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                            <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                         </div>
                     </div>
                     <div class="col-sm-10">
                         <div class="content">
-                           
-                        
                             <div id = "blog" class="blog-page"  style="width:100%;">
                                 <!-- Content of Blog  -->
                             </div>
@@ -139,23 +137,7 @@
                 });    
             }
         </script>
-        <script type="text/javascript">
-            function show(){
-                var sidenav= document.getElementsByClassName("sidenav");
-                console.log("check1");
-                if(sidenav.style.display=="none"){
-                    sidenav.classList.remove = "non-active";
-                    sidenav.classList.add="active";
-                }
-                else{
-                    sidenav.classList.remove = "active";
-                    sidenav.classList.add="non-active";
-                }
-                // sidenav.classList.toggle("active");
-                console.log("check3");
-            } 
-        </script>
-
+<script type="text/javascript" src="Hamburger.js"></script>
 <script type="text/javascript">
 //Get the button
 var mybutton = document.getElementById("myBtn");

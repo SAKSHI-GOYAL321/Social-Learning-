@@ -104,14 +104,16 @@ body {
     }
 
     .img-fluid{
-        height: 400px;
-        width: 400px;
+    width: 80%;  
     }
 
     .content{
-        margin-top:100px;
-        margin-left:100px;
-        height:400px;
-        
-    }
+      margin-top: 87px;
+    /* margin-left: 100px; */
+    margin-bottom: 0px !important;
+    /* height: 400px; */
+}
+.container{
+  width: 90% !important;
+}
     

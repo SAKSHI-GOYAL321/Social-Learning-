@@ -24,12 +24,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <!-- <script src="Hamburger.js"></script> -->
 </head>
 
 <body>
     <section id="top-nav">
         <div class="col-sm-12 paddoff">
-            <div class="topnav">    
+            <div class="topnav" id="top-Ham">    
                 <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
                 <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
@@ -41,13 +43,13 @@
             <div class="contain">
                 <div class="col-sm-2">
                     <div id="Ham" class="sidenav">
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                         <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                         <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
                 <div class="col-sm-10">
@@ -56,6 +58,13 @@
                             <h2 style="text-align: center; color: black;">My Profile</h2>
                         </div>
                         <form class="form" id="form">
+                            <div class="margin img-block">
+                                <input type="File" id="photo" name="photo" class="form-control form-style" style="visibility:hidden; height: 0px;"/>
+                                <div class="profile-img">
+                                    <img id="blah" class="blah" src="<?php echo $datarow['photo'];?>" alt="your image" />
+                                </div>
+                                <label for="photo" class="form-control form-style" >Edit Profile Image</label>
+                            </div>
                             <div class="margin">
                                 <label>First Name:</label>
                                 <input type="text" id="fname" name="fname" placeholder="Enter First name"
@@ -86,12 +95,12 @@
                                 <input type="text" id="website" name="website" placeholder ="linkedin/github/portfolio "
                                     class="form-control form-style" value="<?php echo $datarow['website']; ?>" required>
                             </div>
-                            <div class="margin">
-                                <label>Profile Image</label>
-                                <input type="File" id="photo" name="photo" class="form-control form-style" />
-                                <img id="blah" class="blah" src="<?php echo $datarow['photo'];?>" alt="your image" />
-                            </div>
-                            <div class="margin">
+                            <!-- <div class="margin"> -->
+                                <!-- <label>Profile Image</label> -->
+                                <!-- <input type="File" id="photo" name="photo" class="form-control form-style" /> -->
+                                <!-- <img id="blah" class="blah" src="<?php //echo $datarow['photo'];?>" alt="your image" /> -->
+                            <!-- </div> -->
+                            <div class="margin" style="text-align: center;margin: 24px;">
                                 <input type="submit" value= "Update" class="buton" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
                         </form>
@@ -130,6 +139,24 @@
             </div>
 		</footer>
     </section>    
+    <script type="text/javascript" src="Hamburger.js"></script>
+    <script>
+//         $("#files").change(function() {
+//   filename = this.files[0].name;
+//   console.log(filename);
+// }); 
+
+        $("#photo").change(function() {
+            filename = this.photo[0].name;
+            console.log(filename);
+        });
+        photo.onchange = evt => {
+            const [file] = photo.files
+            if (file) {
+                blah.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
     <script type="text/javascript">
         function UpdateProfile(){
             var form = document.getElementById("form");
@@ -160,31 +187,6 @@
                 //    alert("check1");
         }
         
-    </script>
-    <script type="text/javascript">
-        photo.onchange = evt => {
-  const [file] = photo.files
-  if (file) {
-    blah.src = URL.createObjectURL(file)
-  }
-}
-    </script>
-
-    <script type="text/javascript">
-        function show(){
-            var sidenav= document.getElementsByClassName("sidenav");
-            console.log("check1");
-            if(sidenav.style.display=="none"){
-                sidenav.classList.remove = "non-active";
-                sidenav.classList.add="active";
-            }
-            else{
-                sidenav.classList.remove = "active";
-                sidenav.classList.add="non-active";
-            }
-            // sidenav.classList.toggle("active");
-            console.log("check3");
-        } 
     </script>
 </body>
 </html>

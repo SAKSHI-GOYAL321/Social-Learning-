@@ -1,7 +1,7 @@
 function show(){
     var sidenav= document.getElementById("Ham");
     var Ham = document.getElementById('top-ham');
-    var sidemenu = document.getElementById('sidenav');
+    // var sidemenu = document.getElementById('sidenav');
     console.log("check1");
     if(sidenav.style.display == 'block'){
         sidenav.style.display = "none";

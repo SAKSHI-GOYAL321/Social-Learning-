@@ -22,8 +22,8 @@ session_start();
 <body>
 <section id="top-nav">
         <div class="col-sm-12 paddoff">
-            <div class="topnav">    
-                <i class="fa fa-bars " onclick="show();"></i>
+        <div class="topnav" id="top-Ham">    
+                <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
                 <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
@@ -91,22 +91,5 @@ session_start();
 		</footer>
     </section>    
     <script src="Hamburger.js"></script>
-<script type="text/javascript">
-        function show(){
-            var sidenav= document.getElementsByClassName("sidenav");
-            console.log("check1");
-            if(sidenav.style.display=="none"){
-                sidenav.classList.remove = "non-active";
-                sidenav.classList.add="active";
-            }
-            else{
-                sidenav.classList.remove = "active";
-                sidenav.classList.add="non-active";
-            }
-            // sidenav.classList.toggle("active");
-            console.log("check3");
-        } 
-    </script>
-
 </body>
 </html>

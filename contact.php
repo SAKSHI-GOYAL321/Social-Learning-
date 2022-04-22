@@ -43,20 +43,16 @@
                             <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                             <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                             <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                            <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                            <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-10">
                     <div class="content">
-    
                             <div class="container">
                               <div class="row justify-content-center">
-                                <div class="col-md-10">
-                                  
-                        
                                   <div class="row justify-content-center">
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                       
                                       <h3 class="heading mb-4">Let's talk about everything!</h3>
                                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas debitis, fugit natus?</p>
@@ -65,31 +61,31 @@
                         
                         
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-sm-6">
                                       
                                       <form class="mb-5" method="post" id="contactForm" name="contactForm">
                                         <div class="row">
-                                          <div class="col-md-12 form-group">
+                                          <div class="col-sm-12 form-group">
                                             <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
                                           </div>
                                         </div>
                                         <div class="row">
-                                          <div class="col-md-12 form-group">
+                                          <div class="col-sm-12 form-group">
                                             <input type="text" class="form-control" name="email" id="email" placeholder="Email">
                                           </div>
                                         </div>
                                         <div class="row">
-                                          <div class="col-md-12 form-group">
+                                          <div class="col-sm-12 form-group">
                                             <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
                                           </div>
                                         </div>
                                         <div class="row">
-                                          <div class="col-md-12 form-group">
+                                          <div class="col-sm-12 form-group">
                                             <textarea class="form-control" name="message" id="message" cols="30" rows="7" placeholder="Write your message"></textarea>
                                           </div>
                                         </div>  
                                         <div class="row">
-                                          <div class="col-12">
+                                          <div class="col-sm-12">
                                             <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
                                           <span class="submitting"></span>
                                           </div>
@@ -101,7 +97,6 @@
                                         Your message was sent, thank you!
                                       </div>
                                     </div>
-                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -155,54 +150,7 @@
             </div>
         </div>
     </section>
-       
-    <!-- <section id="footer">
-        <footer class="footer-distributed">
-            <div class="col-sm-12">
-                <div class="footer-distribution">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-3">
-                        <div class="footer-left">
-                            <h3>Company<span>logo</span></h3>
-                
-                            <p class="footer-links">
-                                <a href="#">Home</a>
-                                ·
-                                <a href="#">Blog</a>
-                                ·
-                                <a href="#">About</a>
-                                ·
-                                <a href="#">Faq</a>
-                                ·
-                                <a href="#">Contact</a>
-                            </p>
-                            <p class="footer-company-name">Company Name © 2021</p>
-                            <div class="footer-icons">
-                
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-github"></i></a>
-                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3">
-                        <div class="footer-right">
-                            <p>Contact Us</p>
-                            <form action="#" method="post">
-                                <input type="text" name="email" placeholder="Email">
-                                <textarea name="message" placeholder="Message"></textarea>
-                                <button>Send</button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-sm-1"></div>    
-                </div>               
-            </div>
-		</footer>
-    </section>        -->
+
     <script type="text/javascript">
         function show(){
             var sidenav= document.getElementById("Ham");

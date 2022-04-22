@@ -1,14 +1,16 @@
 <?php
     include('connection.php');
+    session_start();
     $valid_extension = array('jpeg','jpg','png','PNG','JPG','JPEG','jfif','JFIF','svg');
 	$path = '../img/';
     echo "check2";
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
-        $email=$_POST['email'];
+        $email=$_SESSION['email'];
         $profession=$_POST['profession'];
         $bio=$_POST['bio'];
         $website = $_POST['website'];
+
         if(!empty($_FILES["photo"])){
             $img = $_FILES['photo']['name'];
             $tmp = $_FILES['photo']['tmp_name'];
@@ -20,9 +22,11 @@
             if(move_uploaded_file($tmp, $path)){
         
             }
+            $path = './img/';
+            $path = $path.strtolower($img);
         }
         else{
-            $path = '../img/user_profile.png';
+            $path = './img/user_profile.png';
         }
         $query = $db->prepare('SELECT * FROM profile WHERE email = ?');
         $data = array($email);
