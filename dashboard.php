@@ -41,13 +41,26 @@
                             <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
                             <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                             <img src="img/learning-child.png"/>
-                            <h3>Invite Friend</h3>
-                            <a href="index.php">Get The Link</a>
+                            <h5>Invite Friend</h5>
+                            <a href="index.php" class="getlink">Get The Link</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-10">
-                    <div class="content"></div>
+                <div class="col-sm-8">
+                    <div class="content">
+                        
+                        <div class="col-sm-2 users"></div>
+                        <div class="col-sm-2 blog"></div>
+                        <div class="col-sm-2 resources"></div>
+                        <div class="col-sm-2 club"></div>
+                                                    
+                    </div>
+                </div>
+                <div class="col-sm-2 blog-sec">
+                    <div class="recent-blog">
+                        <h2>Recent Blogs</h2>
+                    
+                    </div>
                 </div>
                 <!--<div class="contain sidebar">
                     <ul>
