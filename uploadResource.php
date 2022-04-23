@@ -33,13 +33,13 @@
             <div class="contain">
                 <div class="Ham col-sm-2 paddoff">
                     <div class="sidenav">
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
                         <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                         <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                         <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                        <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
                     </div>
                 </div>
                 <div class="col-sm-10">

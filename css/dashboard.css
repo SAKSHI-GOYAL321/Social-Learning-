@@ -161,6 +161,14 @@ body{
     display: none;
 }
 
+.sidenav img{
+  width:100px;
+  height:100px;
+}
+.sidenav h3{
+  font-size:20px;
+}
+
 #side-nav .content{
   /* width:100%;
   float:left; */

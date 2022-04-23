@@ -39,7 +39,10 @@
                             <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
                             <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
                             <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                            <a href="#"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                            <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                            <img src="img/learning-child.png"/>
+                            <h3>Invite Friend</h3>
+                            <a href="index.php">Get The Link</a>
                         </div>
                     </div>
                 </div>

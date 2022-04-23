@@ -41,7 +41,7 @@
                         <a href="blog.php"style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Blog</span></a>
                         <a href="resourse.php" style="text-align: center;" class="tooltip"><i class="fa fa-pencil"></i><span class="tooltiptext">Resourse</span></a>
                         <a href="clubDash.php"style="text-align: center;" class="tooltip"><i class=" fa fa-cog"></i><span class="tooltiptext">Club</span></a>
-                        <a href="#"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Contact</span></a>
+                        <a href="contact.php"style="text-align: center;" class="tooltip"><i class="fa fa-phone"></i><span class="tooltiptext" >Contact</span></a>
                   </div>
                 </div>
                 </div>

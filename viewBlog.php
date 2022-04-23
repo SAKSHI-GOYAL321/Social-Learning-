@@ -21,70 +21,12 @@
         <title><?php echo $datarow['Title']; ?></title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/viewblog.css">
         <link rel="stylesheet" href="css/dashboard.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/5e6dc576bb.js" crossorigin="anonymous"></script>
-        <style>
-            .main-head{
-                margin: 28px;
-                padding: 10px;
-                font-size: 40px;
-                text-align: center;
-                float: left;
-                width: 43%;
-            }
-            img{
-                width: 45%;
-                margin-top: 61px;
-                margin: 25px;
-                margin-top: 61px;
-                display: block;
-                height: 300px;
-            }
-            .blog-content{
-                margin: 30px;
-            }
-            p{
-                font-size: 16px;
-                line-height: 25px;
-            }
-
-            .back-arrow{
-	width: 38px;
-}
-
-.back-arrow img{
-    height: 38px;
-    width: 100%;
-    border-radius: 40px;
-    padding: 4px;
-    box-shadow: 0px 0px 20px 1px grey;
-}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-    box-shadow: 0px 0px 14px 0px grey;
-    color: black;
-    cursor: pointer;
-    padding: 12px 16px;
-}
-#myBtn img{
-    width: 30px;
-    height: 30px;
-}
-#myBtn:hover {
-  background-color: #555;
-}
-</style>
+      
     </head>
     
     <body>

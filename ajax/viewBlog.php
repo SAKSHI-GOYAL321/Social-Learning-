@@ -15,8 +15,12 @@ include('connection.php');
         <div class="back-arrow">
            <a href="./blog.php" > <img src="./img/left.png" /></a>
         </div>
-        <h1 class="main-head"><?php echo $datarow['Title']?></h1>
-        <img src="social/<?php echo $datarow['ImagePath'] ?>" alt="Reload">
+        <div class="main-img">
+            
+              <h1 class="main-head"><?php echo $datarow['Title']?></h1>
+              <img src="social/<?php echo $datarow['ImagePath'] ?>" alt="Reload">
+        </div>
+       
         <div class="blog-content"><?php echo $datarow['Content'] ?></div>
     </div>
     <?php
