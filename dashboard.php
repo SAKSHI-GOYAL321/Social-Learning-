@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    include('ajax/connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/hexagonal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,11 +50,50 @@
                 </div>
                 <div class="col-sm-8">
                     <div class="content">
-                        
-                        <div class="col-sm-2 users"></div>
-                        <div class="col-sm-2 blog"></div>
-                        <div class="col-sm-2 resources"></div>
-                        <div class="col-sm-2 club"></div>
+                        <div class="col-sm-2 users">
+                            <img class="icon" src="img/students-cap.png" alt="">
+                            <h5>Total Users</h5>
+                            <?php
+                                $query = $db->prepare('SELECT count(sno) as cnt FROM user_details');
+                                $data = array();
+                                $execute = $query->execute($data);
+                                $datarow = $query->fetch();
+                            ?>
+                            <p class="numb"><?php echo $datarow['cnt']; ?></p>
+                        </div>
+                        <div class="col-sm-2 blog">
+                            <img class="icon" src="img/writing.png" alt="">
+                            <h5>Total Blogs</h5>
+                            <?php
+                                $query = $db->prepare('SELECT count(bid) as cnt FROM blogdata');
+                                $data = array();
+                                $execute = $query->execute($data);
+                                $datarow = $query->fetch();
+                            ?>
+                            <p class="numb"><?php echo $datarow['cnt']; ?></p>
+                        </div>
+                        <div class="col-sm-2 resources">
+                            <img class="icon" src="img/download.png" alt="">
+                            <h5>Total Resources</h5>
+                            <?php
+                                $query = $db->prepare('SELECT count(id) as cnt FROM resources');
+                                $data = array();
+                                $execute = $query->execute($data);
+                                $datarow = $query->fetch();
+                            ?>
+                            <p class="numb"><?php echo $datarow['cnt']; ?></p>
+                        </div>
+                        <div class="col-sm-2 club">
+                            <img class="icon" src="img/fan-club.png" alt="">
+                            <h5>Total Clubs</h5>
+                            <?php
+                                $query = $db->prepare('SELECT count(club_id) as cnt FROM clubname');
+                                $data = array();
+                                $execute = $query->execute($data);
+                                $datarow = $query->fetch();
+                            ?>
+                            <p class="numb"><?php echo $datarow['cnt']; ?></p>
+                        </div>
                                                     
                     </div>
                 </div>
@@ -62,45 +103,6 @@
                     
                     </div>
                 </div>
-                <!--<div class="contain sidebar">
-                    <ul>
-                        <li>
-                            <a href="dashboard.php">
-                                <i class='bx bx-home' type="solid"></i>
-                                <span>Home</span>  
-                            </a>
-                        </li>
-                       
-                        <li >
-                            <a href="#">
-                                <i class="bx bx-book-bookmark"></i>
-                                <span class="dropdwn" onclick="menu_dropdwn()"> Blog</span> 
-                                <span class="fas fa-caret-down first"></span> 
-                            </a>
-                        </li>
-                        <li>
-                           
-                            <a href="#">
-                                <i class="bx bx-home-smile"></i>
-                                <span> About</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-pencil"></i>
-                                <span> Services</span>  
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="bx bx-phone-call"></i>
-                                <span>Contact Us</span>  
-                            </a>
-                        </li>
-                    </ul>
-                </div>-->
-                    
-                
             </div>
         </div>
     </section>
