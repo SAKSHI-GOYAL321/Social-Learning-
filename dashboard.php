@@ -51,7 +51,7 @@
                 <div class="col-sm-8">
                     <div class="content">
                         <h3 class="hello-user">Hello, <?php echo $_SESSION['uname'];?> </h3>
-                        <div class="col-sm-12">
+                        <div id="num-box" class="col-sm-12">
                         <div class="col-sm-2 box users">
                             <img class="icon" src="img/students-cap.png" alt="">
                             <h5>Total Users</h5>
