@@ -48,16 +48,16 @@
   #blog-section{
     height:559px;
     border:1px solid black;
-    border-radius:20px;
+    border-radius:15px;
     margin-top:92px; 
-    background-color:#957dad85;
+    background-color:#2cb5e785;
     margin-bottom:20px;
     width: 20%;
 }
   
   
 .blog-img{
-  width: 30%;
+  width: 35%;
   height: 88px;
 }
   
@@ -97,8 +97,8 @@ border-left: 4px solid #1e293b;
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid purple;
-    border-radius:20px;
+    border-left: 4px solid #1e293b;
+    border-radius:16px;
     overflow:hidden;
     background-color:#DAB5D2;
     margin:10px;

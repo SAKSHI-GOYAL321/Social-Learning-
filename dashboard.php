@@ -119,7 +119,7 @@
                             <div class=middle-sec-2>
                                      <p>Do you want to interact with your peers and learn with them? Join several clubs where you can easily connect, learn, and share with your peers. Not only this, you can join several insightful events of various domains. You can also conduct events of yours. Get started now!!</p>
                                      <div class="links">
-                                    <button class="button-81" role="button">View Clubs</button>
+                                    <button class="button-81" role="button"  onclick="window.location.href='clubDash.php'">View Clubs</button>
                                     </div>
                                       
 
@@ -169,7 +169,7 @@
                             }
                             ?>
                             <div class="links">
-                                    <button class="button-81" role="button">View More Blogs</button>
+                                    <button class="button-81" role="button"  onclick="window.location.href='blog.php'">View More Blogs</button>
                              </div>
 
 

@@ -47,8 +47,14 @@ session_start();
                     <div class="col-sm-6">
                         <div class="abt-sec">
                             <h2>ABOUT US</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim nemo commodi aliquam, porro voluptate repudiandae eum accusantium qui nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, rem. </p>
-                            <a href="dashboard.php">Learn More</a>
+                            <p>A learning portal to help you with blogs and resources on several in several domains. Using this portal, you can access blogs from every topic to enhance your knowledge. The resource sections connect you with several useful and effective resources that can help you in your preparation journey. Not only this, using the portal you can also add your resources if you have any.</p>
+                            <br/>
+                            <p>
+                                Using Club section, you get access to various public clubs where you can interact with your peers and share your insights. You can also create a club of your own. Inside a club, you get access to various domain-related events going on. If you also have any event, add them there. To know more about the portal, get started now!!
+                            </p>
+                            <div class="links">
+                                    <button class="button-81" role="button"  onclick="window.location.href='dashboard.php'">Know More About Us</button>
+                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">

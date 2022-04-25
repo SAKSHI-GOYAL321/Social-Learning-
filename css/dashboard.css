@@ -27,6 +27,7 @@
 .topnav a:hover {
   background-color: #e5e8e8;
   color: #122765;
+  border-radius:15px;
   }
   .topnav span,i.fas{
     height: 10px;
