@@ -32,7 +32,7 @@
     <section id="side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
-                <div class="Ham col-sm-2 paddoff">
+                <div class="Ham col-sm-2 paddoff" id="side-navbar">
                     <div >
                         <div id="Ham" class = "sidenav">
                             <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
@@ -50,7 +50,9 @@
                 </div>
                 <div class="col-sm-8">
                     <div class="content">
-                        <div class="col-sm-2 users">
+                        <h3 class="hello-user">Hello, <?php echo $_SESSION['uname'];?> </h3>
+                        <div class="col-sm-12">
+                        <div class="col-sm-2 box users">
                             <img class="icon" src="img/students-cap.png" alt="">
                             <h5>Total Users</h5>
                             <?php
@@ -61,7 +63,7 @@
                             ?>
                             <p class="numb"><?php echo $datarow['cnt']; ?></p>
                         </div>
-                        <div class="col-sm-2 blog">
+                        <div class="col-sm-2 box blog">
                             <img class="icon" src="img/writing.png" alt="">
                             <h5>Total Blogs</h5>
                             <?php
@@ -72,7 +74,7 @@
                             ?>
                             <p class="numb"><?php echo $datarow['cnt']; ?></p>
                         </div>
-                        <div class="col-sm-2 resources">
+                        <div class="col-sm-2 box resources">
                             <img class="icon" src="img/download.png" alt="">
                             <h5>Total Resources</h5>
                             <?php
@@ -83,7 +85,7 @@
                             ?>
                             <p class="numb"><?php echo $datarow['cnt']; ?></p>
                         </div>
-                        <div class="col-sm-2 club">
+                        <div class="col-sm-2 box club">
                             <img class="icon" src="img/fan-club.png" alt="">
                             <h5>Total Clubs</h5>
                             <?php
@@ -94,16 +96,99 @@
                             ?>
                             <p class="numb"><?php echo $datarow['cnt']; ?></p>
                         </div>
+                        
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                <div class=middle-sec-1>
+                                     <p>Do you want effective resources of various topics to help you with your preparation? Here's all what you are looking for. Get unlimited number of resources of every topic here. If you also have some valuable resources, don't forget to add them here. Get started now!!</p>
+                                     <div class="links">
+                                       <button class="button-81" role="button" onclick="window.location.href='resourse.php'">View Resources</button>
+                                     </div>
+                                   
+                                     
+
+
+                                      
+
+                                     
+                                </div>
+
+                            </div>
+                            <div class="col-sm-6">
+                            <div class=middle-sec-2>
+                                     <p>Do you want to interact with your peers and learn with them? Join several clubs where you can easily connect, learn, and share with your peers. Not only this, you can join several insightful events of various domains. You can also conduct events of yours. Get started now!!</p>
+                                     <div class="links">
+                                    <button class="button-81" role="button">View Clubs</button>
+                                    </div>
+                                      
+
+                                     
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
                                                     
                     </div>
+
+                    
+                   
                 </div>
-                <div class="col-sm-2 blog-sec">
+                <?php 
+                
+
+                 $query = $db->prepare('SELECT * FROM blogdata where bid > ( (select COUNT(*) from blogdata) - 4) order by bid desc');
+                 $data = array();
+                 $execute=$query->execute($data);
+                
+                 
+                 ?>
+                <div class="col-sm-2 blog-sec" id="blog-section">
                     <div class="recent-blog">
                         <h2>Recent Blogs</h2>
+                        <div class="blog-content">
+                            <?php
+                            while($datarow=$query->fetch()){
+                                ?>
+                                <div class="blogs">
+                                   <img class="blog-img" src="social/<?php echo $datarow['ImagePath']?>"/>
+                                  <div>
+                                <h4><?php if(strlen($datarow['Title']) > 30)
+                                    echo substr($datarow['Title'],0, 25). "...";
+                                 else
+                                    echo $datarow['Title']; ?></h4>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        <?php
+                                
+                            }
+                            ?>
+                            <div class="links">
+                                    <button class="button-81" role="button">View More Blogs</button>
+                             </div>
+
+
+                            
+                            
+                            
+                        
+                        </div>
+
                     
                     </div>
                 </div>
+
+                
+                
+
+                
             </div>
+          
         </div>
     </section>
        

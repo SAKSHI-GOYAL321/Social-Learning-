@@ -89,7 +89,11 @@ if(password_verify("lowerdata",$_POST['token']))
                     <img src="social/<?php echo $datarow['ImagePath']; ?>" alt="Reload" style="width:100%;">
                 </div>
                 <div style =" ">
-                    <p><?php echo $datarow['Title'];?></p>
+                
+                    <p><?php if(strlen($datarow['Title']) > 80)
+                            echo substr($datarow['Title'],0, 75). "...";
+                        else
+                            echo $datarow['Title']; ?></p>
                     <a href="viewBlog.php?bid=<?php echo $datarow['bid']; ?>" class="btn">View More</a>
                 </div>
             </div>

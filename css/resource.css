@@ -189,6 +189,10 @@ border: none;
     background-color: #122765cc;
         color: white;
   }
+
+  .resouces-content{
+    margin-bottom: 40px;
+  }
   @media screen and (max-width: 1230px) {
     #top-nav .topnav .fa{display:block;}
     #Ham {display: none;}
