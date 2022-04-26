@@ -155,10 +155,10 @@
                                 <div class="blogs">
                                    <img class="blog-img" src="social/<?php echo $datarow['ImagePath']?>"/>
                                   <div>
-                                <h4><?php if(strlen($datarow['Title']) > 30)
+                                <a href="./viewBlog.php?bid=<?php echo $datarow['bid'];?>" ><h4><?php if(strlen($datarow['Title']) > 30)
                                     echo substr($datarow['Title'],0, 25). "...";
                                  else
-                                    echo $datarow['Title']; ?></h4>
+                                    echo $datarow['Title']; ?></h4></a>
                                 
                             </div>
                             
