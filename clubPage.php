@@ -67,7 +67,7 @@
         <div class="col-sm-12 paddoff">
             <div class="contain"> 
                 <div class="col-sm-3">
-                    <div class="events">
+                    <div id="events">
                         <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
                             <h1>Add an Up-comming Event</h1>
@@ -91,8 +91,10 @@
                     <div class=" scroll discussion">
                         <div class="post">
                                 <div class="Add-post">
+                                    <img id="e" class="img-disp" onclick= "events();"src="img/calendar.png" alt="" > 
                                     <span id="u_icon" class="user-icon"></span>
                                     <input type="text" placeholder="Start a Post" id="StartPost"/>
+                                    <img id="m" class="img-disp" onclick="members();" src="img/group.png" alt="">
                                 </div>
                                 <div>
                                     <form id="discussion_form" enctype='multipart/form-data'>
@@ -122,6 +124,18 @@
     <script src = "joinmembers.js"></script>
     <script src= "ExitClub.js"></script>
     <script src="Hamburger.js"></script>
+    <Script type="text/javascript">
+        function events(){
+            var eventsSection = document.getElementById('events');
+            eventsSection.style.display = "block";
+            eventsSection.classList.add('forEvents');
+        }
+        function members(){
+            var memberSection = document.getElementById('member');
+            memberSection.style.display = "block";
+            memberSection.classList.add('forMembers');
+        }
+    </script>
     <script type="text/javascript">
         userimage();
         function userimage(){
@@ -197,7 +211,6 @@
             var form = document.getElementById("discussion_form");
             var form_data = new FormData(form);
             $.ajax({
-    
                 type: "POST",
                 url: "ajax/AddPost.php",
                 data:form_data,
@@ -261,7 +274,30 @@
                 if (!container.is(e.target) // if the target of the click isn't the container...
                     && container.has(e.target).length === 0) // ... nor a descendant of the container
                 {
+                    // container.style.display = "none !important";
                     container.fadeOut();
+                }
+            });
+        });
+        $(function() {
+            $(document).mouseup(function (e) {
+                var container = $("#events");
+                if(window.innerWidth < 767){
+                    if (!container.is(e.target) && container.has(e.target).length === 0) // if the target of the click isn't the container...) // ... nor a descendant of the container
+                    {
+                        container.fadeOut();
+                    }
+                }
+            });
+        });
+        $(function() {
+            $(document).mouseup(function (e) {
+                var container = $("#member");
+                if(window.innerWidth < 767){
+                    if (!container.is(e.target) && container.has(e.target).length === 0) // if the target of the click isn't the container...) // ... nor a descendant of the container
+                    {
+                        container.fadeOut();
+                    }
                 }
             });
         });

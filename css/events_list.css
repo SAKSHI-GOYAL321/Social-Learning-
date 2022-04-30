@@ -34,8 +34,12 @@
   margin-top: 16px;
 }
 .date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     width: 20%;
+    min-width: 50px;
     font-size: 19px;
     color: #090909;
     padding: 8px 12px;
@@ -44,7 +48,13 @@
     float: left;
     min-height: 80px;
 }
-
+.date p{
+  font-size: 16px;
+}
+#dt{
+  display: flex;
+  flex-direction: row;
+}
 .event{
     width: 80%;
     margin:auto;
@@ -73,7 +83,7 @@
     position:absolute;
     height: 673px;
     width:100%;
-    background-color:rgba(0,0,0, .4);
+    background-color:rgba(0,0,0, .2);
     top:0;
     left:0;
     visibility:hidden;

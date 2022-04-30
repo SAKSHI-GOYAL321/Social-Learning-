@@ -10,7 +10,10 @@
         <div class="block">
             <?php
             while($datarow = $query->fetch()){
+                $Cdate = date_create($datarow['date']);
+                $date = date_format($Cdate, 'd M Y g:i A');
            ?>
+           
             <div class="items">
                 <div class="user-img">
                     <img src="<?php echo $datarow['photo']; ?>" alt="">
@@ -24,7 +27,7 @@
                     ?></span>
                     <div class="msg-date">
                         <?php
-                        echo $datarow['date'];
+                        echo $date;
                         ?>
                     </div>
                 </div>
@@ -41,8 +44,6 @@
             </div>
         </div>
             <?php
-
-
             }
         }
     }

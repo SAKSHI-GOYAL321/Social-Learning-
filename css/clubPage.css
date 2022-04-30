@@ -46,8 +46,53 @@
     background-color:#f2f2f2;
     color: steelblue;
 }
-
-.events{
+.img-disp{
+  width: 40px;
+  display: none;
+  margin: 0px 8px;
+}
+.forEvents{
+  /* display: block !important; */
+  position: fixed;
+  z-index: 90;
+  width: 300px !important;
+  background-color: #36497e !important;
+  transition: all .3s ease;
+  animation-name: leftToRight;
+  animation-duration: 0.6s;
+  animation-direction:normal;
+	animation-timing-function:linear;
+}
+@keyframes leftToRight{
+  from{
+    left: -300px;
+  }
+  to{
+    left: 0px;
+  }
+}
+@keyframes RighttoLeft{
+  from{
+    right: -200px;
+  }
+  to{
+    right: 20px;
+  }
+}
+.forMembers{
+  /* display: block !important; */
+  position: fixed;
+  z-index: 90;
+  right:20px;
+  width: 200px !important;
+  background-color: #36497e !important;
+  transition: all .3s ease;
+  animation-name: RighttoLeft;
+  animation-duration: 0.6s;
+  animation-direction:normal;
+	animation-timing-function:linear;
+}
+#events{
     /* border: 2px solid black; */
     height: 88.5vh;
     width: 100%;
@@ -264,10 +309,11 @@
 .post-content-block{
   padding: 16px;
   width: 30%;
+  min-width: 280px;
   /* border: 2px solid black; */
   margin: 25px auto;
   text-align: center;
-  background-color: #e5e8e8b8;
+  background-color: #e5e8e8;
   border-radius: 36px;
   position: fixed;
   top: 38%;
@@ -286,6 +332,7 @@
   background-color: #e5e8e812;
 }
 #post{
+  width: 100%;
   border-radius: 16px;
   background-color: unset;
 }
@@ -326,4 +373,40 @@
 }
 .items:nth-child(odd){
   background-color: #adc7cb;
+}
+@media (max-width: 767px)
+{
+  .img-disp{
+    display: block;
+  }
+  
+  #events{
+    display: none;
+  }
+  #member{
+    display: none;
+  }
+  .discussion{
+    min-height:88.5vh;
+    height: unset !important;
+  }
+  .scroll{
+    height: unset;
+    overflow: unset;
+    overflow-y: unset;
+  }
+}
+@media (max-width: 500px){
+  .post .Add-post input {
+    width: 50%; 
+    font-size: 16px;
+  }
+  .post .Add-post .user-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .img-disp{
+    width: 30px;
+    margin: 0px 8px;
+  }
 }

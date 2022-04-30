@@ -15,7 +15,7 @@ while($data_row=$query->fetch())
     // print_r(strptime($newTime,'%H:%M %r'));
 ?>
     <div id="events-row" class="events_row ">
-        <a href="#pop-up_<?php echo $data_row['event_id']; ?>"><div class="event">
+        <a id="dt" href="#pop-up_<?php echo $data_row['event_id']; ?>"><div class="event">
                 <div class="date">
                     <p class="event_date"><?php echo substr($newDate, 0, 6)?> </p>
                 </div>
