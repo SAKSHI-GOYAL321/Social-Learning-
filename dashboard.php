@@ -1,6 +1,9 @@
 <?php 
     session_start();
     include('ajax/connection.php');
+    if(!isset($_SESSION['uname'])){
+        header('location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['uname'])){
+        header('location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,28 +23,29 @@
 </head>
 
 <body>
-    <section id="top-nav">
+<section id="top-nav">
         <div class="col-sm-12 paddoff">
             <div class="topnav">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
-                <a href="#">Log out</a></i>    
-                <a href="#">User</a></i>
-                <a href="dashboard.html">Dashboard</a></i>
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
+                <a href="logout.php">Log out</a></i>    
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>
     <section id="side-nav">
         <div class="col-sm-12 paddoff">
             <div class="contain">
-                <div class="col-sm-2">
-                    <div class="sidenav active">
-                        <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
-                        <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
-                        <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
-                        <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
-                        <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
-                        <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
-                        <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                <div class="Ham col-sm-2 paddoff">
+                    <div >
+                        <div id="Ham" class = "sidenav">
+                            <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
+                            <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
+                            <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
+                            <a href="blog.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Blog</a>
+                            <a href="resourse.php"><span style="padding: 4px;"><i class="fa fa-pencil"></i></span>Resourse</a>
+                            <a href="clubDash.php"><span style="padding: 4px;"><i class="fa fa-cog"></i></span>Clubs</a>
+                            <a href="contact.php"><span style="padding: 4px;"><i class="fa fa-phone"></i></span>Contact</a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-10">
@@ -56,11 +63,8 @@
                                             </div>
                                             <div>
                                             <div>
-                                                <!-- <label for="image_file" class="btn">Select Image</label> -->
-                                                <!-- <input id="files" style="visibility:hidden;" type="file" > -->
+                                                <label for="image_file">Select an Image for your club</label>
                                                 <input type="file" id="image_file" name="image_file"  class="form-control form-style">
-                                                <!-- <button style="cursor:pointer" id="btn">Click me</button>
-                                                <input type="file" id="input" style="display:block"> -->
                                             </div>
                                             <div class="para">
                                             <!-- <label>Select a Field</label> -->
@@ -76,7 +80,7 @@
                                                             <option value="Development">Development</option>
                                                         </select>
                                             </div>
-                                            <div>
+                                            <div style="text-align: center;">
                                                 <input type="submit" value="Create" name="submit" id="submit" onclick="PostClub();"  class="button-56">
                                             </div>
                                         </form>
@@ -87,16 +91,7 @@
             </div>
         </div>
     </section>
-    <script type="text/javascript">
-        // document.getElementById('btn').addEventListener('click', () => { 
-        // document.getElementById('input').click();
-        // })
-            // $("#image_file").change(function() {
-            //     filename = this.image_file[0][name];
-            //     console.log(filename);
-            // });
-            
-    </script>
+    <script type="text/javascript" src="Hamburger.js"></script>
    <script type="text/javascript">
        function PostClub()
         {

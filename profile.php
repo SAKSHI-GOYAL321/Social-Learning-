@@ -1,5 +1,8 @@
 <?php 
     session_start();
+    if(!isset($_SESSION['uname'])){
+        header('location: index.php');
+    }
         include('ajax/connection.php');
         $email = $_SESSION['email'];
         $query = $db->prepare('SELECT * from profile WHERE email = ?');

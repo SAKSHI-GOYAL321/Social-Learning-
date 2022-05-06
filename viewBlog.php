@@ -1,9 +1,11 @@
-<!-- <?php 
+<?php 
     session_start();
-    ?> -->
-    <!DOCTYPE html>
-    <html lang="en">
-    
+    if(!isset($_SESSION['uname'])){
+        header('location: index.php');
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,9 +28,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/5e6dc576bb.js" crossorigin="anonymous"></script>
-      
     </head>
-    
     <body>
         <section id="top-nav">
             <div class="col-sm-12 paddoff">
