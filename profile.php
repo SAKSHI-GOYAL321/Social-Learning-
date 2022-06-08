@@ -95,11 +95,7 @@
                                 <input type="text" id="website" name="website" placeholder ="linkedin/github/portfolio "
                                     class="form-control form-style" value="<?php echo $datarow['website']; ?>" required>
                             </div>
-                            <!-- <div class="margin"> -->
-                                <!-- <label>Profile Image</label> -->
-                                <!-- <input type="File" id="photo" name="photo" class="form-control form-style" /> -->
-                                <!-- <img id="blah" class="blah" src="<?php //echo $datarow['photo'];?>" alt="your image" /> -->
-                            <!-- </div> -->
+
                             <div class="margin" style="text-align: center;margin: 24px;">
                                 <input type="submit" value= "Update" class="buton" id="button" name="button" onclick="UpdateProfile();" class="btn btn-primary" />
                             </div>
