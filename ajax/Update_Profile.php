@@ -17,7 +17,7 @@
             $ext = pathinfo($img, PATHINFO_EXTENSION); 
     
             if(in_array($ext, $valid_extension)){
-                $path = $path.strtolower($img);
+                $path = $path.strtolower($img); 
             }
             if(move_uploaded_file($tmp, $path)){
         
