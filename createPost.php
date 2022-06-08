@@ -6,7 +6,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,6 +52,9 @@
         .mg-10{
             margin: 10px 0px;
         }
+        @media (max-height:1200px) {
+
+        }
     </style>
 </head>
 <body>
@@ -66,11 +68,10 @@
             </div>
         </div>
     </section>
-    <section id="side-nav">
-        <div class="col-sm-12 paddoff">
+    <div class="col-sm-12 paddoff">
             <div class="contain">
                 <div class="col-sm-2">
-                    <div class="sidenav active">
+                    <div id="Ham" class="sidenav">
                         <a href="about.php"><span style="padding: 4px;"><i class="fa fa-info"></i></span> About</a>
                         <a href="dashboard.php"><span style="padding: 4px;"><i class="fa fa-home"></i></span>Dashboard</a>
                         <a href="profile.php"><span style="padding: 4px;"><i class="fa fa-user-circle"></i></span>Profile</a>
