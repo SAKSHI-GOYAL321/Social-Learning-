@@ -22,13 +22,14 @@
 </head>
 <body>
     <section id="top-nav">
-        <div class="col-sm-12 paddoff">
-            <div class="topnav" id="top-Ham">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
+    <div class="col-sm-12 paddoff">
+            <div class="topnav">    
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
-                <a href="#"><?php echo $_SESSION['uname']?></a></i>
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
+    </section>
     </section>
     <!-- id="side-nav" -->
     <section id = "side-nav">
@@ -133,7 +134,11 @@
             </div>
         </div>
     </section>
-    
+    <script type="text/javascript">
+            $('form').submit(function(e) {
+                e.preventDefault();
+            });
+        </script>
    <script type = "text/javascript">
           getResource();
 
@@ -164,6 +169,7 @@
                 }
             });
           }
+   
          
 
         function getResource(){

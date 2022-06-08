@@ -59,7 +59,7 @@
                         </div>
                         <form class="form" id="form">
                             <div class="margin img-block">
-                                <input type="File" id="photo" name="photo" class="form-control form-style" style="visibility:hidden; height: 0px;"/>
+                                <input type="File" id="photo" name="photo" value="<?php echo $datarow['photo'];?>"class="form-control form-style" style=" height: 0px;"/>
                                 <div class="profile-img">
                                     <img id="blah" class="blah" src="<?php echo $datarow['photo'];?>" alt="your image" />
                                 </div>
