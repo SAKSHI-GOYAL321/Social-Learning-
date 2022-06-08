@@ -12,7 +12,7 @@
                                 <div class="card p-3 py-4">
                                     <div class="edit">
                                         <a href="./profile.php">Edit Profile <span> <i style='font-size:24px' class='fa fa-edit'></i> </span> </a>
-                                    </div>../img/1.png
+                                    </div>
                                     <div class="text-center"> <img src="<?php echo $datarow['photo'];?>" class="rounded-circle" style="width:150px; height: 150px;" /> </div>
                                     <div class="text-center mt-3"> 
                                         <h5 class="mt-2 mb-0">

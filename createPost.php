@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="./Hamburger.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -22,7 +23,7 @@
         .content{
             width: 80%;
             margin: 7% auto;
-            margin-top: 7%;
+            margin-top: 10vh;
         }
         .title{
             text-align: center;
@@ -59,12 +60,11 @@
 </head>
 <body>
     <section id="top-nav">
-        <div class="col-sm-12 paddoff">
+    <div class="col-sm-12 paddoff">
             <div class="topnav">    
-                <i class="fa fa-bars non-active" onclick="show();"></i>
-                <a href="#">Log out</a></i>    
-                <a href="#">User</a></i>
-                <a href="dashboard.html">Dashboard</a></i>
+                <i class="fa fa-bars non-active" id="top-ham" onclick="show();"></i>
+                <a href="logout.php">Log out</a></i>    
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>
@@ -107,22 +107,7 @@
     <script>
         CKEDITOR.replace('write');
     </script>
-    <script type="text/javascript">
-        function show(){
-            var sidenav= document.getElementByClassName("sidenav");
-            console.log("check1");
-            if(sidenav.style.display=="none"){
-                sidenav.classList.remove = "non-active";
-                sidenav.classList.add="active";
-            }
-            else{
-                sidenav.classList.remove = "active";
-                sidenav.classList.add="non-active";
-            }
-            // sidenav.classList.toggle("active");
-            console.log("check3");
-        } 
-    </script>
+
     <script type="text/javascript">
         function BlogPost()
         {
