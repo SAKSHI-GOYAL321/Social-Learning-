@@ -3,7 +3,7 @@
     session_start();
     $valid_extension = array('jpeg','jpg','png','PNG','JPG','JPEG','jfif','JFIF','svg');
 	$path = '../img/';
-    echo "check2";
+    // echo "check2";
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
         $email=$_SESSION['email'];
@@ -11,7 +11,10 @@
         $bio=$_POST['bio'];
         $website = $_POST['website'];
 
-        if(!empty($_FILES["photo"])){
+        // echo !empty($_FILES["photo"]);   //""   "1"
+        // echo print_r($_FILES['photo']);
+        if(!empty($_FILES["photo"]) && $_FILES['photo']['name'] != ""){
+            // echo "if part";
             $img = $_FILES['photo']['name'];
             $tmp = $_FILES['photo']['tmp_name'];
             $ext = pathinfo($img, PATHINFO_EXTENSION); 
@@ -25,9 +28,20 @@
             $path = './img/';
             $path = $path.strtolower($img);
         }
-        else{
-            $path = './img/user_profile.png';
+        else if(empty($_FILES["photo"]) == ""){
+            // echo "else part";
+            $query = $db->prepare('SELECT photo from profile where email = ?');
+            $data = array($email);
+            $execute = $query->execute($data);
+            if($execute){
+                $datarow = $query->fetch();
+                $path = $datarow['photo'];
+            }
+            else{
+                $path = './img/user_profile.png';
+            }
         }
+
         $query = $db->prepare('SELECT * FROM profile WHERE email = ?');
         $data = array($email);
         $execute = $query->execute($data);

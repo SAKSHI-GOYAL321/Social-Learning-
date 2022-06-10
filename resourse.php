@@ -87,7 +87,7 @@
                                                 </select>
                                             </div>
                                         </form> -->
-                                        <form action="" id="resoucedata" class="input" >
+                                        <form action="" id="resourcedata" class="input" >
                                             <div class="filestyle">
                                                 <label for="">Select a Field:</label>
                                                 <select name="cfield" id="cfield" class="form-control">
@@ -222,7 +222,6 @@
        
                var form = document.getElementById("resourcedata");
                var data = new FormData(form);
-               
                
                $.ajax({
                        type: "POST",

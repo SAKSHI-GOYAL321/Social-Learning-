@@ -3,7 +3,6 @@
 	$valid_extension = array('pdf','docx','xlxs','xlsm');
 	$path = '../Uploaded_Resources/';
     include("connection.php");
-
     // echo isset($_POST['link']) . ", ";
     // echo !empty($_FILES['pdf_file']); ($_POST['link'] != "" 
     // echo "hello 1";
@@ -15,7 +14,6 @@
         $link = $_POST['link'];
 		$author = $_SESSION['uname'];
         
-
         if($_POST['link'] != ""){
             $pathDB = NULL;
         }
