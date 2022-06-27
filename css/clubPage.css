@@ -221,7 +221,7 @@
 .scroll{
   height: 88.5vh !important;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 /* Discussion */

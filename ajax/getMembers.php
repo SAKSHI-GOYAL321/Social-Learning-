@@ -10,7 +10,7 @@ if(password_verify("Members", $_POST['token'])){
     ?>
     <div class="members-list">
         <h4>Admin</h4>
-        <p> <?php echo $datarow['club_admin']; ?></p>
+        <a href="profile_page.php"><p ><?php echo $datarow['club_admin']?></p></a>
 
     <?php
 }
@@ -25,8 +25,10 @@ if(password_verify("Members",$_POST['token']))
 
     while($datarow=$query->fetch()){
         ?>
+
         
-        <p><?php echo $datarow['uname']; ?></p>
+        <!-- <p><?php echo $datarow['uname'];  ?></p> -->
+        <a href="profile_page.php"><p ><?php echo $datarow['uname']?></p></a>
     </div>
         <?php
     }

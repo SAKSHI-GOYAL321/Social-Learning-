@@ -27,7 +27,7 @@
             <div class="topnav">    
                 <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
-                <a href="#"><?php echo $_SESSION['uname']?></a></i>
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>

@@ -1,7 +1,7 @@
 <?php 
 include('connection.php');
 if(password_verify("data", $_POST['token'])){
-    $query = $db->prepare('SELECT * FROM blogdata where bid > ( (select COUNT(*) from blogdata) - 3)');
+    $query = $db->prepare('SELECT * FROM blogdata order by bid desc LIMIT 3');
     $data = array();
     $execute=$query->execute($data);
     $datarow=$query->fetch();

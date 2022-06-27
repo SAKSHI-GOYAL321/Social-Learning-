@@ -38,7 +38,7 @@
             <div class="topnav">    
                 <i class="fa fa-bars non-active" onclick="show();"></i>
                 <a href="logout.php">Log out</a></i>    
-                <a href="#"><?php echo $_SESSION['uname']?></a></i>
+                <a href="profile_page.php"><?php echo $_SESSION['uname']?></a></i>
             </div>
         </div>
     </section>
@@ -64,7 +64,7 @@
         <div class="col-sm-12 paddoff">
             <div class="contain"> 
                 <div class="col-sm-3">
-                    <div id="events">
+                    <div id="events" class="scroll">
                         <a class="button-33" id="contact">Add Events</a>
                         <div id="contactForm">
                             <h1>Add an Up-comming Event</h1>
@@ -79,7 +79,7 @@
                             </form>
                         </div>
 
-                        <div id="club-events" >
+                        <div id="club-events"  >
                         </div>
                     </div>
                     
@@ -110,8 +110,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2 ">
-                    <div id="member">
+                <div class="col-sm-2  ">
+                    <div id="member" class="scroll">
                     </div>
                 </div>        
             </div>

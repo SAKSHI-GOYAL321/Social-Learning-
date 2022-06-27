@@ -2,7 +2,7 @@
 include('connection.php');
 $clubid=$_POST['club_id'];
 
-$query=$db->prepare('select * from events where club_id=?');
+$query=$db->prepare('SELECT * FROM events WHERE event_date >= CURRENT_TIMESTAMP AND club_id=?');
 $data=array($clubid);
 $execute=$query->execute($data);
 
